@@ -13,13 +13,19 @@
         <Label Content="Nieuwe Vraag" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="181" Margin="89,4,222,0"/>
         <Button Content="Add" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,4,131,0" Click="Button_Click"/>
-        <DataGrid HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top" Height="250" Width="472"/>
+
+        <DataGrid HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top" Height="250" Width="472">
+        </DataGrid>
+        
         <TextBox HorizontalAlignment="Left" Height="23" Margin="10,308,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="472"/>
         <ComboBox HorizontalAlignment="Left" Margin="10,331,0,0" VerticalAlignment="Top" Width="472"/>
+        
         <Label Content="Nieuwe Antwoord" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,358,0,0"/>
         <TextBox HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="272" Margin="120,362,100,0"/>
         <Button Content="Add" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,362,10,0" Click="Button_Click"/>
-        <DataGrid HorizontalAlignment="Left" Margin="10,403,0,0" VerticalAlignment="Top" Height="228" Width="472"/>
+        
+        <DataGrid HorizontalAlignment="Left" Margin="10,403,0,0" VerticalAlignment="Top" Height="228" Width="472">
+        </DataGrid>
 
 
 
