@@ -16,11 +16,16 @@ namespace Kwisspel.ViewModel
     /// </summary>
     public class MainViewModel : ViewModelBase
     {
+
+        public VragenVM Vragen { get; set; }
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
         public MainViewModel()
         {
+            Vragen = new VragenVM();
+
+           
             ////if (IsInDesignMode)
             ////{
             ////    // Code runs in Blend --> create design time data.

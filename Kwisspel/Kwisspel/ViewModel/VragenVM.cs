@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Kwisspel.ViewModel
 {
-    class VragenVM
+   public class VragenVM : ViewModelBase
     {
         private Model.Vraag vraag;
         public int Id {
@@ -15,6 +16,7 @@ namespace Kwisspel.ViewModel
             }
             set {
                 vraag.Id = value;
+                RaisePropertyChanged("Id");
             }
         }
 
@@ -27,6 +29,7 @@ namespace Kwisspel.ViewModel
             set
             {
                 vraag.StringVraag = value;
+                RaisePropertyChanged("Vraag");
             }
         }
 
@@ -39,6 +42,7 @@ namespace Kwisspel.ViewModel
             set
             {
                 vraag.Soort = value;
+                RaisePropertyChanged("Soort");
             }
         }
 
