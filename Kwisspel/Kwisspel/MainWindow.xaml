@@ -15,7 +15,7 @@
         <TextBox HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="181" Margin="89,4,222,0"/>
         <Button Content="Add" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,4,131,0" />
 
-        <DataGrid ItemsSource="{Binding Vraag}"  HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top" Height="250" Width="472">
+        <DataGrid ItemsSource="{Binding Vragen}"  HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top" Height="250" Width="472">
         </DataGrid>
         
         <TextBox HorizontalAlignment="Left" Height="23" Margin="10,308,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="472"/>

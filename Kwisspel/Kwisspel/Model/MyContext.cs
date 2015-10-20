@@ -10,6 +10,9 @@ namespace Kwisspel.Model
     class MyContext: DbContext
     {
 
-        public DbSet<Vraag> Vragen { get; set; }
+        public DbSet<Vraag> Vragen {
+            get { return Vragen; }
+            set { Vragen = value; }
+        }
     }
 }

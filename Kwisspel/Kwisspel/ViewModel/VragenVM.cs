@@ -19,6 +19,15 @@ namespace Kwisspel.ViewModel
                 RaisePropertyChanged("Id");
             }
         }
+        public VragenVM()
+        {
+            this.vraag = new Model.Vraag();
+        }
+
+        public VragenVM(Model.Vraag vraag)
+        {
+            this.vraag = vraag;
+        }
 
         public string Vraag
         {
@@ -46,20 +55,13 @@ namespace Kwisspel.ViewModel
             }
         }
 
-         public VragenVM(Model.Vraag vraag)
-        {
-            // TODO: Complete member initialization
-            this.vraag = vraag;
-        }
 
-        public VragenVM()
-        {
-            vraag = new Model.Vraag();
-        }
+
+       
 
         public Model.Vraag ToVraag()
         {
-            return vraag;
+            return this.vraag;
         }
 
     }
