@@ -57,7 +57,7 @@ namespace Kwisspel.ViewModel
             vraag = new Model.Vraag();
         }
 
-        public Model.Vraag ToPOCO()
+        public Model.Vraag ToVragen()
         {
             return vraag;
         }

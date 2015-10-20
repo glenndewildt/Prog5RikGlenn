@@ -1,4 +1,9 @@
 using GalaSoft.MvvmLight;
+using System.Collections.Generic;
+
+using GalaSoft.MvvmLight.Command;
+using System.Windows.Input;
+using System.Collections.ObjectModel;
 
 namespace Kwisspel.ViewModel
 {
@@ -16,24 +21,20 @@ namespace Kwisspel.ViewModel
     /// </summary>
     public class MainViewModel : ViewModelBase
     {
-
-        public VragenVM Vragen { get; set; }
+        Model.MyContext context;
+       
+        public ObservableCollection<VragenVM> Vragen { get; set; }
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
         public MainViewModel()
         {
-            Vragen = new VragenVM();
+            context = new Model.MyContext();
 
-           
-            ////if (IsInDesignMode)
-            ////{
-            ////    // Code runs in Blend --> create design time data.
-            ////}
-            ////else
-            ////{
-            ////    // Code runs "for real"
-            ////}
+            IEnumerable<Model.Vraag> result = context.Vragen.ToList();
+
+
+            Vragen = new ObservableCollection<VragenVM>();
         }
     }
 }
