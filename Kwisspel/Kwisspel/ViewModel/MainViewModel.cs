@@ -31,7 +31,7 @@ namespace Kwisspel.ViewModel
         {
             context = new Model.MyContext();
 
-            IEnumerable<Model.Vraag> result = context.Vragen.ToList();
+           
 
 
             Vragen = new ObservableCollection<VragenVM>();

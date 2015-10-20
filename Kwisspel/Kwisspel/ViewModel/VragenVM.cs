@@ -46,7 +46,7 @@ namespace Kwisspel.ViewModel
             }
         }
 
-         public VragenVM(Model.Vraag dier)
+         public VragenVM(Model.Vraag vraag)
         {
             // TODO: Complete member initialization
             this.vraag = vraag;
@@ -57,7 +57,7 @@ namespace Kwisspel.ViewModel
             vraag = new Model.Vraag();
         }
 
-        public Model.Vraag ToVragen()
+        public Model.Vraag ToVraag()
         {
             return vraag;
         }
