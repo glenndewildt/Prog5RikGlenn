@@ -12,7 +12,7 @@ namespace Thuisbezorgd_EF.ViewModel
     public class MainViewModel : ViewModelBase
     {
         //Windows
-        private AddGerecht addGerechtWindow;
+        private AddGerecht addVraagWindow;
 
         MyContext context;
 
@@ -20,39 +20,39 @@ namespace Thuisbezorgd_EF.ViewModel
 
         public VragenVM SelectedVraag { get; set; }
 
-        public ICommand ShowAddGerechtCommand { get; set; }
-        public ICommand SaveGerechtCommand { get; set; }
+        public ICommand ShowAddVraagCommand { get; set; }
+        public ICommand SaveVraagCommand { get; set; }
 
         public MainViewModel()
         {
-            ShowAddGerechtCommand = new RelayCommand(ShowAddGerecht);
-            SaveGerechtCommand = new RelayCommand(SaveGerecht);
+            ShowAddVraagCommand = new RelayCommand(ShowAddVraag);
+            SaveVraagCommand = new RelayCommand(SaveVraag);
             SelectedVraag = new VragenVM();
 
             context = new MyContext();
 
-            //1. ophalen gerechten
+            //1. ophalen vragen
             IEnumerable<VragenVM> vragen = context.Vragen
                 .ToList().Select(g => new VragenVM(g));
             Vragen = new ObservableCollection<VragenVM>(vragen);
 
         }
 
-        private void SaveGerecht()
+        private void SaveVraag()
         {
             Vragen.Add(SelectedVraag);
             context.Vragen.Add(SelectedVraag.vraag);
             context.SaveChanges();
             //Voeg ook toe aan de database
-            addGerechtWindow.Hide();
+            addVraagWindow.Hide();
         }
 
-        private void ShowAddGerecht()
+        private void ShowAddVraag()
         {
             SelectedVraag = new VragenVM();
             RaisePropertyChanged("SelectedGerecht");
-            addGerechtWindow = new AddGerecht();
-            addGerechtWindow.Show();
+            addVraagWindow = new AddGerecht();
+            addVraagWindow.Show();
         }
 
 

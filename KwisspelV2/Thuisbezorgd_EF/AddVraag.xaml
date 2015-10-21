@@ -6,12 +6,12 @@
     
     
     <StackPanel>
-        <TextBlock>Add gerecht</TextBlock>
+        <TextBlock>Add Vraag</TextBlock>
         
         <TextBlock>Name: </TextBlock>
-        <TextBox Text="{Binding SelectedGerecht.Naam}" ></TextBox>
+        <TextBox Text="{Binding SelectedVraag.Tekst}" ></TextBox>
         
-        <Button Command="{Binding SaveGerechtCommand}">Save Gerecht</Button>
+        <Button Command="{Binding SaveVraagCommand}">Save Gerecht</Button>
         
     </StackPanel>
 </Window>

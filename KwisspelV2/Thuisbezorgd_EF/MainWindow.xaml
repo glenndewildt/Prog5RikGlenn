@@ -7,12 +7,12 @@
 
     <StackPanel>
         <WrapPanel>
-            <Button Width="40" Command="{Binding ShowAddGerechtCommand}">+</Button>
+            <Button Width="40" Command="{Binding ShowAddVraagCommand}">+</Button>
         </WrapPanel>
         <DataGrid SelectedItem="{Binding SelectedVraag}" AutoGenerateColumns="False" ItemsSource="{Binding Vragen}" CanUserAddRows="False" >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Vraag" Binding="{Binding Naam}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Aantal antwoorden" Binding="{Binding Prijs}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Vraag" Binding="{Binding Tekst}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Aantal antwoorden" Binding="{Binding Aantal}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Delete" Binding="{Binding Categorie.Name}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>

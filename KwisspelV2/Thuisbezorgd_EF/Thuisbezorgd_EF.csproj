@@ -75,8 +75,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AddGerecht.xaml.cs">
-      <DependentUpon>AddGerecht.xaml</DependentUpon>
+    <Compile Include="AddVraag.xaml.cs">
+      <DependentUpon>AddVraag.xaml</DependentUpon>
     </Compile>
     <Compile Include="Domain\Vraag.cs" />
     <Compile Include="Domain\VraagCategorie.cs" />
@@ -93,7 +93,7 @@
     <Compile Include="ViewModel\VragenVM.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
-    <Page Include="AddGerecht.xaml">
+    <Page Include="AddVraag.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
