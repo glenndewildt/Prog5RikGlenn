@@ -10,7 +10,6 @@ namespace Thuisbezorgd_EF.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "Thuisbezorgd_EF.Domain.MyContext";
         }
 
         protected override void Seed(Thuisbezorgd_EF.Domain.MyContext context)

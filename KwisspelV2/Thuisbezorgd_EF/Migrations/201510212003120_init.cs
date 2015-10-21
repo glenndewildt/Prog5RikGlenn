@@ -3,10 +3,19 @@ namespace Thuisbezorgd_EF.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class init : DbMigration
     {
         public override void Up()
         {
+            CreateTable(
+                "dbo.Antwoord",
+                c => new
+                    {
+                        Id = c.String(nullable: false, maxLength: 128),
+                        Tekst = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
             CreateTable(
                 "dbo.GerechtCategorie",
                 c => new
@@ -17,15 +26,14 @@ namespace Thuisbezorgd_EF.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.Gerecht",
+                "dbo.Vraag",
                 c => new
                     {
-                        GerechtId = c.Int(nullable: false, identity: true),
-                        Naam = c.String(),
-                        Prijs = c.Double(nullable: false),
+                        Aantal = c.Int(nullable: false, identity: true),
+                        Tekst = c.String(),
                         CategorieId = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.GerechtId)
+                .PrimaryKey(t => t.Aantal)
                 .ForeignKey("dbo.GerechtCategorie", t => t.CategorieId, cascadeDelete: true)
                 .Index(t => t.CategorieId);
             
@@ -33,10 +41,11 @@ namespace Thuisbezorgd_EF.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.Gerecht", "CategorieId", "dbo.GerechtCategorie");
-            DropIndex("dbo.Gerecht", new[] { "CategorieId" });
-            DropTable("dbo.Gerecht");
+            DropForeignKey("dbo.Vraag", "CategorieId", "dbo.GerechtCategorie");
+            DropIndex("dbo.Vraag", new[] { "CategorieId" });
+            DropTable("dbo.Vraag");
             DropTable("dbo.GerechtCategorie");
+            DropTable("dbo.Antwoord");
         }
     }
 }

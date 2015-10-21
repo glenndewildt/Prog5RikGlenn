@@ -3,19 +3,27 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Vragen Beheer" Height="350" Width="525"
         DataContext="{Binding Main, Source={ StaticResource Locator} }">
-    
+
 
     <StackPanel>
-        <WrapPanel>
-            <Label Content="Nieuwe Vraag Toevoegen:"/>
-            <Button Width="40" Command="{Binding ShowAddVraagCommand}">+</Button>
-            
-        </WrapPanel>
+       
         <DataGrid SelectedItem="{Binding SelectedVraag}" AutoGenerateColumns="False" ItemsSource="{Binding Vragen}" CanUserAddRows="False" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Vraag" Binding="{Binding Tekst}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Aantal antwoorden" Binding="{Binding Aantal}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Delete" Binding="{Binding Categorie.Name}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <WrapPanel>
+            <Button Width="40" Command="{Binding ShowAddVraagCommand}">+</Button>
+            <Label Content="Nieuwe Vraag Toevoegen:"/>
+
+        </WrapPanel>
+        <DataGrid SelectedItem="{Binding SelectedVraag}" AutoGenerateColumns="False" ItemsSource="{Binding Antwoorden}" CanUserAddRows="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Aantal antwoorden" Binding="{Binding Tekst}"/>
+              
             </DataGrid.Columns>
         </DataGrid>
     </StackPanel>

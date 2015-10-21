@@ -11,6 +11,7 @@ namespace Thuisbezorgd_EF.Domain
     {
         public DbSet<Vraag> Vragen { get; set; }
 
+        public DbSet<Antwoord> Antwoorden { get; set; }
         public DbSet<VraagCategorie> VraagCategorie { get; set; }
     }
 }

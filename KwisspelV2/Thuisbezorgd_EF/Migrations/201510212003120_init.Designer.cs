@@ -13,7 +13,7 @@ namespace Thuisbezorgd_EF.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201510211621112_init"; }
+            get { return "201510212003120_init"; }
         }
         
         string IMigrationMetadata.Source

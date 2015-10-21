@@ -17,6 +17,7 @@ namespace Thuisbezorgd_EF.ViewModel
         MyContext context;
 
         public ObservableCollection<VragenVM> Vragen { get; set; }
+        public ObservableCollection<AntwoordenVM> Antwoorden { get; set; }
 
         public VragenVM SelectedVraag { get; set; }
 
@@ -36,6 +37,13 @@ namespace Thuisbezorgd_EF.ViewModel
                 .ToList().Select(g => new VragenVM(g));
             Vragen = new ObservableCollection<VragenVM>(vragen);
 
+
+                //dit moeten we zien te fixen
+           // IEnumerable<AntwoordenVM> antwoorden = context.Antwoorden.ToList().Select(a => new AntwoordenVM(a));
+                  
+             //   Antwoorden = new ObservableCollection<AntwoordenVM>(antwoorden);
+            
+           
         }
 
         private void SaveVraag()
