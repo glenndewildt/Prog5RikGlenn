@@ -1,0 +1,20 @@
+﻿<Window x:Class="Thuisbezorgd_EF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525"
+        DataContext="{Binding Main, Source={ StaticResource Locator} }">
+    
+
+    <StackPanel>
+        <WrapPanel>
+            <Button Width="40" Command="{Binding ShowAddGerechtCommand}">+</Button>
+        </WrapPanel>
+        <DataGrid SelectedItem="{Binding SelectedVraag}" AutoGenerateColumns="False" ItemsSource="{Binding Vragen}" CanUserAddRows="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Vraag" Binding="{Binding Naam}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Aantal antwoorden" Binding="{Binding Prijs}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Delete" Binding="{Binding Categorie.Name}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </StackPanel>
+</Window>
