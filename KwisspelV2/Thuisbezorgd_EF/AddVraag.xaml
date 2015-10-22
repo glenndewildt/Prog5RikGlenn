@@ -10,8 +10,6 @@
         
         <TextBlock Margin="20,10,24,0">Vraag: </TextBlock>
         <TextBox Text="{Binding SelectedVraag.Tekst}" Margin="20,10,24,0" Height="22"></TextBox>
-        <TextBlock Margin="20,10,24,0" Height="22"><Run Text="Aantal Antwoorden:"/></TextBlock>
-        <TextBox Text="" Margin="20,10,24,0"/>
         <Button Command="{Binding SaveVraagCommand}" Content="Vraag Opslaan" Margin="20,10,24,0" RenderTransformOrigin="0.5,0.545"/>
 
     </StackPanel>
