@@ -5,9 +5,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Thuisbezorgd_EF.ViewModel;
 
-namespace Thuisbezorgd_EF.Domain
+namespace KwisspelV3.Database
 {
     //Model
     [Table("Vraag")]
@@ -16,17 +15,12 @@ namespace Thuisbezorgd_EF.Domain
         [Key]
         public int Aantal { get; set; }
         public String Tekst { get; set; }
-        
+
 
         [ForeignKey("Categorie")]
         public int CategorieId { get; set; }
 
         public virtual VraagCategorie Categorie { get; set; }
-
-        [ForeignKey("Antwoord")]
-        public int AntwoordId { get; set; }
-
-        public virtual Antwoord Antwoord { get; set; }
 
     }
 }

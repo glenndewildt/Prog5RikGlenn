@@ -5,9 +5,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Thuisbezorgd_EF.ViewModel;
 
-namespace Thuisbezorgd_EF.Domain
+namespace KwisspelV3.Database
 {
     //Model
     [Table("Antwoord")]
@@ -15,7 +14,6 @@ namespace Thuisbezorgd_EF.Domain
     {
         [Key]
         public String Id { get; set; }
-
         public String Tekst { get; set; }
 
         public Boolean GoeieAntwoord { get; set; }
