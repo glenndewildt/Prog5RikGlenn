@@ -39,9 +39,8 @@ namespace Thuisbezorgd_EF.ViewModel
 
 
                 //dit moeten we zien te fixen
-           // IEnumerable<AntwoordenVM> antwoorden = context.Antwoorden.ToList().Select(a => new AntwoordenVM(a));
-                  
-             //   Antwoorden = new ObservableCollection<AntwoordenVM>(antwoorden);
+            IEnumerable<AntwoordenVM> antwoorden = context.Antwoorden.ToList().Select(a => new AntwoordenVM(a));
+               Antwoorden = new ObservableCollection<AntwoordenVM>(antwoorden);
             
            
         }
