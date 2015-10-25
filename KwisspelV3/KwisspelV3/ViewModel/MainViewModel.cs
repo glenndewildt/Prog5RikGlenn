@@ -19,8 +19,31 @@ namespace KwisspelV3.ViewModel
         public ObservableCollection<VragenVM> Vragen { get; set; }
         public ObservableCollection<AntwoordenVM> Antwoorden { get; set; }
         public ObservableCollection<AntwoordenVM> VraagAntwoorden { get; set; }
+        public VragenVM _selectedVraag { get; set; }
 
-        public VragenVM SelectedVraag { get; set; }
+        IEnumerable<AntwoordenVM> vraagAntwoorden = null;
+
+        public VragenVM SelectedVraag
+        {
+            get { return _selectedVraag; }
+            set
+            {
+                if (SelectedVraag != value)
+                {
+                    _selectedVraag = value;
+                    RaisePropertyChanged("VraagAntwoorden");
+                    RaisePropertyChanged("vraagAntwoorden");
+                    RaisePropertyChanged(null);
+                    RaisePropertyChanged("SelectedVraag"); //NotifyPropertyChanged("SelectedItem");
+                    if (vraagAntwoorden != null)
+                    {
+                        vraagAntwoorden = Antwoorden.Where(a => a.BijVraagId.Equals(_selectedVraag.Id));
+                        VraagAntwoorden = new ObservableCollection<AntwoordenVM>(vraagAntwoorden);
+                    }
+                }
+            }
+        }
+   
 
         public ICommand ShowAddVraagCommand { get; set; }
         public ICommand SaveVraagCommand { get; set; }
@@ -42,7 +65,7 @@ namespace KwisspelV3.ViewModel
             //dit moeten we zien te fixen
             IEnumerable<AntwoordenVM> antwoorden = context.Antwoorden.ToList().Select(a => new AntwoordenVM(a));
             Antwoorden = new ObservableCollection<AntwoordenVM>(antwoorden);
-            IEnumerable<AntwoordenVM> vraagAntwoorden = Antwoorden.Where(a => a.BijVraagId.Equals(SelectedVraag.Id));
+            vraagAntwoorden = Antwoorden.Where(a => a.BijVraagId.Equals(_selectedVraag.Id));
             VraagAntwoorden = new ObservableCollection<AntwoordenVM>(vraagAntwoorden);
 
         }

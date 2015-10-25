@@ -12,8 +12,8 @@
         <DataGrid SelectedItem="{Binding SelectedVraag}" AutoGenerateColumns="False" ItemsSource="{Binding Vragen}" CanUserAddRows="False" Height="100" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Vraag" Binding="{Binding Tekst}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Aantal antwoorden" Binding="{Binding Aantal}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Delete" Binding="{Binding Categorie.Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Aantal antwoorden" Binding="{Binding Id}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Delete" Binding="{Binding Categorie}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
         <DataGrid  AutoGenerateColumns="False" ItemsSource="{Binding VraagAntwoorden}" CanUserAddRows="False" Height="100" >
