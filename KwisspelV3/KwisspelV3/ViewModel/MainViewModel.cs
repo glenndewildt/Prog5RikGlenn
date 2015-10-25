@@ -31,16 +31,15 @@ namespace KwisspelV3.ViewModel
                 if (SelectedVraag != value)
                 {
                     _selectedVraag = value;
-                    RaisePropertyChanged("VraagAntwoorden");
-                    RaisePropertyChanged("vraagAntwoorden");
-                    RaisePropertyChanged(null);
-                    RaisePropertyChanged("SelectedVraag"); //NotifyPropertyChanged("SelectedItem");
-                    if (vraagAntwoorden != null)
+               
+
+                    if (Antwoorden != null)
                     {
                         vraagAntwoorden = Antwoorden.Where(a => a.BijVraagId.Equals(_selectedVraag.Id));
                         VraagAntwoorden = new ObservableCollection<AntwoordenVM>(vraagAntwoorden);
                     }
                 }
+                RaisePropertyChanged("VraagAntwoorden");
             }
         }
    
