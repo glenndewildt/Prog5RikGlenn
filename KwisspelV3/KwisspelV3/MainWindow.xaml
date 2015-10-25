@@ -7,13 +7,20 @@
 
         <WrapPanel>
             <Button Width="40" Command="{Binding ShowAddVraagCommand}" Content="+"/>
-            <Label Content="Nieuwe Vraag Toevoegen:"/>
+            <Label Content="{Binding SelectedVraag.Id}"/>
         </WrapPanel>
         <DataGrid SelectedItem="{Binding SelectedVraag}" AutoGenerateColumns="False" ItemsSource="{Binding Vragen}" CanUserAddRows="False" Height="100" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Vraag" Binding="{Binding Tekst}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Aantal antwoorden" Binding="{Binding Aantal}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Delete" Binding="{Binding Categorie.Name}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid  AutoGenerateColumns="False" ItemsSource="{Binding VraagAntwoorden}" CanUserAddRows="False" Height="100" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Vraag" Binding="{Binding Tekst}"/>
+                <DataGridTextColumn Header="Aantal antwoorden" Binding="{Binding BijVraagId}"/>
+                <DataGridTextColumn Header="Delete" Binding="{Binding }"/>
             </DataGrid.Columns>
         </DataGrid>
     </StackPanel>

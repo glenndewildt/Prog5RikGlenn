@@ -21,12 +21,12 @@ namespace KwisspelV3.ViewModel
             }
         }
 
-        public int Aantal
+        public int Id
         {
-            get { return vraag.Aantal; }
+            get { return vraag.Id; }
             set
             {
-                vraag.Aantal = value;
+                vraag.Id = value;
                 RaisePropertyChanged("Aantal");
             }
         }

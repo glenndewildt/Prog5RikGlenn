@@ -21,7 +21,7 @@ namespace KwisspelV3.ViewModel
             }
         }
 
-        public String Id
+        public int Id
         {
             get { return antwoord.Id; }
             set
@@ -38,6 +38,25 @@ namespace KwisspelV3.ViewModel
             {
                 antwoord.GoeieAntwoord = value;
                 RaisePropertyChanged("GoeieAntwoord");
+            }
+        }
+        public Vraag BijVraag
+        {
+            get { return antwoord.BijVraag; }
+            set
+            {
+                antwoord.BijVraag = value;
+                RaisePropertyChanged("Categorie");
+            }
+        }
+
+        public int BijVraagId
+        {
+            get { return antwoord.BijvraagId; }
+            set
+            {
+                antwoord.BijvraagId = value;
+                RaisePropertyChanged("Categorie");
             }
         }
 

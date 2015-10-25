@@ -12,7 +12,7 @@ namespace KwisspelV3.Database
         protected override void Seed(MyContext context)
         {
             //Seed data zodat je database niet leeg is
-            context.Vragen.Add(new Vraag() { Tekst = "Why is Tom Cruise in my closet?", Aantal = 3 });
+            context.Vragen.Add(new Vraag() { Tekst = "Why is Tom Cruise in my closet?"});
             context.SaveChanges();
         }
     }

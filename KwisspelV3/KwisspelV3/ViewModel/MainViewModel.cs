@@ -18,6 +18,7 @@ namespace KwisspelV3.ViewModel
 
         public ObservableCollection<VragenVM> Vragen { get; set; }
         public ObservableCollection<AntwoordenVM> Antwoorden { get; set; }
+        public ObservableCollection<AntwoordenVM> VraagAntwoorden { get; set; }
 
         public VragenVM SelectedVraag { get; set; }
 
@@ -41,18 +42,38 @@ namespace KwisspelV3.ViewModel
             //dit moeten we zien te fixen
             IEnumerable<AntwoordenVM> antwoorden = context.Antwoorden.ToList().Select(a => new AntwoordenVM(a));
             Antwoorden = new ObservableCollection<AntwoordenVM>(antwoorden);
-
+            IEnumerable<AntwoordenVM> vraagAntwoorden = Antwoorden.Where(a => a.BijVraagId.Equals(SelectedVraag.Id));
+            VraagAntwoorden = new ObservableCollection<AntwoordenVM>(vraagAntwoorden);
 
         }
 
         private void SaveVraag()
         {
+            
             Vragen.Add(SelectedVraag);
+            SelectedVraag.Id = 12;
             context.Vragen.Add(SelectedVraag.vraag);
             context.SaveChanges();
+            AddAntwoord();
             //Voeg ook toe aan de database
             addVraagWindow.Hide();
         }
+
+        private void AddAntwoord()
+        {
+            AntwoordenVM antwoord = new AntwoordenVM(new Antwoord());
+            antwoord.BijVraag = SelectedVraag.vraag;
+            antwoord.Tekst = "jajajaj";
+            antwoord.Id = 1;
+
+
+            Antwoorden.Add(antwoord);
+            context.Antwoorden.Add(antwoord.antwoord);
+         
+            //Voeg ook toe aan de database
+        
+        }
+
 
         private void ShowAddVraag()
         {

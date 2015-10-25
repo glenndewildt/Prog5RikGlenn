@@ -13,10 +13,16 @@ namespace KwisspelV3.Database
     public class Antwoord
     {
         [Key]
-        public String Id { get; set; }
+        public int Id { get; set; }
         public String Tekst { get; set; }
 
         public Boolean GoeieAntwoord { get; set; }
+
+
+        [ForeignKey("BijVraag")]
+        public int BijvraagId { get; set; }
+
+        public virtual Vraag BijVraag { get; set; }
 
     }
 }

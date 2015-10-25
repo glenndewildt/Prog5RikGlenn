@@ -13,7 +13,7 @@ namespace KwisspelV3.Database
     public class Vraag
     {
         [Key]
-        public int Aantal { get; set; }
+        public int Id { get; set; }
         public String Tekst { get; set; }
 
 
