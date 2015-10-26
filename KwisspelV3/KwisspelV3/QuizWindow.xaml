@@ -1,23 +1,22 @@
-﻿<Window x:Class="KwisspelV3.MainWindow"
+﻿<Window x:Class="KwisspelV3.QuizWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="457" Width="525"
+        Title="MainWindow" Height="400" Width="525"
         DataContext="{Binding Main, Source={ StaticResource Locator} }">
     <StackPanel>
 
         <WrapPanel>
-            <Label Content ="Vragen beheer" Width="291"/>
-            <ComboBox Width="120" ItemsSource="{Binding Categorie}" DisplayMemberPath="SoortName" SelectedItem="{Binding SelectedCategorie}"/>
+            <Label Content ="Quiz beheer" Width="512"/>
             <Button Width="40" Command="{Binding ShowAddVraagCommand}" Content="+"/>
-            <Label Content = "Vraag Toevoegen" Width="268"/>
+            <Label Content = "Vraag Toevoegen" Width="279"/>
             <Button Command="{Binding DellVraagCommand}" Content="verwijder geselecteerde vraag"/>
             
         </WrapPanel>
-        <DataGrid SelectedItem="{Binding SelectedVraag}" AutoGenerateColumns="False" ItemsSource="{Binding Vragen}" CanUserAddRows="False" Height="100" >
+        <DataGrid SelectedItem="{Binding SelectedQuiz}" AutoGenerateColumns="False" ItemsSource="{Binding Quizen}" CanUserAddRows="False" Height="100" >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Vraag" Binding="{Binding Tekst}" Width="300"></DataGridTextColumn>
-                <DataGridTextColumn Header="Aantal antwoorden" Binding="{Binding AantalAntwoorden}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Soort" Binding="{Binding Categorie.Name}" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Naam" Binding="{Binding Name}" Width="300"></DataGridTextColumn>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}"></DataGridTextColumn>
+                
 
 
             </DataGrid.Columns>
@@ -29,18 +28,17 @@
             <Label Content ="Antwoord Toevoegen" Width="269"/>
             <Button Command="{Binding DellAntwoordCommand}" Content="verwijder geselecteerde antwoord"/>
         </WrapPanel>
-        <DataGrid  SelectedItem="{Binding SelectedAntwoord}" AutoGenerateColumns="False" ItemsSource="{Binding VraagAntwoorden}" CanUserAddRows="False" Height="100" >
+        <DataGrid  SelectedItem="{Binding SelectedVraag}" AutoGenerateColumns="False" ItemsSource="{Binding Vragen}" CanUserAddRows="False" Height="100" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Tekst" Binding="{Binding Tekst}" Width="300"/>
-                <DataGridTextColumn Header="Is Correct" Binding="{Binding BijVraagId}"/>
+                <DataGridTextColumn Header="Soort" Binding="{Binding SoortVraag}"/>
                 <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
 
             </DataGrid.Columns>
         </DataGrid>
         <TextBox Text="{Binding SelectedAntwoord.Tekst}" Width="515" Margin="0,10,0,10"></TextBox>
-        <WrapPanel Height="46">
-
-            <Button Command="{Binding QuizWindowCommand}" Content="Play!" Width="100" Margin="400,15,0,0"/>
+        <WrapPanel>
+            <Button Command="{Binding PlayCommand}" Content="Play!" Width="100" Margin="400,15,0,0"/>
         </WrapPanel>
     </StackPanel>
 </Window>
