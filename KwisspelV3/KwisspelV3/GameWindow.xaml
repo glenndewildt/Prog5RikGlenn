@@ -6,7 +6,7 @@
 
 
     <StackPanel>
-        <Label Margin="35" Content="{Binding currentVraag.Tekst}"></Label>
+        <TextBlock Margin="35" Text="{Binding SelectedVraag.Tekst}"></TextBlock>
 
     </StackPanel>
 </Window>

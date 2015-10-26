@@ -25,12 +25,6 @@ namespace KwisspelV3.ViewModel
         public ObservableCollection<AntwoordenVM> VraagAntwoorden { get; set; }
         public VragenVM _selectedVraag { get; set; }
 
-        public VragenVM[] gameVragen { get; set; }
-
-        public int counterVraag = 0;
-
-        public VragenVM currentVraag { get; set; }
-
         public AntwoordenVM _selectedAntwoord { get; set; }
 
         public AntwoordenVM antwoord { get; set; }
@@ -78,8 +72,6 @@ namespace KwisspelV3.ViewModel
             SaveAntwoordCommand = new RelayCommand(SaveAntwoord);
             PlayCommand = new RelayCommand(PlayGame);
             SelectedVraag = new VragenVM();
-            currentVraag = new VragenVM();
-            gameVragen = new VragenVM[10];
 
             context = new MyContext();
 
@@ -88,38 +80,24 @@ namespace KwisspelV3.ViewModel
                 .ToList().Select(g => new VragenVM(g));
             Vragen = new ObservableCollection<VragenVM>(vragen);
 
+
             //dit moeten we zien te fixen
             IEnumerable<AntwoordenVM> antwoorden = context.Antwoorden.ToList().Select(a => new AntwoordenVM(a));
             Antwoorden = new ObservableCollection<AntwoordenVM>(antwoorden);
             vraagAntwoorden = Antwoorden.Where(a => a.BijVraagId.Equals(_selectedVraag.Id));
             VraagAntwoorden = new ObservableCollection<AntwoordenVM>(vraagAntwoorden);
 
-
         }
 
         private void PlayGame()
         {
-            GetVraag();
             addGameWindow = new GameWindow();
             addGameWindow.Show();
         }
 
-        private void GetVraag()
-        {
-            int tempCounter = 0;
-            foreach (var e in Vragen)
-            {
-                gameVragen[tempCounter] = e;
-                tempCounter = tempCounter + 1;
-            }
-
-            currentVraag = gameVragen[0];
-            counterVraag++;
-            
-        }
-
         private void SaveVraag()
         {
+            
             Vragen.Add(SelectedVraag);
             context.Vragen.Add(SelectedVraag.vraag);
             context.SaveChanges();
