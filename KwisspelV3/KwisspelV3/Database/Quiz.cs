@@ -9,22 +9,14 @@ using System.Threading.Tasks;
 namespace KwisspelV3.Database
 {
     //Model
-    [Table("Vraag")]
-    public class Vraag
+    [Table("Quiz")]
+    public class Quiz
     {
         [Key]
         public int Id { get; set; }
         public String Tekst { get; set; }
 
-        public int AantalAntwoorden { get; set; }
+        public List<Vraag> Vragen{ get; set; }
 
-
-        [ForeignKey("Categorie")]
-        public int CategorieId { get; set; }
-
-        public virtual VraagCategorie Categorie { get; set; }
-
-
- 
     }
 }

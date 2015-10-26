@@ -85,6 +85,7 @@
     <Compile Include="AddAntwoord.xaml.cs">
       <DependentUpon>AddAntwoord.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Database\Quiz.cs" />
     <Compile Include="GameWindow.xaml.cs">
       <DependentUpon>GameWindow.xaml</DependentUpon>
     </Compile>
@@ -94,6 +95,7 @@
     <Compile Include="ViewModel\AntwoordenVM.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="ViewModel\QuizVM.cs" />
     <Compile Include="ViewModel\VraagCategorienVM.cs" />
     <Compile Include="ViewModel\VragenVM.cs" />
     <Page Include="AddAntwoord.xaml">
