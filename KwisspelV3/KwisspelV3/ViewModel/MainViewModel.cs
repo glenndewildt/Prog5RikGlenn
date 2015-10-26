@@ -21,7 +21,9 @@ namespace KwisspelV3.ViewModel
         MyContext context;
 
         public ObservableCollection<VragenVM> Vragen { get; set; }
-        public ObservableCollection<string> Categorie { get; set; }
+        public ObservableCollection<VraagCategorienVM> Categorie { get; set; }
+
+        public VraagCategorienVM _selectedCategorie { get; set; }
         public ObservableCollection<AntwoordenVM> Antwoorden { get; set; }
         public ObservableCollection<AntwoordenVM> VraagAntwoorden { get; set; }
         public VragenVM _selectedVraag { get; set; }
@@ -32,6 +34,7 @@ namespace KwisspelV3.ViewModel
 
 
         IEnumerable<AntwoordenVM> vraagAntwoorden = null;
+
 
         public int AantalAntwoorden { get; set; }
 
@@ -68,6 +71,21 @@ namespace KwisspelV3.ViewModel
                 }
             }
         }
+        public VraagCategorienVM SelectedCategorie
+        {
+            get { return _selectedCategorie; }
+            set
+            {
+               
+                    _selectedCategorie = value;
+                    IEnumerable<VragenVM> vragen = context.Vragen
+                .ToList().Select(g => new VragenVM(g)).Where(v => v.Categorie.Id.Equals(SelectedCategorie.Id));
+                    Vragen = new ObservableCollection<VragenVM>(vragen);
+
+                    RaisePropertyChanged("Vragen");
+                
+            }
+        }
 
 
         public ICommand ShowAddVraagCommand { get; set; }
@@ -98,8 +116,8 @@ namespace KwisspelV3.ViewModel
                 .ToList().Select(g => new VragenVM(g));
             Vragen = new ObservableCollection<VragenVM>(vragen);
             //Categorie vragen ophalen
-            IEnumerable<string> categorie = context.VraagCategorie.ToList().Select(c => c.Name);
-            Categorie = new ObservableCollection<string>(categorie);
+            IEnumerable<VraagCategorienVM> categorie = context.VraagCategorie.ToList().Select(c => new VraagCategorienVM(c));
+            Categorie = new ObservableCollection<VraagCategorienVM>(categorie);
 
 
             //Antwoorden bij de vragen ophalen
@@ -118,7 +136,7 @@ namespace KwisspelV3.ViewModel
 
         private void SaveVraag()
         {
-            
+            SelectedVraag.Categorie = SelectedCategorie.categorie;
             Vragen.Add(SelectedVraag);
             context.Vragen.Add(SelectedVraag.vraag);
             context.SaveChanges();

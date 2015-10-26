@@ -6,8 +6,8 @@
     <StackPanel>
 
         <WrapPanel>
-            <Label Content ="{Binding SelectedVraag.AantalAntwoorden.Tekst}" Width="291"/>
-            <ComboBox Width="120" ItemsSource="{Binding Categorie}"/>
+            <Label Content ="Vragen beheer" Width="291"/>
+            <ComboBox Width="120" ItemsSource="{Binding Categorie}" DisplayMemberPath="SoortName" SelectedItem="{Binding SelectedCategorie}"/>
             <Button Width="40" Command="{Binding ShowAddVraagCommand}" Content="+"/>
             <Label Content = "Vraag Toevoegen" Width="268"/>
             <Button Command="{Binding DellVraagCommand}" Content="verwijder geselecteerde vraag"/>
@@ -17,17 +17,8 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Vraag" Binding="{Binding Tekst}" Width="300"></DataGridTextColumn>
                 <DataGridTextColumn Header="Aantal antwoorden" Binding="{Binding AantalAntwoorden}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Soort" Binding="{Binding Categorie.Name}" ></DataGridTextColumn>
 
-                <DataGridTemplateColumn >
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate >
-                            <StackPanel Orientation="Horizontal">
-                               
-                              
-                            </StackPanel>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
 
             </DataGrid.Columns>
         </DataGrid>
