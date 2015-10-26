@@ -21,6 +21,7 @@ namespace KwisspelV3.ViewModel
         MyContext context;
 
         public ObservableCollection<VragenVM> Vragen { get; set; }
+        public ObservableCollection<string> Categorie { get; set; }
         public ObservableCollection<AntwoordenVM> Antwoorden { get; set; }
         public ObservableCollection<AntwoordenVM> VraagAntwoorden { get; set; }
         public VragenVM _selectedVraag { get; set; }
@@ -96,10 +97,13 @@ namespace KwisspelV3.ViewModel
             IEnumerable<VragenVM> vragen = context.Vragen
                 .ToList().Select(g => new VragenVM(g));
             Vragen = new ObservableCollection<VragenVM>(vragen);
+            //Categorie vragen ophalen
+            IEnumerable<string> categorie = context.VraagCategorie.ToList().Select(c => c.Name);
+            Categorie = new ObservableCollection<string>(categorie);
 
 
-            //dit moeten we zien te fixen
-            IEnumerable<AntwoordenVM> antwoorden = context.Antwoorden.ToList().Select(a => new AntwoordenVM(a));
+            //Antwoorden bij de vragen ophalen
+            IEnumerable<AntwoordenVM> antwoorden = context.Antwoorden.ToList().Select(a => new AntwoordenVM(a,context));
             Antwoorden = new ObservableCollection<AntwoordenVM>(antwoorden);
             vraagAntwoorden = Antwoorden.Where(a => a.BijVraagId.Equals(_selectedVraag.Id));
             VraagAntwoorden = new ObservableCollection<AntwoordenVM>(vraagAntwoorden);
@@ -188,7 +192,7 @@ namespace KwisspelV3.ViewModel
 
         private void ShowAddAntwoord()
         {
-            antwoord = new AntwoordenVM(new Antwoord());
+            antwoord = new AntwoordenVM(new Antwoord(),context);
             RaisePropertyChanged("SelectedAntwoord");
             addAntwoordWindow = new AddAntwoord();
             addAntwoordWindow.Show();

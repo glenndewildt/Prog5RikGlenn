@@ -6,10 +6,12 @@
     <StackPanel>
 
         <WrapPanel>
-            <Label Content ="Vragen en Antwoord Beheer" Width="515"/>
+            <Label Content ="{Binding SelectedVraag.AantalAntwoorden.Tekst}" Width="291"/>
+            <ComboBox Width="120" ItemsSource="{Binding Categorie}"/>
             <Button Width="40" Command="{Binding ShowAddVraagCommand}" Content="+"/>
             <Label Content = "Vraag Toevoegen" Width="268"/>
             <Button Command="{Binding DellVraagCommand}" Content="verwijder geselecteerde vraag"/>
+            
         </WrapPanel>
         <DataGrid SelectedItem="{Binding SelectedVraag}" AutoGenerateColumns="False" ItemsSource="{Binding Vragen}" CanUserAddRows="False" Height="100" >
             <DataGrid.Columns>
@@ -44,6 +46,7 @@
 
             </DataGrid.Columns>
         </DataGrid>
+        <TextBox Text="{Binding SelectedAntwoord.Tekst}" Width="515" Margin="0,10,0,10"></TextBox>
         <WrapPanel>
             <Button Command="{Binding PlayCommand}" Content="Play!" Width="100" Margin="400,15,0,0"/>
         </WrapPanel>
