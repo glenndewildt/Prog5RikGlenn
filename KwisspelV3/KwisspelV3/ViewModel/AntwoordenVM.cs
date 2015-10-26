@@ -4,18 +4,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using KwisspelV3.Database;
+using System.Data.Entity;
 
 namespace KwisspelV3.ViewModel
 {
     public class AntwoordenVM : ViewModelBase
     {
         public Antwoord antwoord;
+        private MyContext context;
 
         public String Tekst
         {
             get { return antwoord.Tekst; }
             set
             {
+
                 antwoord.Tekst = value;
                 RaisePropertyChanged("Tekst");
             }
@@ -36,7 +39,9 @@ namespace KwisspelV3.ViewModel
             get { return antwoord.GoeieAntwoord; }
             set
             {
+                context.Antwoorden.Find(this.antwoord).GoeieAntwoord = value;
                 antwoord.GoeieAntwoord = value;
+                context.SaveChanges();
                 RaisePropertyChanged("GoeieAntwoord");
             }
         }
@@ -60,16 +65,18 @@ namespace KwisspelV3.ViewModel
             }
         }
 
-        public AntwoordenVM()
+        public AntwoordenVM(MyContext context)
         {
+            this.context = context;
             antwoord = new Antwoord();
 
         }
 
-        public AntwoordenVM(Antwoord antwoord)
+        public AntwoordenVM(Antwoord antwoord, MyContext context)
         {
             // TODO: Complete member initialization
             this.antwoord = antwoord;
+            this.context = context;
         }
 
     }

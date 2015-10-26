@@ -6,26 +6,19 @@
     <StackPanel>
 
         <WrapPanel>
-            <Label Content ="Vragen en Antwoord Beheer" Width="515"/>
+            <Label Content ="Vragen beheer" Width="291"/>
+            <ComboBox Width="120" ItemsSource="{Binding Categorie}" DisplayMemberPath="SoortName" SelectedItem="{Binding SelectedCategorie}"/>
             <Button Width="40" Command="{Binding ShowAddVraagCommand}" Content="+"/>
-            <Label Content = "Vraag Toevoegen" Width="355"/>
-            <Button Command="{Binding DellVraagCommand}" Content="Delete selected vraag"/>
+            <Label Content = "Vraag Toevoegen" Width="268"/>
+            <Button Command="{Binding DellVraagCommand}" Content="verwijder geselecteerde vraag"/>
+            
         </WrapPanel>
         <DataGrid SelectedItem="{Binding SelectedVraag}" AutoGenerateColumns="False" ItemsSource="{Binding Vragen}" CanUserAddRows="False" Height="100" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Vraag" Binding="{Binding Tekst}" Width="300"></DataGridTextColumn>
                 <DataGridTextColumn Header="Aantal antwoorden" Binding="{Binding AantalAntwoorden}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Soort" Binding="{Binding Categorie.Name}" ></DataGridTextColumn>
 
-                <DataGridTemplateColumn >
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate >
-                            <StackPanel Orientation="Horizontal">
-                               
-                              
-                            </StackPanel>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
 
             </DataGrid.Columns>
         </DataGrid>
@@ -33,9 +26,10 @@
         <WrapPanel>
             <TextBox Text="{Binding SelectedVraag.Tekst}" Width="515" Margin="0,10,0,10"> </TextBox>
             <Button Width="40" Command="{Binding ShowAddAntwoordCommand}" Content="+"/>
-            <Label Content ="Antwoord Toevoegen"/>
+            <Label Content ="Antwoord Toevoegen" Width="269"/>
+            <Button Command="{Binding DellAntwoordCommand}" Content="verwijder geselecteerde antwoord"/>
         </WrapPanel>
-        <DataGrid  SelectedItem="{Binding _selectedAntwoord}" AutoGenerateColumns="False" ItemsSource="{Binding VraagAntwoorden}" CanUserAddRows="False" Height="100" >
+        <DataGrid  SelectedItem="{Binding SelectedAntwoord}" AutoGenerateColumns="False" ItemsSource="{Binding VraagAntwoorden}" CanUserAddRows="False" Height="100" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Tekst" Binding="{Binding Tekst}" Width="300"/>
                 <DataGridTextColumn Header="Is Correct" Binding="{Binding BijVraagId}"/>
@@ -43,6 +37,7 @@
 
             </DataGrid.Columns>
         </DataGrid>
+        <TextBox Text="{Binding SelectedAntwoord.Tekst}" Width="515" Margin="0,10,0,10"></TextBox>
         <WrapPanel>
             <Button Command="{Binding PlayCommand}" Content="Play!" Width="100" Margin="400,15,0,0"/>
         </WrapPanel>

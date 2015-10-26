@@ -94,6 +94,7 @@
     <Compile Include="ViewModel\AntwoordenVM.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="ViewModel\VraagCategorienVM.cs" />
     <Compile Include="ViewModel\VragenVM.cs" />
     <Page Include="AddAntwoord.xaml">
       <SubType>Designer</SubType>

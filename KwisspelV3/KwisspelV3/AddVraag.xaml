@@ -10,6 +10,9 @@
 
         <TextBlock Margin="20,10,24,0">Vraag:</TextBlock>
         <TextBox Text="{Binding SelectedVraag.Tekst}" Margin="20,10,24,0" Height="22"></TextBox>
+        <TextBlock Margin="20,10,24,0">Soort Vraag:</TextBlock>
+        <ComboBox Width="120" ItemsSource="{Binding Categorie}" DisplayMemberPath="SoortName" SelectedItem="{Binding SelectedCategorie}"/>
+        
         <Button Command="{Binding SaveVraagCommand}" Content="Vraag Opslaan" Margin="20,10,24,0" RenderTransformOrigin="0.5,0.545"/>
 
     </StackPanel>

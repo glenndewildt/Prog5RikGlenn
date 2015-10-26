@@ -10,6 +10,7 @@
 
         <TextBlock Margin="20,10,24,0">Antwoord:</TextBlock>
         <TextBox Text="{Binding antwoord.Tekst}" Margin="20,10,24,0" Height="22"></TextBox>
+       
         <Button Command="{Binding SaveAntwoordCommand}" Content="Antwoord Opslaan" Margin="20,10,24,0" RenderTransformOrigin="0.5,0.545"/>
 
     </StackPanel>
