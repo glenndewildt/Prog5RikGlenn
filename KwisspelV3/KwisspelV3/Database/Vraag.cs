@@ -16,6 +16,8 @@ namespace KwisspelV3.Database
         public int Id { get; set; }
         public String Tekst { get; set; }
 
+        public int AantalAntwoorden { get; set; }
+
 
         [ForeignKey("Categorie")]
         public int CategorieId { get; set; }

@@ -14,6 +14,10 @@ namespace KwisspelV3.ViewModel
         //Windows
         private AddVraag addVraagWindow;
 
+        private AddAntwoord addAntwoordWindow;
+
+        private GameWindow addGameWindow;
+
         MyContext context;
 
         public ObservableCollection<VragenVM> Vragen { get; set; }
@@ -21,7 +25,14 @@ namespace KwisspelV3.ViewModel
         public ObservableCollection<AntwoordenVM> VraagAntwoorden { get; set; }
         public VragenVM _selectedVraag { get; set; }
 
+        public AntwoordenVM _selectedAntwoord { get; set; }
+
+        public AntwoordenVM antwoord { get; set; }
+
+
         IEnumerable<AntwoordenVM> vraagAntwoorden = null;
+
+        public int AantalAntwoorden { get; set; }
 
         public VragenVM SelectedVraag
         {
@@ -42,15 +53,23 @@ namespace KwisspelV3.ViewModel
                 RaisePropertyChanged("VraagAntwoorden");
             }
         }
-   
+
 
         public ICommand ShowAddVraagCommand { get; set; }
         public ICommand SaveVraagCommand { get; set; }
+
+        public ICommand ShowAddAntwoordCommand { get; set; }
+        public ICommand SaveAntwoordCommand { get; set; }
+
+        public ICommand PlayCommand { get; set; }
 
         public MainViewModel()
         {
             ShowAddVraagCommand = new RelayCommand(ShowAddVraag);
             SaveVraagCommand = new RelayCommand(SaveVraag);
+            ShowAddAntwoordCommand = new RelayCommand(ShowAddAntwoord);
+            SaveAntwoordCommand = new RelayCommand(SaveAntwoord);
+            PlayCommand = new RelayCommand(PlayGame);
             SelectedVraag = new VragenVM();
 
             context = new MyContext();
@@ -69,42 +88,46 @@ namespace KwisspelV3.ViewModel
 
         }
 
+        private void PlayGame()
+        {
+            addGameWindow = new GameWindow();
+            addGameWindow.Show();
+        }
+
         private void SaveVraag()
         {
             
             Vragen.Add(SelectedVraag);
-            SelectedVraag.Id = 12;
             context.Vragen.Add(SelectedVraag.vraag);
             context.SaveChanges();
-            AddAntwoord();
-            //Voeg ook toe aan de database
             addVraagWindow.Hide();
         }
 
-        private void AddAntwoord()
+        private void SaveAntwoord()
         {
-            AntwoordenVM antwoord = new AntwoordenVM(new Antwoord());
             antwoord.BijVraag = SelectedVraag.vraag;
-            antwoord.Tekst = "jajajaj";
-            antwoord.Id = 1;
-
-
+            antwoord.GoeieAntwoord = false;
             Antwoorden.Add(antwoord);
             context.Antwoorden.Add(antwoord.antwoord);
-         
-            //Voeg ook toe aan de database
-        
+            context.SaveChanges();
+            addAntwoordWindow.Hide();
         }
 
 
         private void ShowAddVraag()
         {
             SelectedVraag = new VragenVM();
-            RaisePropertyChanged("SelectedGerecht");
+            RaisePropertyChanged("SelectedVraag");
             addVraagWindow = new AddVraag();
             addVraagWindow.Show();
         }
 
-
+        private void ShowAddAntwoord()
+        {
+            antwoord = new AntwoordenVM(new Antwoord());
+            RaisePropertyChanged("SelectedAntwoord");
+            addAntwoordWindow = new AddAntwoord();
+            addAntwoordWindow.Show();
+        }
     }
 }

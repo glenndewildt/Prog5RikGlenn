@@ -31,6 +31,19 @@ namespace KwisspelV3.ViewModel
             }
         }
 
+        public int AantalAntwoorden
+        {
+            get
+            {
+                return vraag.AantalAntwoorden;
+            }
+            set
+            {
+                vraag.AantalAntwoorden = value;
+                RaisePropertyChanged("Aantal Antwoorden");
+            }
+        }
+
 
 
 
