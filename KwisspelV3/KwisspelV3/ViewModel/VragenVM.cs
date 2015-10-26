@@ -4,12 +4,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using KwisspelV3.Database;
+using System.Windows.Input;
 
 namespace KwisspelV3.ViewModel
 {
     public class VragenVM : ViewModelBase
     {
         public Vraag vraag;
+
+      
 
         public String Tekst
         {
@@ -40,7 +43,7 @@ namespace KwisspelV3.ViewModel
             set
             {
                 vraag.AantalAntwoorden = value;
-                RaisePropertyChanged("Aantal Antwoorden");
+                RaisePropertyChanged("AantalAntwoorden");
             }
         }
 
