@@ -53,10 +53,26 @@ namespace KwisspelV3.ViewModel
             }
         }
 
+        public VragenVM SelectedAntwoord
+        {
+            get { return _selectedVraag; }
+            set
+            {
+                if (SelectedVraag != value)
+                {
+                    _selectedVraag = value;
+
+                    
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
 
         public ICommand ShowAddVraagCommand { get; set; }
         public ICommand SaveVraagCommand { get; set; }
         public ICommand DellVraagCommand { get; set; }
+        public ICommand DellAntwoordCommand { get; set; }
 
         public ICommand ShowAddAntwoordCommand { get; set; }
         public ICommand SaveAntwoordCommand { get; set; }
@@ -68,6 +84,7 @@ namespace KwisspelV3.ViewModel
             ShowAddVraagCommand = new RelayCommand(ShowAddVraag);
             SaveVraagCommand = new RelayCommand(SaveVraag);
             DellVraagCommand = new RelayCommand(DellVraag);
+            DellAntwoordCommand = new RelayCommand(DellAntwoord);
             ShowAddAntwoordCommand = new RelayCommand(ShowAddAntwoord);
             SaveAntwoordCommand = new RelayCommand(SaveAntwoord);
             PlayCommand = new RelayCommand(PlayGame);
@@ -110,6 +127,22 @@ namespace KwisspelV3.ViewModel
             context.Vragen.Remove(SelectedVraag.vraag);
             Vragen.Remove(SelectedVraag);
             context.SaveChanges();
+            SelectedVraag = new VragenVM();
+            if (Antwoorden != null && SelectedVraag != null)//refreshed the selectedAntwoorden collection
+            {
+                vraagAntwoorden = Antwoorden.Where(a => a.BijVraagId.Equals(_selectedVraag.Id));
+                VraagAntwoorden = new ObservableCollection<AntwoordenVM>(vraagAntwoorden);
+            }
+            RaisePropertyChanged("VraagAntwoorden");
+
+            
+        }
+        private void DellAntwoord()
+        {
+
+            
+            Vragen.Remove(SelectedVraag);
+            context.SaveChanges();
             if (Antwoorden != null)//refreshed the selectedAntwoorden collection
             {
                 vraagAntwoorden = Antwoorden.Where(a => a.BijVraagId.Equals(_selectedVraag.Id));
@@ -117,8 +150,6 @@ namespace KwisspelV3.ViewModel
             }
             RaisePropertyChanged("VraagAntwoorden");
 
-        
-            
         }
 
         private void SaveAntwoord()

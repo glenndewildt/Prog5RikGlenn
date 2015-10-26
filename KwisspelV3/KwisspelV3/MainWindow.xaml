@@ -8,8 +8,8 @@
         <WrapPanel>
             <Label Content ="Vragen en Antwoord Beheer" Width="515"/>
             <Button Width="40" Command="{Binding ShowAddVraagCommand}" Content="+"/>
-            <Label Content = "Vraag Toevoegen" Width="355"/>
-            <Button Command="{Binding DellVraagCommand}" Content="Delete selected vraag"/>
+            <Label Content = "Vraag Toevoegen" Width="268"/>
+            <Button Command="{Binding DellVraagCommand}" Content="verwijder geselecteerde vraag"/>
         </WrapPanel>
         <DataGrid SelectedItem="{Binding SelectedVraag}" AutoGenerateColumns="False" ItemsSource="{Binding Vragen}" CanUserAddRows="False" Height="100" >
             <DataGrid.Columns>
@@ -33,7 +33,8 @@
         <WrapPanel>
             <TextBox Text="{Binding SelectedVraag.Tekst}" Width="515" Margin="0,10,0,10"> </TextBox>
             <Button Width="40" Command="{Binding ShowAddAntwoordCommand}" Content="+"/>
-            <Label Content ="Antwoord Toevoegen"/>
+            <Label Content ="Antwoord Toevoegen" Width="269"/>
+            <Button Command="{Binding DellVraagCommand}" Content="verwijder geselecteerde antwoord"/>
         </WrapPanel>
         <DataGrid  SelectedItem="{Binding _selectedAntwoord}" AutoGenerateColumns="False" ItemsSource="{Binding VraagAntwoorden}" CanUserAddRows="False" Height="100" >
             <DataGrid.Columns>
