@@ -53,14 +53,14 @@ namespace KwisspelV3.ViewModel
             }
         }
 
-        public VragenVM SelectedAntwoord
+        public AntwoordenVM SelectedAntwoord
         {
-            get { return _selectedVraag; }
+            get { return _selectedAntwoord; }
             set
             {
-                if (SelectedVraag != value)
+                if (_selectedAntwoord != value)
                 {
-                    _selectedVraag = value;
+                    _selectedAntwoord = value;
 
                     
                     RaisePropertyChanged();
@@ -140,8 +140,12 @@ namespace KwisspelV3.ViewModel
         private void DellAntwoord()
         {
 
-            
-            Vragen.Remove(SelectedVraag);
+            if (SelectedAntwoord != null) {
+                Antwoorden.Remove(SelectedAntwoord);
+                context.Antwoorden.Remove(SelectedAntwoord.antwoord);
+                SelectedVraag.AantalAntwoorden = SelectedVraag.AantalAntwoorden - 1;
+            }
+           
             context.SaveChanges();
             if (Antwoorden != null)//refreshed the selectedAntwoorden collection
             {
@@ -154,21 +158,22 @@ namespace KwisspelV3.ViewModel
 
         private void SaveAntwoord()
         {
-            antwoord.BijVraag = _selectedVraag.vraag;
-            antwoord.GoeieAntwoord = false;
-            Antwoorden.Add(antwoord);
-            SelectedVraag.AantalAntwoorden = SelectedVraag.AantalAntwoorden + 1;
-
-            context.Antwoorden.Add(antwoord.antwoord);
-            context.SaveChanges();
-
-            if (Antwoorden != null)//refreshed the selectedAntwoorden collection
+            if (_selectedVraag.Tekst != null)
             {
-                vraagAntwoorden = Antwoorden.Where(a => a.BijVraagId.Equals(_selectedVraag.Id));
-                VraagAntwoorden = new ObservableCollection<AntwoordenVM>(vraagAntwoorden);
-            }
-            RaisePropertyChanged("VraagAntwoorden");
+                antwoord.BijVraag = _selectedVraag.vraag;
+                Antwoorden.Add(antwoord);
+                SelectedVraag.AantalAntwoorden = SelectedVraag.AantalAntwoorden + 1;
 
+                context.Antwoorden.Add(antwoord.antwoord);
+                context.SaveChanges();
+
+                if (Antwoorden != null)//refreshed the selectedAntwoorden collection
+                {
+                    vraagAntwoorden = Antwoorden.Where(a => a.BijVraagId.Equals(_selectedVraag.Id));
+                    VraagAntwoorden = new ObservableCollection<AntwoordenVM>(vraagAntwoorden);
+                }
+                RaisePropertyChanged("VraagAntwoorden");
+            }
             addAntwoordWindow.Hide(); // hide window
         }
 

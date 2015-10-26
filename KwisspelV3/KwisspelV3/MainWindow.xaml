@@ -34,9 +34,9 @@
             <TextBox Text="{Binding SelectedVraag.Tekst}" Width="515" Margin="0,10,0,10"> </TextBox>
             <Button Width="40" Command="{Binding ShowAddAntwoordCommand}" Content="+"/>
             <Label Content ="Antwoord Toevoegen" Width="269"/>
-            <Button Command="{Binding DellVraagCommand}" Content="verwijder geselecteerde antwoord"/>
+            <Button Command="{Binding DellAntwoordCommand}" Content="verwijder geselecteerde antwoord"/>
         </WrapPanel>
-        <DataGrid  SelectedItem="{Binding _selectedAntwoord}" AutoGenerateColumns="False" ItemsSource="{Binding VraagAntwoorden}" CanUserAddRows="False" Height="100" >
+        <DataGrid  SelectedItem="{Binding SelectedAntwoord}" AutoGenerateColumns="False" ItemsSource="{Binding VraagAntwoorden}" CanUserAddRows="False" Height="100" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Tekst" Binding="{Binding Tekst}" Width="300"/>
                 <DataGridTextColumn Header="Is Correct" Binding="{Binding BijVraagId}"/>
