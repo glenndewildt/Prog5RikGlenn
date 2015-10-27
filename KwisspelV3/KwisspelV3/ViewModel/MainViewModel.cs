@@ -18,6 +18,8 @@ namespace KwisspelV3.ViewModel
 
         private GameWindow addGameWindow;
 
+        private QuizWindow addQuizWindow;
+
         MyContext context;
 
         public ObservableCollection<VragenVM> Vragen { get; set; }
@@ -25,8 +27,11 @@ namespace KwisspelV3.ViewModel
 
         public VraagCategorienVM _selectedCategorie { get; set; }
         public ObservableCollection<AntwoordenVM> Antwoorden { get; set; }
+        public ObservableCollection<QuizVM> Quizen { get; set; }
         public ObservableCollection<AntwoordenVM> VraagAntwoorden { get; set; }
         public VragenVM _selectedVraag { get; set; }
+
+        public QuizVM _selectedQuiz { get; set; }
 
         public AntwoordenVM _selectedAntwoord { get; set; }
 
@@ -58,7 +63,7 @@ namespace KwisspelV3.ViewModel
                         vraagAntwoorden = Antwoorden.Where(a => a.BijVraagId.Equals(_selectedVraag.Id));
                         VraagAntwoorden = new ObservableCollection<AntwoordenVM>(vraagAntwoorden);
                     }
-                    RaisePropertyChanged("VraagAntwoorden");
+                    RaisePropertyChanged("SelectedVraag");
                 }
             }
         }
@@ -93,6 +98,17 @@ namespace KwisspelV3.ViewModel
             }
         }
 
+        public QuizVM SelectedQuiz
+        {
+            get { return _selectedQuiz; }
+            set
+            {
+
+                _selectedQuiz = value;
+                RaisePropertyChanged("SelectedQuiz");
+            }
+        }
+
 
         public ICommand ShowAddVraagCommand { get; set; }
         public ICommand SaveVraagCommand { get; set; }
@@ -100,9 +116,13 @@ namespace KwisspelV3.ViewModel
         public ICommand DellAntwoordCommand { get; set; }
 
         public ICommand ShowAddAntwoordCommand { get; set; }
+
+        public ICommand AddVraagToQuizCommand { get; set; }
         public ICommand SaveAntwoordCommand { get; set; }
 
         public ICommand PlayCommand { get; set; }
+
+        public ICommand QuizWindowCommand { get; set; }
 
         public MainViewModel()
         {
@@ -112,6 +132,8 @@ namespace KwisspelV3.ViewModel
             DellAntwoordCommand = new RelayCommand(DellAntwoord);
             ShowAddAntwoordCommand = new RelayCommand(ShowAddAntwoord);
             SaveAntwoordCommand = new RelayCommand(SaveAntwoord);
+            AddVraagToQuizCommand = new RelayCommand(AddVraagToQuiz);
+            QuizWindowCommand = new RelayCommand(ShowQuizWindow);
             PlayCommand = new RelayCommand(PlayGame);
             SelectedVraag = new VragenVM();
             currentVraag = new VragenVM();
@@ -123,10 +145,14 @@ namespace KwisspelV3.ViewModel
             IEnumerable<VragenVM> vragen = context.Vragen
                 .ToList().Select(g => new VragenVM(g));
             Vragen = new ObservableCollection<VragenVM>(vragen);
+
             //Categorie vragen ophalen
             IEnumerable<VraagCategorienVM> categorie = context.VraagCategorie.ToList().Select(c => new VraagCategorienVM(c));
             Categorie = new ObservableCollection<VraagCategorienVM>(categorie);
 
+            // Quizen ophalen
+            IEnumerable<QuizVM> quiz = context.Quiz.ToList().Select(c => new QuizVM(c));
+            Quizen = new ObservableCollection<QuizVM>(quiz);
 
             //Antwoorden bij de vragen ophalen
             IEnumerable<AntwoordenVM> antwoorden = context.Antwoorden.ToList().Select(a => new AntwoordenVM(a,context));
@@ -143,6 +169,7 @@ namespace KwisspelV3.ViewModel
             addGameWindow.Show();
         }
 
+<<<<<<< HEAD
         private void GetVraag()
         {
             int tempCounter = 0;
@@ -156,6 +183,32 @@ namespace KwisspelV3.ViewModel
             counterVraag++;
         }
 
+=======
+        private void ShowQuizWindow()
+        {
+            addQuizWindow = new QuizWindow();
+            addQuizWindow.Show();
+        }
+
+        private void AddVraagToQuiz()
+        {
+            if (SelectedQuiz != null) {
+                if (_selectedVraag != null) {
+                    if (SelectedQuiz.quiz.Vragen == null) {
+                        SelectedQuiz.quiz.Vragen = new List<Vraag>();
+                        
+                    }
+                    SelectedQuiz.quiz.Vragen.Add(SelectedVraag.vraag);
+                  
+                    context.Quiz.Where(q => q.Id.Equals(SelectedQuiz.Id)).First().Vragen = SelectedQuiz.quiz.Vragen;
+                }
+            }
+            context.SaveChanges();
+            RaisePropertyChanged("VragenLijst");
+        }
+
+
+>>>>>>> origin/master
         private void SaveVraag()
         {
             SelectedVraag.Categorie = SelectedCategorie.categorie;
