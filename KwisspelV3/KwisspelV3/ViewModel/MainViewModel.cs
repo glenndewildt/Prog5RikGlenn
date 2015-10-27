@@ -5,6 +5,7 @@ using System.Windows.Input;
 using KwisspelV3.Database;
 using System.Linq;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace KwisspelV3.ViewModel
 {
@@ -39,11 +40,11 @@ namespace KwisspelV3.ViewModel
 
         public AntwoordenVM _selectedAntwoord { get; set; }
 
-        public VragenVM[] gameVragen { get; set; }
+        public AntwoordenVM[] gameAntwoorden { get; set; }
 
         public int counterVraag = 0;
 
-        public VragenVM currentVraag { get; set; }
+        public Vraag currentVraag { get; set; }
 
         public AntwoordenVM antwoord { get; set; }
 
@@ -156,8 +157,8 @@ namespace KwisspelV3.ViewModel
             AddQuizCommand = new RelayCommand(SaveQuiz);
             PlayCommand = new RelayCommand(PlayGame);
             SelectedVraag = new VragenVM();
-            currentVraag = new VragenVM();
-            gameVragen = new VragenVM[10];
+            currentVraag = new Vraag();
+            gameAntwoorden = new AntwoordenVM[10];
 
             context = new MyContext();
 
@@ -189,6 +190,7 @@ namespace KwisspelV3.ViewModel
 
         private void PlayGame()
         {
+            counterVraag = 0;
             GetVraag();
             addGameWindow = new GameWindow();
             addGameWindow.Show();
@@ -196,15 +198,20 @@ namespace KwisspelV3.ViewModel
 
         private void GetVraag()
         {
+            
+
+            currentVraag = SelectedQuiz.VragenLijst[counterVraag];
+            counterVraag++;
+
+            vraagAntwoorden = Antwoorden.Where(a => a.BijVraagId.Equals(currentVraag.Id));
+            VraagAntwoorden = new ObservableCollection<AntwoordenVM>(vraagAntwoorden);
+
             int tempCounter = 0;
-            foreach (var e in Vragen)
+            foreach (var e in VraagAntwoorden)
             {
-                gameVragen[tempCounter] = e;
+                gameAntwoorden[tempCounter] = e;
                 tempCounter = tempCounter + 1;
             }
-
-            currentVraag = gameVragen[0];
-            counterVraag++;
         }
 
         private void ShowQuizWindow()
@@ -227,8 +234,8 @@ namespace KwisspelV3.ViewModel
                 }
             }
             context.SaveChanges();
-            RaisePropertyChanged("VragenLijst");
-            RaisePropertyChanged("Quizen");
+            RaisePropertyChanged();
+
 
         }
 
@@ -260,7 +267,7 @@ namespace KwisspelV3.ViewModel
 
             context.SaveChanges();
             RaisePropertyChanged("Quizen");
-            RaisePropertyChanged("SelectedQuiz.VragenLijst");
+            RaisePropertyChanged("SelectedQuiz");
 
         }
 

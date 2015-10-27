@@ -32,8 +32,10 @@
         <DataGrid  SelectedItem="{Binding SelectedAntwoord}" AutoGenerateColumns="False" ItemsSource="{Binding VraagAntwoorden}" CanUserAddRows="False" Height="100" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Tekst" Binding="{Binding Tekst}" Width="300"/>
-                <DataGridTextColumn Header="Is Correct" Binding="{Binding Id}"/>
-                <DataGridTextColumn Header="Id" Binding="{Binding Name}"/>
+                <DataGridCheckBoxColumn Header="Is Correct" Binding="{Binding GoeieAntwoord}"/>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="GoeieAntwoord" Binding="{Binding GoeieAntwoord}"/>
+
 
             </DataGrid.Columns>
         </DataGrid>

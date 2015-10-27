@@ -39,8 +39,8 @@ namespace KwisspelV3.ViewModel
             get { return antwoord.GoeieAntwoord; }
             set
             {
-                context.Antwoorden.Find(this.antwoord).GoeieAntwoord = value;
                 antwoord.GoeieAntwoord = value;
+                context.Antwoorden.Find(this.antwoord.Id).GoeieAntwoord = value;
                 context.SaveChanges();
                 RaisePropertyChanged("GoeieAntwoord");
             }
@@ -62,6 +62,7 @@ namespace KwisspelV3.ViewModel
             {
                 antwoord.BijvraagId = value;
                 RaisePropertyChanged("Categorie");
+
             }
         }
 
