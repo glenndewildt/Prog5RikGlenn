@@ -31,8 +31,8 @@
         <DataGrid Name="Eerste" SelectedItem="{Binding SelectedVraag}" AutoGenerateColumns="False" ItemsSource="{Binding Vragen}" CanUserAddRows="False" Height="100" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Tekst" Binding="{Binding Tekst}" Width="300"/>
-                <DataGridTextColumn Header="Soort" />
-                <DataGridTextColumn Header="Id" />
+                <DataGridTextColumn Header="Soort" Binding="{Binding Categorie.Name}" />
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
 
             </DataGrid.Columns>
         </DataGrid>
@@ -41,8 +41,8 @@
         <DataGrid  Name="Tweede" SelectedItem="{Binding SelectedVraagUitQuiz}" AutoGenerateColumns="False" ItemsSource="{Binding SelectedQuiz.VragenLijst}" CanUserAddRows="False" Height="100" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Tekst" Binding="{Binding Tekst}" Width="300"/>
-                <DataGridTextColumn Header="Soort" />
-                <DataGridTextColumn Header="Id" />
+                <DataGridTextColumn Header="Soort" Binding="{Binding Categorie.Name}" />
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
 
             </DataGrid.Columns>
         </DataGrid>

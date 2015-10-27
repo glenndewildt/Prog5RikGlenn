@@ -20,7 +20,7 @@ namespace KwisspelV3.ViewModel
             set
             {
                 quiz.Tekst = value;
-                RaisePropertyChanged("Name");
+                RaisePropertyChanged(null);
             }
         }
 
@@ -30,7 +30,7 @@ namespace KwisspelV3.ViewModel
             set
             {
                 quiz.Id = value;
-                RaisePropertyChanged("Id");
+                RaisePropertyChanged(null);
             }
         }
 
@@ -40,7 +40,7 @@ namespace KwisspelV3.ViewModel
             set
             {
                 quiz.Vragen= value;
-                RaisePropertyChanged("VragenLijst");
+                RaisePropertyChanged(null);
             }
         }
 

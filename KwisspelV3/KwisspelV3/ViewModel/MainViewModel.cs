@@ -71,10 +71,13 @@ namespace KwisspelV3.ViewModel
                     {
                         vraagAntwoorden = Antwoorden.Where(a => a.BijVraagId.Equals(_selectedVraag.Id));
                         VraagAntwoorden = new ObservableCollection<AntwoordenVM>(vraagAntwoorden);
+                        RaisePropertyChanged(null);
                     }
-                    RaisePropertyChanged("SelectedVraag");
+                  
                 }
+              
             }
+
         }
 
         public AntwoordenVM SelectedAntwoord
@@ -102,7 +105,7 @@ namespace KwisspelV3.ViewModel
                 .ToList().Select(g => new VragenVM(g)).Where(v => v.Categorie.Id.Equals(SelectedCategorie.Id));
                     Vragen = new ObservableCollection<VragenVM>(vragen);
 
-                    RaisePropertyChanged("Vragen");
+                    RaisePropertyChanged(null);
                 
             }
         }
@@ -114,7 +117,7 @@ namespace KwisspelV3.ViewModel
             {
 
                 _selectedQuiz = value;
-                RaisePropertyChanged("SelectedQuiz");
+                RaisePropertyChanged(null);
             }
         }
 
@@ -203,6 +206,7 @@ namespace KwisspelV3.ViewModel
         private void PlayEndGame()
         {
             addEndGameWindow = new EndGameWindow();
+            counterVraag = 0;
             addEndGameWindow.Show();
         }
 
@@ -241,11 +245,12 @@ namespace KwisspelV3.ViewModel
                     SelectedQuiz.quiz.Vragen.Add(SelectedVraag.vraag);
                   
                     context.Quizen.Where(q => q.Id.Equals(SelectedQuiz.Id)).First().Vragen = SelectedQuiz.quiz.Vragen;
+                    context.SaveChanges();
                 }
             }
-            context.SaveChanges();
-            RaisePropertyChanged();
-
+           
+            RaisePropertyChanged(null);
+            
 
         }
 
@@ -276,8 +281,8 @@ namespace KwisspelV3.ViewModel
             }
 
             context.SaveChanges();
-            RaisePropertyChanged("Quizen");
-            RaisePropertyChanged("SelectedQuiz");
+            RaisePropertyChanged(null);
+            
 
         }
 
@@ -293,7 +298,7 @@ namespace KwisspelV3.ViewModel
                 vraagAntwoorden = Antwoorden.Where(a => a.BijVraagId.Equals(_selectedVraag.Id));
                 VraagAntwoorden = new ObservableCollection<AntwoordenVM>(vraagAntwoorden);
             }
-            RaisePropertyChanged("VraagAntwoorden");
+            RaisePropertyChanged(null);
    
         }
         private void DellAntwoord()
@@ -311,7 +316,7 @@ namespace KwisspelV3.ViewModel
                 vraagAntwoorden = Antwoorden.Where(a => a.BijVraagId.Equals(_selectedVraag.Id));
                 VraagAntwoorden = new ObservableCollection<AntwoordenVM>(vraagAntwoorden);
             }
-            RaisePropertyChanged("VraagAntwoorden");
+            RaisePropertyChanged(null);
 
         }
 
@@ -325,7 +330,7 @@ namespace KwisspelV3.ViewModel
             }
 
             context.SaveChanges();
-            RaisePropertyChanged("Quizen");
+            RaisePropertyChanged(null);
 
         }
 
@@ -345,7 +350,7 @@ namespace KwisspelV3.ViewModel
                     vraagAntwoorden = Antwoorden.Where(a => a.BijVraagId.Equals(_selectedVraag.Id));
                     VraagAntwoorden = new ObservableCollection<AntwoordenVM>(vraagAntwoorden);
                 }
-                RaisePropertyChanged("VraagAntwoorden");
+                RaisePropertyChanged(null);
             }
             addAntwoordWindow.Hide(); // hide window
         }
@@ -354,7 +359,7 @@ namespace KwisspelV3.ViewModel
         private void ShowAddVraag()
         {
             SelectedVraag = new VragenVM();
-            RaisePropertyChanged("SelectedVraag");
+            RaisePropertyChanged(null);
             addVraagWindow = new AddVraag();
             addVraagWindow.Show();
         }
@@ -362,7 +367,7 @@ namespace KwisspelV3.ViewModel
         private void ShowAddAntwoord()
         {
             antwoord = new AntwoordenVM(new Antwoord(),context);
-            RaisePropertyChanged("SelectedAntwoord");
+            RaisePropertyChanged(null);
             addAntwoordWindow = new AddAntwoord();
             addAntwoordWindow.Show();
         }
@@ -370,7 +375,7 @@ namespace KwisspelV3.ViewModel
         private void ShowAddQuiz()
         {
             addQuiz = new QuizVM();
-            RaisePropertyChanged("AddQuiz");
+            RaisePropertyChanged(null);
             addAddQuizWindow = new AddQuiz();
             addAddQuizWindow.Show();
         }
