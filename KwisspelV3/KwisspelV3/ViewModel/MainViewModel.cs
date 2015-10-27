@@ -31,6 +31,8 @@ namespace KwisspelV3.ViewModel
         public ObservableCollection<AntwoordenVM> Antwoorden { get; set; }
         public ObservableCollection<QuizVM> Quizen { get; set; }
         public ObservableCollection<AntwoordenVM> VraagAntwoorden { get; set; }
+        public Vraag SelectedVraagUitQuiz { get; set; }
+
         public VragenVM _selectedVraag { get; set; }
 
         public QuizVM _selectedQuiz { get; set; }
@@ -52,6 +54,7 @@ namespace KwisspelV3.ViewModel
 
 
         public int AantalAntwoorden { get; set; }
+
 
         public VragenVM SelectedVraag
         {
@@ -134,6 +137,8 @@ namespace KwisspelV3.ViewModel
 
         public ICommand AddQuizCommand { get; set; }
 
+        public ICommand DellVraagFromQuizCommand { get; set; } 
+
 
         public MainViewModel()
         {
@@ -141,6 +146,7 @@ namespace KwisspelV3.ViewModel
             SaveVraagCommand = new RelayCommand(SaveVraag);
             DellVraagCommand = new RelayCommand(DellVraag);
             DellAntwoordCommand = new RelayCommand(DellAntwoord);
+            DellVraagFromQuizCommand = new RelayCommand(DellVraagFromQuiz);
             DellQuizCommand = new RelayCommand(DellQuiz);
             ShowAddAntwoordCommand = new RelayCommand(ShowAddAntwoord);
             SaveAntwoordCommand = new RelayCommand(SaveAntwoord);
@@ -222,6 +228,8 @@ namespace KwisspelV3.ViewModel
             }
             context.SaveChanges();
             RaisePropertyChanged("VragenLijst");
+            RaisePropertyChanged("Quizen");
+
         }
 
 
@@ -240,6 +248,19 @@ namespace KwisspelV3.ViewModel
             context.Quizen.Add(addQuiz.quiz);
             context.SaveChanges();
             addAddQuizWindow.Hide();
+
+        }
+        private void DellVraagFromQuiz()
+        {
+            if (SelectedVraagUitQuiz != null)
+            {
+                SelectedQuiz.quiz.Vragen.Remove(SelectedVraagUitQuiz);
+
+            }
+
+            context.SaveChanges();
+            RaisePropertyChanged("Quizen");
+            RaisePropertyChanged("SelectedQuiz.VragenLijst");
 
         }
 
