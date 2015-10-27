@@ -30,6 +30,12 @@ namespace KwisspelV3.ViewModel
 
         public AntwoordenVM _selectedAntwoord { get; set; }
 
+        public VragenVM[] gameVragen { get; set; }
+
+        public int counterVraag = 0;
+
+        public VragenVM currentVraag { get; set; }
+
         public AntwoordenVM antwoord { get; set; }
 
 
@@ -108,6 +114,8 @@ namespace KwisspelV3.ViewModel
             SaveAntwoordCommand = new RelayCommand(SaveAntwoord);
             PlayCommand = new RelayCommand(PlayGame);
             SelectedVraag = new VragenVM();
+            currentVraag = new VragenVM();
+            gameVragen = new VragenVM[10];
 
             context = new MyContext();
 
@@ -130,8 +138,22 @@ namespace KwisspelV3.ViewModel
 
         private void PlayGame()
         {
+            GetVraag();
             addGameWindow = new GameWindow();
             addGameWindow.Show();
+        }
+
+        private void GetVraag()
+        {
+            int tempCounter = 0;
+            foreach (var e in Vragen)
+            {
+                gameVragen[tempCounter] = e;
+                tempCounter = tempCounter + 1;
+            }
+
+            currentVraag = gameVragen[0];
+            counterVraag++;
         }
 
         private void SaveVraag()
