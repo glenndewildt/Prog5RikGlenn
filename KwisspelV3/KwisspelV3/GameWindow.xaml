@@ -7,8 +7,8 @@
 
     <StackPanel>
         <TextBlock Margin="35" Text="{Binding currentVraag.Tekst}"></TextBlock>
-        
-        <Button Margin="10" Content="{Binding gameAntwoorden[0].Tekst }" Command="{Binding Antwoord1}"></Button>
+
+        <Button Margin="10" Content="{Binding gameAntwoorden[0].Tekst }" Command="{Binding eersteAntwoord}"></Button>
 
         <Button Margin="10" Content="{Binding gameAntwoorden[1].Tekst }" Command="{Binding Antwoord2}"></Button>
 

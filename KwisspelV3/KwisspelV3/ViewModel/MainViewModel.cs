@@ -23,6 +23,8 @@ namespace KwisspelV3.ViewModel
 
         private AddQuiz addAddQuizWindow;
 
+        private EndGameWindow addEndGameWindow;
+
         MyContext context;
 
         public ObservableCollection<VragenVM> Vragen { get; set; }
@@ -50,12 +52,11 @@ namespace KwisspelV3.ViewModel
 
         public QuizVM addQuiz { get; set; }
 
-
         IEnumerable<AntwoordenVM> vraagAntwoorden = null;
-
 
         public int AantalAntwoorden { get; set; }
 
+        public int totaalPunten { get; set; }
 
         public VragenVM SelectedVraag
         {
@@ -138,7 +139,9 @@ namespace KwisspelV3.ViewModel
 
         public ICommand AddQuizCommand { get; set; }
 
-        public ICommand DellVraagFromQuizCommand { get; set; } 
+        public ICommand DellVraagFromQuizCommand { get; set; }
+
+        public ICommand eersteAntwoord { get; set; } 
 
 
         public MainViewModel()
@@ -149,6 +152,7 @@ namespace KwisspelV3.ViewModel
             DellAntwoordCommand = new RelayCommand(DellAntwoord);
             DellVraagFromQuizCommand = new RelayCommand(DellVraagFromQuiz);
             DellQuizCommand = new RelayCommand(DellQuiz);
+            eersteAntwoord = new RelayCommand(EersteAntwoord);
             ShowAddAntwoordCommand = new RelayCommand(ShowAddAntwoord);
             SaveAntwoordCommand = new RelayCommand(SaveAntwoord);
             AddVraagToQuizCommand = new RelayCommand(AddVraagToQuiz);
@@ -159,6 +163,7 @@ namespace KwisspelV3.ViewModel
             SelectedVraag = new VragenVM();
             currentVraag = new Vraag();
             gameAntwoorden = new AntwoordenVM[10];
+            totaalPunten = 0;
 
             context = new MyContext();
 
@@ -190,10 +195,15 @@ namespace KwisspelV3.ViewModel
 
         private void PlayGame()
         {
-            counterVraag = 0;
             GetVraag();
             addGameWindow = new GameWindow();
             addGameWindow.Show();
+        }
+
+        private void PlayEndGame()
+        {
+            addEndGameWindow = new EndGameWindow();
+            addEndGameWindow.Show();
         }
 
         private void GetVraag()
@@ -363,6 +373,26 @@ namespace KwisspelV3.ViewModel
             RaisePropertyChanged("AddQuiz");
             addAddQuizWindow = new AddQuiz();
             addAddQuizWindow.Show();
+        }
+
+        private void EersteAntwoord()
+        {
+            if (gameAntwoorden[0].GoeieAntwoord)
+            {
+                totaalPunten++;
+                
+            }
+            addGameWindow.Hide();
+
+            if (SelectedQuiz.VragenLijst.Count > counterVraag)
+            {
+                PlayGame();
+            }
+            else
+            {
+                PlayEndGame();
+            }
+            
         }
     }
 }

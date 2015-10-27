@@ -1,0 +1,14 @@
+﻿<Window x:Class="KwisspelV3.EndGameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="EndGameWindow" Height="300" Width="300"
+    DataContext="{Binding Main, Source={ StaticResource Locator} }">
+
+
+    <StackPanel>
+        <TextBlock Margin="35">Einde van het spel!</TextBlock>
+        <TextBlock Margin="35,0,0,0">Behaalde punten:</TextBlock>
+        <TextBlock Margin="35,0,0,0" Text="{Binding totaalPunten}"></TextBlock>
+
+    </StackPanel>
+</Window>
