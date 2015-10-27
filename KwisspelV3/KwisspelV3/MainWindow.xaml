@@ -29,11 +29,11 @@
             <Label Content ="Antwoord Toevoegen" Width="269"/>
             <Button Command="{Binding DellAntwoordCommand}" Content="verwijder geselecteerde antwoord"/>
         </WrapPanel>
-        <DataGrid  SelectedItem="{Binding SelectedAntwoord}" AutoGenerateColumns="False" ItemsSource="{Binding VraagAntwoorden}" CanUserAddRows="False" Height="100" >
+        <DataGrid  SelectedItem="{Binding SelectedAntwoord}" AutoGenerateColumns="False" ItemsSource="{Binding SelectedQuiz.VragenLijst}" CanUserAddRows="False" Height="100" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Tekst" Binding="{Binding Tekst}" Width="300"/>
-                <DataGridTextColumn Header="Is Correct" Binding="{Binding BijVraagId}"/>
-                <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Is Correct" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Id" Binding="{Binding Name}"/>
 
             </DataGrid.Columns>
         </DataGrid>

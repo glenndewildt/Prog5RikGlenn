@@ -16,7 +16,7 @@ namespace KwisspelV3.Database
         public int Id { get; set; }
         public String Tekst { get; set; }
 
-        public List<Vraag> Vragen{ get; set; }
-
+        public List<Vraag> Vragen { get; set; }
+       
     }
 }

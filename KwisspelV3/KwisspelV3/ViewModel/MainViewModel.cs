@@ -57,7 +57,7 @@ namespace KwisspelV3.ViewModel
                         vraagAntwoorden = Antwoorden.Where(a => a.BijVraagId.Equals(_selectedVraag.Id));
                         VraagAntwoorden = new ObservableCollection<AntwoordenVM>(vraagAntwoorden);
                     }
-                    RaisePropertyChanged("VraagAntwoorden");
+                    RaisePropertyChanged("SelectedVraag");
                 }
             }
         }
@@ -99,7 +99,7 @@ namespace KwisspelV3.ViewModel
             {
 
                 _selectedQuiz = value;
-
+                RaisePropertyChanged("SelectedQuiz");
             }
         }
 
@@ -110,6 +110,8 @@ namespace KwisspelV3.ViewModel
         public ICommand DellAntwoordCommand { get; set; }
 
         public ICommand ShowAddAntwoordCommand { get; set; }
+
+        public ICommand AddVraagToQuizCommand { get; set; }
         public ICommand SaveAntwoordCommand { get; set; }
 
         public ICommand PlayCommand { get; set; }
@@ -124,6 +126,7 @@ namespace KwisspelV3.ViewModel
             DellAntwoordCommand = new RelayCommand(DellAntwoord);
             ShowAddAntwoordCommand = new RelayCommand(ShowAddAntwoord);
             SaveAntwoordCommand = new RelayCommand(SaveAntwoord);
+            AddVraagToQuizCommand = new RelayCommand(AddVraagToQuiz);
             QuizWindowCommand = new RelayCommand(ShowQuizWindow);
             PlayCommand = new RelayCommand(PlayGame);
             SelectedVraag = new VragenVM();
@@ -162,6 +165,21 @@ namespace KwisspelV3.ViewModel
             addQuizWindow = new QuizWindow();
             addQuizWindow.Show();
         }
+
+        private void AddVraagToQuiz()
+        {
+            if (SelectedQuiz != null) {
+                if (_selectedVraag != null) {
+                    if (SelectedQuiz.quiz.Vragen == null) {
+                        SelectedQuiz.quiz.Vragen = new List<Vraag>();
+                       
+                    }
+                    SelectedQuiz.quiz.Vragen.Add(SelectedVraag.vraag);
+                }
+            }
+            RaisePropertyChanged("VragenLijst");
+        }
+
 
         private void SaveVraag()
         {

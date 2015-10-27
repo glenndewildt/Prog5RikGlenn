@@ -36,7 +36,7 @@ namespace KwisspelV3.ViewModel
 
         public List<Vraag> VragenLijst
         {
-            get { return quiz.Vragen; }
+            get { RaisePropertyChanged("VragenLijst"); return quiz.Vragen; }
             set
             {
                 quiz.Vragen= value;
