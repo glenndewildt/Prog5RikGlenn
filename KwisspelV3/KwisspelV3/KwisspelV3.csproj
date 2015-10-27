@@ -85,6 +85,9 @@
     <Compile Include="AddAntwoord.xaml.cs">
       <DependentUpon>AddAntwoord.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddQuiz.xaml.cs">
+      <DependentUpon>AddQuiz.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Database\Quiz.cs" />
     <Compile Include="GameWindow.xaml.cs">
       <DependentUpon>GameWindow.xaml</DependentUpon>
@@ -102,6 +105,10 @@
     <Compile Include="ViewModel\VraagCategorienVM.cs" />
     <Compile Include="ViewModel\VragenVM.cs" />
     <Page Include="AddAntwoord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddQuiz.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

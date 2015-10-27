@@ -20,6 +20,8 @@ namespace KwisspelV3.ViewModel
 
         private QuizWindow addQuizWindow;
 
+        private AddQuiz addAddQuizWindow;
+
         MyContext context;
 
         public ObservableCollection<VragenVM> Vragen { get; set; }
@@ -42,6 +44,8 @@ namespace KwisspelV3.ViewModel
         public VragenVM currentVraag { get; set; }
 
         public AntwoordenVM antwoord { get; set; }
+
+        public QuizVM addQuiz { get; set; }
 
 
         IEnumerable<AntwoordenVM> vraagAntwoorden = null;
@@ -115,6 +119,8 @@ namespace KwisspelV3.ViewModel
         public ICommand DellVraagCommand { get; set; }
         public ICommand DellAntwoordCommand { get; set; }
 
+        public ICommand DellQuizCommand { get; set; } 
+
         public ICommand ShowAddAntwoordCommand { get; set; }
 
         public ICommand AddVraagToQuizCommand { get; set; }
@@ -124,16 +130,24 @@ namespace KwisspelV3.ViewModel
 
         public ICommand QuizWindowCommand { get; set; }
 
+        public ICommand AddQuizWindowCommand { get; set; }
+
+        public ICommand AddQuizCommand { get; set; }
+
+
         public MainViewModel()
         {
             ShowAddVraagCommand = new RelayCommand(ShowAddVraag);
             SaveVraagCommand = new RelayCommand(SaveVraag);
             DellVraagCommand = new RelayCommand(DellVraag);
             DellAntwoordCommand = new RelayCommand(DellAntwoord);
+            DellQuizCommand = new RelayCommand(DellQuiz);
             ShowAddAntwoordCommand = new RelayCommand(ShowAddAntwoord);
             SaveAntwoordCommand = new RelayCommand(SaveAntwoord);
             AddVraagToQuizCommand = new RelayCommand(AddVraagToQuiz);
             QuizWindowCommand = new RelayCommand(ShowQuizWindow);
+            AddQuizWindowCommand = new RelayCommand(ShowAddQuiz);
+            AddQuizCommand = new RelayCommand(SaveQuiz);
             PlayCommand = new RelayCommand(PlayGame);
             SelectedVraag = new VragenVM();
             currentVraag = new VragenVM();
@@ -147,11 +161,16 @@ namespace KwisspelV3.ViewModel
             Vragen = new ObservableCollection<VragenVM>(vragen);
 
             //Categorie vragen ophalen
+            VraagCategorienVM vraagCat = new VraagCategorienVM();
+            vraagCat.Id = 1;
+            vraagCat.SoortName = "Java Vragen";
+
             IEnumerable<VraagCategorienVM> categorie = context.VraagCategorie.ToList().Select(c => new VraagCategorienVM(c));
             Categorie = new ObservableCollection<VraagCategorienVM>(categorie);
+            Categorie.Add(vraagCat);
 
             // Quizen ophalen
-            IEnumerable<QuizVM> quiz = context.Quiz.ToList().Select(c => new QuizVM(c));
+            IEnumerable<QuizVM> quiz = context.Quizen.ToList().Select(c => new QuizVM(c));
             Quizen = new ObservableCollection<QuizVM>(quiz);
 
             //Antwoorden bij de vragen ophalen
@@ -169,7 +188,6 @@ namespace KwisspelV3.ViewModel
             addGameWindow.Show();
         }
 
-<<<<<<< HEAD
         private void GetVraag()
         {
             int tempCounter = 0;
@@ -183,7 +201,6 @@ namespace KwisspelV3.ViewModel
             counterVraag++;
         }
 
-=======
         private void ShowQuizWindow()
         {
             addQuizWindow = new QuizWindow();
@@ -200,7 +217,7 @@ namespace KwisspelV3.ViewModel
                     }
                     SelectedQuiz.quiz.Vragen.Add(SelectedVraag.vraag);
                   
-                    context.Quiz.Where(q => q.Id.Equals(SelectedQuiz.Id)).First().Vragen = SelectedQuiz.quiz.Vragen;
+                    context.Quizen.Where(q => q.Id.Equals(SelectedQuiz.Id)).First().Vragen = SelectedQuiz.quiz.Vragen;
                 }
             }
             context.SaveChanges();
@@ -208,7 +225,6 @@ namespace KwisspelV3.ViewModel
         }
 
 
->>>>>>> origin/master
         private void SaveVraag()
         {
             SelectedVraag.Categorie = SelectedCategorie.categorie;
@@ -216,6 +232,15 @@ namespace KwisspelV3.ViewModel
             context.Vragen.Add(SelectedVraag.vraag);
             context.SaveChanges();
             addVraagWindow.Hide();
+        }
+
+        private void SaveQuiz()
+        {
+            Quizen.Add(addQuiz);
+            context.Quizen.Add(addQuiz.quiz);
+            context.SaveChanges();
+            addAddQuizWindow.Hide();
+
         }
 
         private void DellVraag()
@@ -231,8 +256,7 @@ namespace KwisspelV3.ViewModel
                 VraagAntwoorden = new ObservableCollection<AntwoordenVM>(vraagAntwoorden);
             }
             RaisePropertyChanged("VraagAntwoorden");
-
-            
+   
         }
         private void DellAntwoord()
         {
@@ -250,6 +274,20 @@ namespace KwisspelV3.ViewModel
                 VraagAntwoorden = new ObservableCollection<AntwoordenVM>(vraagAntwoorden);
             }
             RaisePropertyChanged("VraagAntwoorden");
+
+        }
+
+        private void DellQuiz()
+        {
+
+            if (SelectedQuiz != null)
+            {
+                Quizen.Remove(SelectedQuiz);
+                
+            }
+
+            context.SaveChanges();
+            RaisePropertyChanged("Quizen");
 
         }
 
@@ -289,6 +327,14 @@ namespace KwisspelV3.ViewModel
             RaisePropertyChanged("SelectedAntwoord");
             addAntwoordWindow = new AddAntwoord();
             addAntwoordWindow.Show();
+        }
+
+        private void ShowAddQuiz()
+        {
+            addQuiz = new QuizVM();
+            RaisePropertyChanged("AddQuiz");
+            addAddQuizWindow = new AddQuiz();
+            addAddQuizWindow.Show();
         }
     }
 }

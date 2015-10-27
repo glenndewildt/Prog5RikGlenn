@@ -1,0 +1,17 @@
+﻿<Window x:Class="KwisspelV3.AddQuiz"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AddQuiz" Height="300" Width="300"
+        DataContext="{Binding Main, Source={ StaticResource Locator} }">
+
+
+    <StackPanel>
+            <TextBlock>Add Quiz</TextBlock>
+
+            <TextBlock Margin="20,10,24,0">Quiz Naam:</TextBlock>
+            <TextBox Text="{Binding addQuiz.Name}" Margin="20,10,24,0" Height="22"></TextBox>
+
+            <Button Command="{Binding AddQuizCommand}" Content="Quiz Opslaan" Margin="20,10,24,0" RenderTransformOrigin="0.5,0.545"/>
+
+        </StackPanel>
+</Window>

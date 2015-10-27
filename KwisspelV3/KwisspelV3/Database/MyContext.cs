@@ -19,6 +19,8 @@ namespace KwisspelV3
 
         public DbSet<Antwoord> Antwoorden { get; set; }
         public DbSet<VraagCategorie> VraagCategorie { get; set; }
-        public DbSet<Quiz> Quiz { get; set; }
+        public DbSet<Quiz> Quizen { get; set; }
+
+
     }
 }

@@ -7,9 +7,9 @@
 
         <WrapPanel>
             <Label Content ="Quiz beheer" Width="512"/>
-            <Button Width="40" Command="{Binding ShowAddVraagCommand}" Content="+"/>
+            <Button Width="40" Command="{Binding AddQuizWindowCommand}" Content="+"/>
             <Label Content = "Quiz Toevoegen" Width="279"/>
-            <Button Command="{Binding DellVraagCommand}" Content="verwijder geselecteerde Quiz"/>
+            <Button Command="{Binding DellQuizCommand}" Content="verwijder geselecteerde Quiz"/>
             
         </WrapPanel>
         <DataGrid SelectedItem="{Binding SelectedQuiz}" AutoGenerateColumns="False" ItemsSource="{Binding Quizen}" CanUserAddRows="False" Height="100" >
