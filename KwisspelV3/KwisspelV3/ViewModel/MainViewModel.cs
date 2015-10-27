@@ -172,11 +172,14 @@ namespace KwisspelV3.ViewModel
                 if (_selectedVraag != null) {
                     if (SelectedQuiz.quiz.Vragen == null) {
                         SelectedQuiz.quiz.Vragen = new List<Vraag>();
-                       
+                        
                     }
                     SelectedQuiz.quiz.Vragen.Add(SelectedVraag.vraag);
+                  
+                    context.Quiz.Where(q => q.Id.Equals(SelectedQuiz.Id)).First().Vragen = SelectedQuiz.quiz.Vragen;
                 }
             }
+            context.SaveChanges();
             RaisePropertyChanged("VragenLijst");
         }
 
