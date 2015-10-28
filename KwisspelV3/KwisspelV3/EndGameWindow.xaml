@@ -7,7 +7,7 @@
 
     <StackPanel>
         <TextBlock Margin="35">Einde van het spel!</TextBlock>
-        <TextBlock Margin="35,0,0,0">Behaalde punten:</TextBlock>
+        <TextBlock Margin="35,0,0,0">Correcte antwoorden:</TextBlock>
         <TextBlock Margin="35,0,0,0" Text="{Binding totaalPunten}"></TextBlock>
 
     </StackPanel>
