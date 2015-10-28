@@ -10,11 +10,11 @@
 
         <Button Margin="10" Content="{Binding gameAntwoorden[0].Tekst }" Command="{Binding eersteAntwoord}"></Button>
 
-        <Button Margin="10" Content="{Binding gameAntwoorden[1].Tekst }" Command="{Binding Antwoord2}"></Button>
+        <Button Margin="10" Content="{Binding gameAntwoorden[1].Tekst }" Command="{Binding tweedeAntwoord}"></Button>
 
-        <Button Margin="10" Content="{Binding gameAntwoorden[2].Tekst }" Command="{Binding Antwoord3}"></Button>
+        <Button Margin="10" Content="{Binding gameAntwoorden[2].Tekst }" Command="{Binding derdeAntwoord}"></Button>
 
-        <Button Margin="10" Content="{Binding gameAntwoorden[3].Tekst }" Command="{Binding Antwoord4}"></Button>
+        <Button Margin="10" Content="{Binding gameAntwoorden[3].Tekst }" Command="{Binding vierdeAntwoord}"></Button>
 
     </StackPanel>
 </Window>

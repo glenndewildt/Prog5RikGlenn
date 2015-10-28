@@ -145,7 +145,14 @@ namespace KwisspelV3.ViewModel
 
         public ICommand DellVraagFromQuizCommand { get; set; }
 
-        public ICommand eersteAntwoord { get; set; } 
+        public ICommand eersteAntwoord { get; set; }
+
+        public ICommand tweedeAntwoord { get; set; }
+
+        public ICommand derdeAntwoord { get; set; }
+
+        public ICommand vierdeAntwoord { get; set; } 
+
 
 
         public MainViewModel()
@@ -157,6 +164,9 @@ namespace KwisspelV3.ViewModel
             DellVraagFromQuizCommand = new RelayCommand(DellVraagFromQuiz);
             DellQuizCommand = new RelayCommand(DellQuiz);
             eersteAntwoord = new RelayCommand(EersteAntwoord);
+            tweedeAntwoord = new RelayCommand(TweedeAntwoord);
+            derdeAntwoord = new RelayCommand(DerdeAntwoord);
+            vierdeAntwoord = new RelayCommand(VierdeAntwoord);
             ShowAddAntwoordCommand = new RelayCommand(ShowAddAntwoord);
             SaveAntwoordCommand = new RelayCommand(SaveAntwoord);
             AddVraagToQuizCommand = new RelayCommand(AddVraagToQuiz);
@@ -426,7 +436,63 @@ namespace KwisspelV3.ViewModel
             {
                 PlayEndGame();
             }
-            
+        }
+
+        private void TweedeAntwoord()
+        {
+            if (gameAntwoorden[1].GoeieAntwoord)
+            {
+                totaalPunten++;
+
+            }
+            addGameWindow.Hide();
+
+            if (SelectedQuiz.VragenLijst.Count > counterVraag)
+            {
+                PlayGame();
+            }
+            else
+            {
+                PlayEndGame();
+            }
+        }
+
+        private void DerdeAntwoord()
+        {
+            if (gameAntwoorden[2].GoeieAntwoord)
+            {
+                totaalPunten++;
+
+            }
+            addGameWindow.Hide();
+
+            if (SelectedQuiz.VragenLijst.Count > counterVraag)
+            {
+                PlayGame();
+            }
+            else
+            {
+                PlayEndGame();
+            }
+        }
+
+        private void VierdeAntwoord()
+        {
+            if (gameAntwoorden[3].GoeieAntwoord)
+            {
+                totaalPunten++;
+
+            }
+            addGameWindow.Hide();
+
+            if (SelectedQuiz.VragenLijst.Count > counterVraag)
+            {
+                PlayGame();
+            }
+            else
+            {
+                PlayEndGame();
+            }
         }
     }
 }
