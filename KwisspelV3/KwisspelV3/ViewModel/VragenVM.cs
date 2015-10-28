@@ -11,7 +11,7 @@ namespace KwisspelV3.ViewModel
     public class VragenVM : ViewModelBase
     {
         public Vraag vraag;
-
+        private MyContext content;
       
 
         public String Tekst
@@ -19,7 +19,9 @@ namespace KwisspelV3.ViewModel
             get { return vraag.Tekst; }
             set
             {
+                content.Vragen.Where(v => v.Id.Equals(vraag.Id)).ToList().First().Tekst = value; 
                 vraag.Tekst = value;
+                content.SaveChanges();
                 RaisePropertyChanged("Tekst");
             }
         }
@@ -42,6 +44,7 @@ namespace KwisspelV3.ViewModel
             }
             set
             {
+                
                 vraag.AantalAntwoorden = value;
                 RaisePropertyChanged("AantalAntwoorden");
             }
@@ -62,15 +65,16 @@ namespace KwisspelV3.ViewModel
         }
 
 
-        public VragenVM()
+        public VragenVM(MyContext content)
         {
+            this.content = content;
             vraag = new Vraag();
             Categorie = new VraagCategorie();
         }
 
-        public VragenVM(Vraag gerecht)
+        public VragenVM(Vraag gerecht, MyContext content)
         {
-            // TODO: Complete member initialization
+            this.content = content;
             this.vraag = gerecht;
         }
 

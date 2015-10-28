@@ -103,7 +103,7 @@ namespace KwisspelV3.ViewModel
                
                     _selectedCategorie = value;
                     IEnumerable<VragenVM> vragen = context.Vragen
-                .ToList().Select(g => new VragenVM(g)).Where(v => v.Categorie.Id.Equals(SelectedCategorie.Id));
+                .ToList().Select(g => new VragenVM(g, context)).Where(v => v.Categorie.Id.Equals(SelectedCategorie.Id));
                     Vragen = new ObservableCollection<VragenVM>(vragen);
 
                     RaisePropertyChanged(null);
@@ -175,7 +175,7 @@ namespace KwisspelV3.ViewModel
             AddQuizCommand = new RelayCommand(SaveQuiz);
             PlayCommand = new RelayCommand(PlayGame);
             SelectedQuiz = new QuizVM();
-            SelectedVraag = new VragenVM();
+            SelectedVraag = new VragenVM(context);
             currentVraag = new Vraag();
             gameAntwoorden = new AntwoordenVM[10];
             totaalPunten = 0;
@@ -184,7 +184,7 @@ namespace KwisspelV3.ViewModel
 
             //1. ophalen vragen
             IEnumerable<VragenVM> vragen = context.Vragen
-                .ToList().Select(g => new VragenVM(g));
+                .ToList().Select(g => new VragenVM(g, context));
             Vragen = new ObservableCollection<VragenVM>(vragen);
 
             //Categorie vragen ophalen
@@ -319,7 +319,7 @@ namespace KwisspelV3.ViewModel
             context.Vragen.Remove(SelectedVraag.vraag);
             Vragen.Remove(SelectedVraag);
             context.SaveChanges();
-            SelectedVraag = new VragenVM();
+            SelectedVraag = new VragenVM(context);
             if (Antwoorden != null && SelectedVraag != null)//refreshed the selectedAntwoorden collection
             {
                 vraagAntwoorden = Antwoorden.Where(a => a.BijVraagId.Equals(_selectedVraag.Id));
@@ -396,7 +396,7 @@ namespace KwisspelV3.ViewModel
 
         private void ShowAddVraag()
         {
-            SelectedVraag = new VragenVM();
+            SelectedVraag = new VragenVM(context);
             RaisePropertyChanged(null);
             addVraagWindow = new AddVraag();
             addVraagWindow.Show();

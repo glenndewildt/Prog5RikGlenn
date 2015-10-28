@@ -18,8 +18,10 @@ namespace KwisspelV3.ViewModel
             get { return antwoord.Tekst; }
             set
             {
-
+   
+                context.Antwoorden.Where(a => a.Id.Equals(antwoord.Id)).ToList().First().Tekst = value;
                 antwoord.Tekst = value;
+                context.SaveChanges();
                 RaisePropertyChanged("Tekst");
             }
         }
