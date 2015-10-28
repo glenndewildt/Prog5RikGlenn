@@ -18,7 +18,7 @@
                 <DataGridTextColumn Header="Vraag" Binding="{Binding Tekst}" Width="300"></DataGridTextColumn>
                 <DataGridTextColumn Header="Aantal antwoorden" Binding="{Binding AantalAntwoorden}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Soort" Binding="{Binding Categorie.Name}" ></DataGridTextColumn>
-                <DataGridComboBoxColumn Header="Soort"  Visibility="Visible" SelectedValuePath="{Binding Categorie/SoortName}" SelectedItemBinding="{Binding Categorie}" SelectedValueBinding="{Binding Categorie.Name}" TextBinding="{Binding Categorie.Name}"/>
+                <DataGridComboBoxColumn Header="Soort"  ItemsSource="{Binding Categorie}" DisplayMemberPath="SoortName"/>
             </DataGrid.Columns>
         </DataGrid>
      

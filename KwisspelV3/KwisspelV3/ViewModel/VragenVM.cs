@@ -19,9 +19,13 @@ namespace KwisspelV3.ViewModel
             get { return vraag.Tekst; }
             set
             {
-                content.Vragen.Where(v => v.Id.Equals(vraag.Id)).ToList().First().Tekst = value; 
+                if(vraag.Tekst != null){
+                    content.Vragen.Where(v => v.Id.Equals(vraag.Id)).ToList().First().Tekst = value; 
+                    content.SaveChanges();
+                }
+      
                 vraag.Tekst = value;
-                content.SaveChanges();
+               
                 RaisePropertyChanged("Tekst");
             }
         }
