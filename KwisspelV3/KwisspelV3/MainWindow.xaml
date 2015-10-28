@@ -6,7 +6,7 @@
     <StackPanel>
 
         <WrapPanel>
-            <Label Content ="Vragen beheer" Width="291"/>
+            <Label Content ="Vragen beheer" Width="364"/>
             <ComboBox Width="120" ItemsSource="{Binding Categorie}" DisplayMemberPath="SoortName" SelectedItem="{Binding SelectedCategorie}"/>
             <Button Width="40" Command="{Binding ShowAddVraagCommand}" Content="+"/>
             <Label Content = "Vraag Toevoegen" Width="268"/>

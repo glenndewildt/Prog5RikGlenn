@@ -14,6 +14,11 @@ namespace KwisspelV3.ViewModel
     public class MainViewModel : ViewModelBase
     {
         //Windows
+
+        public string Vis1;
+        public string Vis2;
+        public string Vis3;
+        public string Vis4;
         private AddVraag addVraagWindow;
 
         private AddAntwoord addAntwoordWindow;
@@ -102,11 +107,7 @@ namespace KwisspelV3.ViewModel
             {
                
                     _selectedCategorie = value;
-                    IEnumerable<VragenVM> vragen = context.Vragen
-                .ToList().Select(g => new VragenVM(g, context)).Where(v => v.Categorie.Id.Equals(SelectedCategorie.Id));
-                    Vragen = new ObservableCollection<VragenVM>(vragen);
 
-                    RaisePropertyChanged(null);
                 
             }
         }
@@ -163,10 +164,10 @@ namespace KwisspelV3.ViewModel
             DellAntwoordCommand = new RelayCommand(DellAntwoord);
             DellVraagFromQuizCommand = new RelayCommand(DellVraagFromQuiz);
             DellQuizCommand = new RelayCommand(DellQuiz);
-            eersteAntwoord = new RelayCommand(EersteAntwoord);
-            tweedeAntwoord = new RelayCommand(TweedeAntwoord);
-            derdeAntwoord = new RelayCommand(DerdeAntwoord);
-            vierdeAntwoord = new RelayCommand(VierdeAntwoord);
+            eersteAntwoord = new RelayCommand(EersteAntwoord, CanEersteAntwoord);
+            tweedeAntwoord = new RelayCommand(TweedeAntwoord, CanTweedeAntwoord);
+            derdeAntwoord = new RelayCommand(DerdeAntwoord, CanDerdeAntwoord);
+            vierdeAntwoord = new RelayCommand(VierdeAntwoord, CanVierdeAntwoord);
             ShowAddAntwoordCommand = new RelayCommand(ShowAddAntwoord);
             SaveAntwoordCommand = new RelayCommand(SaveAntwoord);
             AddVraagToQuizCommand = new RelayCommand(AddVraagToQuiz);
@@ -257,6 +258,9 @@ namespace KwisspelV3.ViewModel
         {
             if (SelectedQuiz != null) {
                 if (_selectedVraag != null) {
+                    if (SelectedQuiz.VragenLijst == null) {
+                        SelectedQuiz.VragenLijst = new List<Vraag>();
+                    }
                     if (SelectedQuiz.VragenLijst.Count <= 10)
                     {
                         if (SelectedQuiz.quiz.Vragen == null)
@@ -284,11 +288,24 @@ namespace KwisspelV3.ViewModel
 
         private void SaveVraag()
         {
-            SelectedVraag.Categorie = SelectedCategorie.categorie;
-            Vragen.Add(SelectedVraag);
-            context.Vragen.Add(SelectedVraag.vraag);
-            context.SaveChanges();
-            addVraagWindow.Hide();
+            
+            if (SelectedCategorie != null)
+            {
+                if (SelectedVraag.Tekst == null || SelectedVraag.Tekst == "")
+                {
+                    MessageBox.Show("Vul de vraag in het vraagveld in", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+                SelectedVraag.Categorie = SelectedCategorie.categorie;
+                Vragen.Add(SelectedVraag);
+                context.Vragen.Add(SelectedVraag.vraag);
+                context.SaveChanges();
+                addVraagWindow.Hide();
+            }
+            else {
+                SelectedVraag.Tekst = null;
+                MessageBox.Show("Een Vraag moet een categorie hebben", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void SaveQuiz()
@@ -436,6 +453,19 @@ namespace KwisspelV3.ViewModel
                 PlayEndGame();
             }
         }
+        public bool CanEersteAntwoord()
+        {
+
+            if (gameAntwoorden[0] != null)
+            {
+                Vis2 = "Visble";
+                RaisePropertyChanged("Vis1");
+                return true;
+            }
+            Vis2 = "Hidden";
+            RaisePropertyChanged("Vis1");
+            return false;
+        } 
 
         private void TweedeAntwoord()
         {
@@ -456,6 +486,19 @@ namespace KwisspelV3.ViewModel
             }
         }
 
+        public bool CanTweedeAntwoord()
+        {
+
+            if (gameAntwoorden[1] != null) {
+                Vis2 = "Visble";
+                RaisePropertyChanged("Vis2");
+                return true;
+            }
+            Vis2 = "Hidden";
+            RaisePropertyChanged("Vis2");
+            return false;
+        }   
+
         private void DerdeAntwoord()
         {
             if (gameAntwoorden[2].GoeieAntwoord)
@@ -475,6 +518,20 @@ namespace KwisspelV3.ViewModel
             }
         }
 
+        public bool CanDerdeAntwoord()
+        {
+
+            if (gameAntwoorden[2] != null)
+            {
+                Vis2 = "Visble";
+                RaisePropertyChanged("Vis3");
+                return true;
+            }
+            Vis2 = "Hidden";
+            RaisePropertyChanged("Vis3");
+            return false;
+        } 
+
         private void VierdeAntwoord()
         {
             if (gameAntwoorden[3].GoeieAntwoord)
@@ -493,5 +550,18 @@ namespace KwisspelV3.ViewModel
                 PlayEndGame();
             }
         }
+        public bool CanVierdeAntwoord()
+        {
+
+            if (gameAntwoorden[3] != null)
+            {
+                Vis2 = "Visble";
+                RaisePropertyChanged("Vis4");
+                return true;
+            }
+            Vis2 = "Hidden";
+            RaisePropertyChanged("Vis4");
+            return false;
+        } 
     }
 }

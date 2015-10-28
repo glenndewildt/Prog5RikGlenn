@@ -19,7 +19,7 @@ namespace KwisspelV3.ViewModel
             get { return vraag.Tekst; }
             set
             {
-                if(vraag.Tekst != null){
+                if(vraag.Tekst != null || vraag.Tekst == ""){
                     content.Vragen.Where(v => v.Id.Equals(vraag.Id)).ToList().First().Tekst = value; 
                     content.SaveChanges();
                 }

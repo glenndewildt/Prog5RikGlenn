@@ -8,13 +8,13 @@
     <StackPanel>
         <TextBlock Margin="35" Text="{Binding currentVraag.Tekst}"></TextBlock>
 
-        <Button Margin="10" Content="{Binding gameAntwoorden[0].Tekst }" Command="{Binding eersteAntwoord}"></Button>
+        <Button Margin="10" Content="{Binding gameAntwoorden[0].Tekst }" Command="{Binding eersteAntwoord}" Visibility="{Binding Vis1}" ></Button>
 
-        <Button Margin="10" Content="{Binding gameAntwoorden[1].Tekst }" Command="{Binding tweedeAntwoord}"></Button>
+        <Button Margin="10" Content="{Binding gameAntwoorden[1].Tekst }" Command="{Binding tweedeAntwoord}" Visibility="{Binding Vis2}"></Button>
 
-        <Button Margin="10" Content="{Binding gameAntwoorden[2].Tekst }" Command="{Binding derdeAntwoord}"></Button>
+        <Button Margin="10" Content="{Binding gameAntwoorden[2].Tekst }" Command="{Binding derdeAntwoord}" Visibility="{Binding Vis3}"></Button>
 
-        <Button Margin="10" Content="{Binding gameAntwoorden[3].Tekst }" Command="{Binding vierdeAntwoord}"></Button>
+        <Button Margin="10" Content="{Binding gameAntwoorden[3].Tekst }" Command="{Binding vierdeAntwoord}" Visibility="{Binding Vis3}"></Button>
 
     </StackPanel>
 </Window>
