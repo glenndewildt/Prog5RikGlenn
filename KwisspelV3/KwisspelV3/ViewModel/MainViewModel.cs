@@ -6,6 +6,7 @@ using KwisspelV3.Database;
 using System.Linq;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Windows;
 
 namespace KwisspelV3.ViewModel
 {
@@ -341,23 +342,29 @@ namespace KwisspelV3.ViewModel
 
         private void SaveAntwoord()
         {
-            if (_selectedVraag.Tekst != null)
-            {
-                antwoord.BijVraag = _selectedVraag.vraag;
-                Antwoorden.Add(antwoord);
-                SelectedVraag.AantalAntwoorden = SelectedVraag.AantalAntwoorden + 1;
-
-                context.Antwoorden.Add(antwoord.antwoord);
-                context.SaveChanges();
-
-                if (Antwoorden != null)//refreshed the selectedAntwoorden collection
+            if(SelectedVraag.AantalAntwoorden <= 4){
+                if (_selectedVraag.Tekst != null)
                 {
-                    vraagAntwoorden = Antwoorden.Where(a => a.BijVraagId.Equals(_selectedVraag.Id));
-                    VraagAntwoorden = new ObservableCollection<AntwoordenVM>(vraagAntwoorden);
+                    antwoord.BijVraag = _selectedVraag.vraag;
+                    Antwoorden.Add(antwoord);
+                    SelectedVraag.AantalAntwoorden = SelectedVraag.AantalAntwoorden + 1;
+
+                    context.Antwoorden.Add(antwoord.antwoord);
+                    context.SaveChanges();
+
+                    if (Antwoorden != null)//refreshed the selectedAntwoorden collection
+                    {
+                        vraagAntwoorden = Antwoorden.Where(a => a.BijVraagId.Equals(_selectedVraag.Id));
+                        VraagAntwoorden = new ObservableCollection<AntwoordenVM>(vraagAntwoorden);
+                    }
+                    RaisePropertyChanged(null);
                 }
-                RaisePropertyChanged(null);
+                addAntwoordWindow.Hide(); // hide window
             }
-            addAntwoordWindow.Hide(); // hide window
+            else
+            {
+                MessageBox.Show("Een vraag mag maar vier antwoorden bevatten!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
 
