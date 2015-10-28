@@ -194,7 +194,6 @@ namespace KwisspelV3.ViewModel
 
             IEnumerable<VraagCategorienVM> categorie = context.VraagCategorie.ToList().Select(c => new VraagCategorienVM(c));
             Categorie = new ObservableCollection<VraagCategorienVM>(categorie);
-            Categorie.Add(vraagCat);
 
             // Quizen ophalen
             IEnumerable<QuizVM> quiz = context.Quizen.ToList().Select(c => new QuizVM(c));
