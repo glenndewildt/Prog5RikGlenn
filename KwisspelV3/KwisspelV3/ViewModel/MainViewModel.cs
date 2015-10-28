@@ -201,11 +201,15 @@ namespace KwisspelV3.ViewModel
         private void PlayGame()
         {
             if(SelectedQuiz.VragenLijst != null){
-                if (SelectedQuiz.VragenLijst.Count > 0)
+                if (SelectedQuiz.VragenLijst.Count > 1)
                 {
                     GetVraag();
                     addGameWindow = new GameWindow();
                     addGameWindow.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Quiz moet minstens 2 vragen bevatten!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
         }
@@ -255,6 +259,10 @@ namespace KwisspelV3.ViewModel
 
                         context.Quizen.Where(q => q.Id.Equals(SelectedQuiz.Id)).First().Vragen = SelectedQuiz.quiz.Vragen;
                         context.SaveChanges();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Een Quiz mag maar 10 antwoorden bevatten!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     }
                 }
             }
@@ -362,12 +370,17 @@ namespace KwisspelV3.ViewModel
                         VraagAntwoorden = new ObservableCollection<AntwoordenVM>(vraagAntwoorden);
                     }
                     RaisePropertyChanged(null);
+                    addAntwoordWindow.Hide(); // hide window
+
                 }
-                addAntwoordWindow.Hide(); // hide window
+                else
+                {
+                    MessageBox.Show("Een vraag mag niet leeg zijn", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
             else
             {
-                MessageBox.Show("Een vraag mag maar vier antwoorden bevatten!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Een vraag mag maar 4 antwoorden bevatten!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
