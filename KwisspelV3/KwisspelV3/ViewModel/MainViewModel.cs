@@ -164,10 +164,10 @@ namespace KwisspelV3.ViewModel
             DellAntwoordCommand = new RelayCommand(DellAntwoord);
             DellVraagFromQuizCommand = new RelayCommand(DellVraagFromQuiz);
             DellQuizCommand = new RelayCommand(DellQuiz);
-            eersteAntwoord = new RelayCommand(EersteAntwoord, CanEersteAntwoord);
-            tweedeAntwoord = new RelayCommand(TweedeAntwoord, CanTweedeAntwoord);
-            derdeAntwoord = new RelayCommand(DerdeAntwoord, CanDerdeAntwoord);
-            vierdeAntwoord = new RelayCommand(VierdeAntwoord, CanVierdeAntwoord);
+            eersteAntwoord = new RelayCommand(EersteAntwoord,CanEersteAntwoord);
+            tweedeAntwoord = new RelayCommand(TweedeAntwoord,CanTweedeAntwoord);
+            derdeAntwoord = new RelayCommand(DerdeAntwoord,CanDerdeAntwoord);
+            vierdeAntwoord = new RelayCommand(VierdeAntwoord,CanVierdeAntwoord);
             ShowAddAntwoordCommand = new RelayCommand(ShowAddAntwoord);
             SaveAntwoordCommand = new RelayCommand(SaveAntwoord);
             AddVraagToQuizCommand = new RelayCommand(AddVraagToQuiz);
@@ -175,7 +175,7 @@ namespace KwisspelV3.ViewModel
             AddQuizWindowCommand = new RelayCommand(ShowAddQuiz);
             AddQuizCommand = new RelayCommand(SaveQuiz);
             PlayCommand = new RelayCommand(PlayGame);
-            SelectedQuiz = new QuizVM();
+            SelectedQuiz = new QuizVM( context);
             SelectedVraag = new VragenVM(context);
             currentVraag = new Vraag();
             gameAntwoorden = new AntwoordenVM[10];
@@ -197,7 +197,7 @@ namespace KwisspelV3.ViewModel
             Categorie = new ObservableCollection<VraagCategorienVM>(categorie);
 
             // Quizen ophalen
-            IEnumerable<QuizVM> quiz = context.Quizen.ToList().Select(c => new QuizVM(c));
+            IEnumerable<QuizVM> quiz = context.Quizen.ToList().Select(c => new QuizVM(c, context));
             Quizen = new ObservableCollection<QuizVM>(quiz);
 
             //Antwoorden bij de vragen ophalen
@@ -209,7 +209,9 @@ namespace KwisspelV3.ViewModel
         }
 
         private void PlayGame()
+        
         {
+
             if(SelectedQuiz.VragenLijst != null){
                 if (SelectedQuiz.VragenLijst.Count > 1)
                 {
@@ -230,10 +232,13 @@ namespace KwisspelV3.ViewModel
             addEndGameWindow.Show();
             counterVraag = 0;
             totaalPunten = 0;
+            counterVraag = 0;
+            
         }
 
         private void GetVraag()
         {
+            
             currentVraag = SelectedQuiz.VragenLijst[counterVraag];
             counterVraag++;
 
@@ -310,6 +315,10 @@ namespace KwisspelV3.ViewModel
 
         private void SaveQuiz()
         {
+            if (addQuiz.Name == null || addQuiz.Name == "") {
+                MessageBox.Show("Een quiz moet een naam hebben", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
             Quizen.Add(addQuiz);
             context.Quizen.Add(addQuiz.quiz);
             context.SaveChanges();
@@ -369,8 +378,9 @@ namespace KwisspelV3.ViewModel
 
             if (SelectedQuiz != null)
             {
+                context.Quizen.Remove(SelectedQuiz.quiz);
                 Quizen.Remove(SelectedQuiz);
-                
+
             }
 
             context.SaveChanges();
@@ -380,9 +390,14 @@ namespace KwisspelV3.ViewModel
 
         private void SaveAntwoord()
         {
-            if(SelectedVraag.AantalAntwoorden <= 4){
+            if(SelectedVraag.AantalAntwoorden < 4){
                 if (_selectedVraag.Tekst != null)
                 {
+                    if (antwoord.Tekst == null || antwoord.Tekst == "")
+                    {
+                        MessageBox.Show("Een vraag moet tekst bevatten!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        return;
+                    }
                     antwoord.BijVraag = _selectedVraag.vraag;
                     Antwoorden.Add(antwoord);
                     SelectedVraag.AantalAntwoorden = SelectedVraag.AantalAntwoorden + 1;
@@ -401,7 +416,7 @@ namespace KwisspelV3.ViewModel
                 }
                 else
                 {
-                    MessageBox.Show("Een vraag mag niet leeg zijn", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("er moet een vraag gesleceteerd zijn", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             else
@@ -429,7 +444,7 @@ namespace KwisspelV3.ViewModel
 
         private void ShowAddQuiz()
         {
-            addQuiz = new QuizVM();
+            addQuiz = new QuizVM(context);
             RaisePropertyChanged(null);
             addAddQuizWindow = new AddQuiz();
             addAddQuizWindow.Show();
@@ -456,7 +471,7 @@ namespace KwisspelV3.ViewModel
         public bool CanEersteAntwoord()
         {
 
-            if (gameAntwoorden[0] != null)
+            if (gameAntwoorden[0].Tekst != null)
             {
                 Vis2 = "Visble";
                 RaisePropertyChanged("Vis1");
@@ -489,7 +504,8 @@ namespace KwisspelV3.ViewModel
         public bool CanTweedeAntwoord()
         {
 
-            if (gameAntwoorden[1] != null) {
+            if (gameAntwoorden[1].Tekst != null)
+            {
                 Vis2 = "Visble";
                 RaisePropertyChanged("Vis2");
                 return true;
@@ -521,7 +537,7 @@ namespace KwisspelV3.ViewModel
         public bool CanDerdeAntwoord()
         {
 
-            if (gameAntwoorden[2] != null)
+            if (gameAntwoorden[2].Tekst != null)
             {
                 Vis2 = "Visble";
                 RaisePropertyChanged("Vis3");
@@ -553,7 +569,7 @@ namespace KwisspelV3.ViewModel
         public bool CanVierdeAntwoord()
         {
 
-            if (gameAntwoorden[3] != null)
+            if (gameAntwoorden[3].Tekst != null)
             {
                 Vis2 = "Visble";
                 RaisePropertyChanged("Vis4");
