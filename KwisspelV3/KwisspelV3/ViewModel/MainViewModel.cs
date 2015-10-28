@@ -163,6 +163,7 @@ namespace KwisspelV3.ViewModel
             AddQuizWindowCommand = new RelayCommand(ShowAddQuiz);
             AddQuizCommand = new RelayCommand(SaveQuiz);
             PlayCommand = new RelayCommand(PlayGame);
+            SelectedQuiz = new QuizVM();
             SelectedVraag = new VragenVM();
             currentVraag = new Vraag();
             gameAntwoorden = new AntwoordenVM[10];
@@ -198,22 +199,26 @@ namespace KwisspelV3.ViewModel
 
         private void PlayGame()
         {
-            GetVraag();
-            addGameWindow = new GameWindow();
-            addGameWindow.Show();
+            if(SelectedQuiz.VragenLijst != null){
+                if (SelectedQuiz.VragenLijst.Count > 0)
+                {
+                    GetVraag();
+                    addGameWindow = new GameWindow();
+                    addGameWindow.Show();
+                }
+            }
         }
 
         private void PlayEndGame()
         {
             addEndGameWindow = new EndGameWindow();
-            counterVraag = 0;
             addEndGameWindow.Show();
+            counterVraag = 0;
+            totaalPunten = 0;
         }
 
         private void GetVraag()
         {
-            
-
             currentVraag = SelectedQuiz.VragenLijst[counterVraag];
             counterVraag++;
 
