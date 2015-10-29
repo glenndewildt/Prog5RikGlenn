@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2015-10-27T22:05:48" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Boolean' -  (PrimitiveType)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'e469366a-1625-44ff-8c76-83916c87eb7c' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'eaef0a69-87cb-4b85-ab61-414b4541d0c9' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen' -  (ModelStoreModel)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Medium" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::BaseTrack' -  (Class)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::BaseTrack::BaseTrack' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::BaseTrack::Content' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::BaseTrack::IsEmpty' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::BaseTrack::Next' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::BaseTrack::Place' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::BaseTrack::Place::mc' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::BaseTrack::Previous' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::BaseTrack::ToChar' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::BaseTrack::ToChar::rawChar' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Medium" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Board' -  (Class)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Board::Board' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Board::FirstRow' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Board::GameOver' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Board::Move' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Board::OccupiedTracks' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Board::RandomGenerator' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Board::Score' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Board::Ship' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Board::Spawn' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Board::Switches' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Board::SwitchSwitch' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Board::SwitchSwitch::switchNum' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Board::Tick' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Board::Warehouses' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Medium" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::BoardLoader' -  (Class)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::BoardLoader::board' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::BoardLoader::BoardLoader' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::BoardLoader::BoardLoader::board' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::BoardLoader::connectTracks' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::BoardLoader::connectTracks::x' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::BoardLoader::connectTracks::y' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::BoardLoader::getAtPosition' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::BoardLoader::getAtPosition::x' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::BoardLoader::getAtPosition::y' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::BoardLoader::initializeBoard' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Medium" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Controller' -  (Class)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Controller::app_started' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Controller::bLoader' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Controller::board' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Controller::Controller' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Controller::game_started' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Controller::GameInput' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Controller::GameInput::inputKey' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Controller::inputValid' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Controller::inputView' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Controller::MainMenuInput' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Controller::MainMenuInput::inputKey' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Controller::outputView' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Controller::Start' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Controller::Tick' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Controller::Tick::e' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Controller::Tick::source' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Controller::timer' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Controller::TIMER_DEFAULT_INTERVAL' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Controller::timerInterval' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Medium" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::ConvergingSwitch' -  (Class)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::ConvergingSwitch::ConvergingSwitch' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::ConvergingSwitch::Inactive' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::ConvergingSwitch::IsUp' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::ConvergingSwitch::Place' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::ConvergingSwitch::Place::mc' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::ConvergingSwitch::SwitchSwitch' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::ConvergingSwitch::ToChar' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::ConvergingSwitch::ToChar::rawChar' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Medium" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::DivergingSwitch' -  (Class)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::DivergingSwitch::DivergingSwitch' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::DivergingSwitch::Inactive' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::DivergingSwitch::IsUp' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::DivergingSwitch::Place' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::DivergingSwitch::Place::mc' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::DivergingSwitch::SwitchSwitch' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::DivergingSwitch::ToChar' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::DivergingSwitch::ToChar::rawChar' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Medium" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Dock' -  (Class)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Dock::Board' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Dock::Dock' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Dock::Dock::b' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Dock::Place' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Dock::Place::mc' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Dock::Ship' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Dock::ToChar' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Dock::ToChar::rawChar' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Medium" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::EmptyVoid' -  (Class)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::EmptyVoid::EmptyVoid' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::EmptyVoid::ToChar' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::EmptyVoid::ToChar::rawChar' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Goudkoorts_Verkopen' -  (Package)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Medium" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Goudkoorts_Verkopen::Program' -  (Class)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Goudkoorts_Verkopen::Program::Main' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Goudkoorts_Verkopen::Program::Main::args' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Goudkoorts_Verkopen::Program::Program' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Medium" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::InputView' -  (Class)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::InputView::GetGameInput' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::InputView::GetMainMenuInput' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::InputView::InputView' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Medium" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::JeMoederException' -  (Class)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::JeMoederException::JeMoederException' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Medium" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Minecart' -  (Class)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Minecart::Loaded' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Minecart::Minecart' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Minecart::ToChar' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Medium" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::OutputView' -  (Class)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::OutputView::OutputView' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::OutputView::ShowGame' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::OutputView::ShowGame::list' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::OutputView::ShowGame::s' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::OutputView::ShowGame::score' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::OutputView::ShowGameOver' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::OutputView::ShowGameOver::score' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::OutputView::ShowInvalidInputError' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::OutputView::ShowMainMenu' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Medium" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::SafeTrack' -  (Class)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::SafeTrack::Place' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::SafeTrack::Place::mc' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::SafeTrack::SafeTrack' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::SafeTrack::ToChar' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::SafeTrack::ToChar::rawChar' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::SafeTrack::ToRawChar' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Medium" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Ship' -  (Class)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Ship::Cargo' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Ship::Depart' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Ship::Distance' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Ship::DrawShip' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Ship::IsDocked' -  (Property)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Ship::Sail' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Ship::Ship' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Switch' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Switch::Place' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Switch::Place::mc' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Switch::Switch' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Switch::SwitchSwitch' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::System' -  (Package)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::System::Char' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::System::Collections' -  (Package)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::System::Collections::Generic' -  (Package)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::System::Collections::Generic::LinkedList' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::System::Collections::Generic::LinkedList&lt;BaseTrack‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::System::Collections::Generic::LinkedList&lt;LinkedList‎&lt;BaseTrack‎&gt;‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::System::Collections::Generic::List' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::System::Collections::Generic::List&lt;BaseTrack‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::System::Double' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::System::Exception' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::System::Object' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::System::Random' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::System::Timers' -  (Package)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::System::Timers::ElapsedEventArgs' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::System::Timers::Timer' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Warehouse' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Warehouse::ToChar' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Warehouse::ToChar::rawChar' -  (Parameter)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Goudkoorts_Kopen::Warehouse::Warehouse' -  (Operation)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Integer' -  (PrimitiveType)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Goudkoorts_Kopen::BaseTrack to Goudkoorts_Kopen::Minecart (Association)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Goudkoorts_Kopen::BaseTrack to Goudkoorts_Kopen::BaseTrack (Association)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Goudkoorts_Kopen::BaseTrack to Goudkoorts_Kopen::BaseTrack (Association)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Goudkoorts_Kopen::Board to Goudkoorts_Kopen::System::Collections::Generic::LinkedList&lt;LinkedList‎&lt;BaseTrack‎&gt;‎&gt; (Association)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Goudkoorts_Kopen::Board to Goudkoorts_Kopen::Ship (Association)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Goudkoorts_Kopen::Board to Goudkoorts_Kopen::Switch (Association)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Goudkoorts_Kopen::Board to Goudkoorts_Kopen::Warehouse (Association)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Goudkoorts_Kopen::BoardLoader to Goudkoorts_Kopen::Board (Association)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Goudkoorts_Kopen::ConvergingSwitch to Goudkoorts_Kopen::BaseTrack (Association)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Goudkoorts_Kopen::ConvergingSwitch to Goudkoorts_Kopen::Switch (Generalization)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Goudkoorts_Kopen::DivergingSwitch to Goudkoorts_Kopen::BaseTrack (Association)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Goudkoorts_Kopen::DivergingSwitch to Goudkoorts_Kopen::Switch (Generalization)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Goudkoorts_Kopen::Dock to Goudkoorts_Kopen::Board (Association)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Goudkoorts_Kopen::Dock to Goudkoorts_Kopen::Ship (Association)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Goudkoorts_Kopen::Dock to Goudkoorts_Kopen::BaseTrack (Generalization)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Goudkoorts_Kopen::EmptyVoid to Goudkoorts_Kopen::BaseTrack (Generalization)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Goudkoorts_Kopen::JeMoederException to Goudkoorts_Kopen::System::Exception (Generalization)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Goudkoorts_Kopen::SafeTrack to Goudkoorts_Kopen::BaseTrack (Generalization)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Goudkoorts_Kopen::Switch to Goudkoorts_Kopen::BaseTrack (Generalization)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Goudkoorts_Kopen::Warehouse to Goudkoorts_Kopen::BaseTrack (Generalization)" />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="High" Text="(15) type(s) fully reverse engineered." />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="High" Text="(14) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2015-10-27T22:05:57" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>

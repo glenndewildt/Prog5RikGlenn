@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/CodeGenLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2015-10-26T19:29:56" Importance="High" Text="Code generation or text transformation started." />
+  <Message Timestamp="2015-10-26T19:29:57" Importance="Diagnostic" Text="Name = ClassTemplate" />
+  <Message Timestamp="2015-10-26T19:29:57" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2015-10-26T19:29:57" Importance="Diagnostic" Text="ProjectPath = ..\Goudkoorts_KopenLib\Goudkoorts_KopenLib.csproj" />
+  <Message Timestamp="2015-10-26T19:29:57" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2015-10-26T19:29:57" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2015-10-26T19:29:57" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2015-10-26T19:29:57" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2015-10-26T19:29:57" Importance="Medium" Text="Goudkoorts_Kopen's Text Template Binding: 'ClassTemplate' will apply ClassTemplate.t4 to: 'Goudkoorts_Kopen::InputView' -  (Class), 'Goudkoorts_Kopen::OutputView' -  (Class), 'Goudkoorts_Kopen::Controller' -  (Class), 'Goudkoorts_Kopen::Board' -  (Class), 'Goudkoorts_Kopen::BaseTrack' -  (Class), 'Goudkoorts_Kopen::Minecart' -  (Class), 'Goudkoorts_Kopen::Warehouse' -  (Class), 'Goudkoorts_Kopen::Switch' -  (Class), 'Goudkoorts_Kopen::SafeTrack' -  (Class), 'Goudkoorts_Kopen::Dock' -  (Class), 'Goudkoorts_Kopen::DivergingSwitch' -  (Class), 'Goudkoorts_Kopen::ConvergingSwitch' -  (Class), 'Goudkoorts_Kopen::Ship' -  (Class) " />
+  <Message Timestamp="2015-10-26T19:30:02" Importance="Medium" Text="Project Added: C:\Users\Django\Documents\Visual Studio 2013\Projects\Goudkoorts_Kopen\Goudkoorts_KopenLib\Goudkoorts_KopenLib.csproj" />
+  <Message Timestamp="2015-10-26T19:30:02" Importance="Medium" Text="'Goudkoorts_Kopen::InputView' -  (Class) : success (file created) - C:\Users\Django\Documents\Visual Studio 2013\Projects\Goudkoorts_Kopen\Goudkoorts_KopenLib\GeneratedCode\InputView.cs" />
+  <Message Timestamp="2015-10-26T19:30:02" Importance="Medium" Text="'Goudkoorts_Kopen::OutputView' -  (Class) : success (file created) - C:\Users\Django\Documents\Visual Studio 2013\Projects\Goudkoorts_Kopen\Goudkoorts_KopenLib\GeneratedCode\OutputView.cs" />
+  <Message Timestamp="2015-10-26T19:30:02" Importance="Medium" Text="'Goudkoorts_Kopen::Controller' -  (Class) : success (file created) - C:\Users\Django\Documents\Visual Studio 2013\Projects\Goudkoorts_Kopen\Goudkoorts_KopenLib\GeneratedCode\Controller.cs" />
+  <Message Timestamp="2015-10-26T19:30:03" Importance="Medium" Text="'Goudkoorts_Kopen::Board' -  (Class) : success (file created) - C:\Users\Django\Documents\Visual Studio 2013\Projects\Goudkoorts_Kopen\Goudkoorts_KopenLib\GeneratedCode\Board.cs" />
+  <Message Timestamp="2015-10-26T19:30:03" Importance="Medium" Text="'Goudkoorts_Kopen::BaseTrack' -  (Class) : success (file created) - C:\Users\Django\Documents\Visual Studio 2013\Projects\Goudkoorts_Kopen\Goudkoorts_KopenLib\GeneratedCode\BaseTrack.cs" />
+  <Message Timestamp="2015-10-26T19:30:03" Importance="Medium" Text="'Goudkoorts_Kopen::Minecart' -  (Class) : success (file created) - C:\Users\Django\Documents\Visual Studio 2013\Projects\Goudkoorts_Kopen\Goudkoorts_KopenLib\GeneratedCode\Minecart.cs" />
+  <Message Timestamp="2015-10-26T19:30:03" Importance="Medium" Text="'Goudkoorts_Kopen::Warehouse' -  (Class) : success (file created) - C:\Users\Django\Documents\Visual Studio 2013\Projects\Goudkoorts_Kopen\Goudkoorts_KopenLib\GeneratedCode\Warehouse.cs" />
+  <Message Timestamp="2015-10-26T19:30:04" Importance="Medium" Text="'Goudkoorts_Kopen::Switch' -  (Class) : success (file created) - C:\Users\Django\Documents\Visual Studio 2013\Projects\Goudkoorts_Kopen\Goudkoorts_KopenLib\GeneratedCode\Switch.cs" />
+  <Message Timestamp="2015-10-26T19:30:04" Importance="Medium" Text="'Goudkoorts_Kopen::SafeTrack' -  (Class) : success (file created) - C:\Users\Django\Documents\Visual Studio 2013\Projects\Goudkoorts_Kopen\Goudkoorts_KopenLib\GeneratedCode\SafeTrack.cs" />
+  <Message Timestamp="2015-10-26T19:30:04" Importance="Medium" Text="'Goudkoorts_Kopen::Dock' -  (Class) : success (file created) - C:\Users\Django\Documents\Visual Studio 2013\Projects\Goudkoorts_Kopen\Goudkoorts_KopenLib\GeneratedCode\Dock.cs" />
+  <Message Timestamp="2015-10-26T19:30:04" Importance="Medium" Text="'Goudkoorts_Kopen::DivergingSwitch' -  (Class) : success (file created) - C:\Users\Django\Documents\Visual Studio 2013\Projects\Goudkoorts_Kopen\Goudkoorts_KopenLib\GeneratedCode\DivergingSwitch.cs" />
+  <Message Timestamp="2015-10-26T19:30:04" Importance="Medium" Text="'Goudkoorts_Kopen::ConvergingSwitch' -  (Class) : success (file created) - C:\Users\Django\Documents\Visual Studio 2013\Projects\Goudkoorts_Kopen\Goudkoorts_KopenLib\GeneratedCode\ConvergingSwitch.cs" />
+  <Message Timestamp="2015-10-26T19:30:05" Importance="Medium" Text="'Goudkoorts_Kopen::Ship' -  (Class) : success (file created) - C:\Users\Django\Documents\Visual Studio 2013\Projects\Goudkoorts_Kopen\Goudkoorts_KopenLib\GeneratedCode\Ship.cs" />
+  <Message Timestamp="2015-10-26T19:30:05" Importance="Diagnostic" Text="Name = StructTemplate" />
+  <Message Timestamp="2015-10-26T19:30:05" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2015-10-26T19:30:05" Importance="Diagnostic" Text="ProjectPath = ..\Goudkoorts_KopenLib\Goudkoorts_KopenLib.csproj" />
+  <Message Timestamp="2015-10-26T19:30:05" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2015-10-26T19:30:05" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2015-10-26T19:30:05" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2015-10-26T19:30:05" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2015-10-26T19:30:05" Importance="Medium" Text="Goudkoorts_Kopen's Text Template Binding: 'StructTemplate' will apply StructTemplate.t4 to: 'Goudkoorts_Kopen::InputView' -  (Class), 'Goudkoorts_Kopen::OutputView' -  (Class), 'Goudkoorts_Kopen::Controller' -  (Class), 'Goudkoorts_Kopen::Board' -  (Class), 'Goudkoorts_Kopen::BaseTrack' -  (Class), 'Goudkoorts_Kopen::Minecart' -  (Class), 'Goudkoorts_Kopen::Warehouse' -  (Class), 'Goudkoorts_Kopen::Switch' -  (Class), 'Goudkoorts_Kopen::SafeTrack' -  (Class), 'Goudkoorts_Kopen::Dock' -  (Class), 'Goudkoorts_Kopen::DivergingSwitch' -  (Class), 'Goudkoorts_Kopen::ConvergingSwitch' -  (Class), 'Goudkoorts_Kopen::Ship' -  (Class) " />
+  <Message Timestamp="2015-10-26T19:30:05" Importance="Diagnostic" Text="'Goudkoorts_Kopen::InputView' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-10-26T19:30:05" Importance="Diagnostic" Text="'Goudkoorts_Kopen::OutputView' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-10-26T19:30:05" Importance="Diagnostic" Text="'Goudkoorts_Kopen::Controller' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-10-26T19:30:05" Importance="Diagnostic" Text="'Goudkoorts_Kopen::Board' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-10-26T19:30:05" Importance="Diagnostic" Text="'Goudkoorts_Kopen::BaseTrack' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-10-26T19:30:05" Importance="Diagnostic" Text="'Goudkoorts_Kopen::Minecart' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-10-26T19:30:05" Importance="Diagnostic" Text="'Goudkoorts_Kopen::Warehouse' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-10-26T19:30:05" Importance="Diagnostic" Text="'Goudkoorts_Kopen::Switch' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-10-26T19:30:06" Importance="Diagnostic" Text="'Goudkoorts_Kopen::SafeTrack' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-10-26T19:30:06" Importance="Diagnostic" Text="'Goudkoorts_Kopen::Dock' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-10-26T19:30:06" Importance="Diagnostic" Text="'Goudkoorts_Kopen::DivergingSwitch' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-10-26T19:30:06" Importance="Diagnostic" Text="'Goudkoorts_Kopen::ConvergingSwitch' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-10-26T19:30:06" Importance="Diagnostic" Text="'Goudkoorts_Kopen::Ship' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-10-26T19:30:06" Importance="Diagnostic" Text="The selection included 19 elements which were not bound to a template." />
+  <Message Timestamp="2015-10-26T19:30:06" Importance="Diagnostic" Text="'Goudkoorts_Kopen::' -  (Association): no bound template." />
+  <Message Timestamp="2015-10-26T19:30:06" Importance="Diagnostic" Text="'Goudkoorts_Kopen::' -  (Association): no bound template." />
+  <Message Timestamp="2015-10-26T19:30:06" Importance="Diagnostic" Text="'Goudkoorts_Kopen::' -  (Association): no bound template." />
+  <Message Timestamp="2015-10-26T19:30:06" Importance="Diagnostic" Text="'Goudkoorts_Kopen::' -  (Association): no bound template." />
+  <Message Timestamp="2015-10-26T19:30:06" Importance="Diagnostic" Text="'Goudkoorts_Kopen::' -  (Association): no bound template." />
+  <Message Timestamp="2015-10-26T19:30:06" Importance="Diagnostic" Text="'Goudkoorts_Kopen::' -  (Association): no bound template." />
+  <Message Timestamp="2015-10-26T19:30:06" Importance="Diagnostic" Text="'Goudkoorts_Kopen::' -  (Association): no bound template." />
+  <Message Timestamp="2015-10-26T19:30:06" Importance="Diagnostic" Text="'Goudkoorts_Kopen::' -  (Association): no bound template." />
+  <Message Timestamp="2015-10-26T19:30:06" Importance="Diagnostic" Text="'Goudkoorts_Kopen::' -  (Association): no bound template." />
+  <Message Timestamp="2015-10-26T19:30:06" Importance="Diagnostic" Text="'Goudkoorts_Kopen::' -  (Association): no bound template." />
+  <Message Timestamp="2015-10-26T19:30:06" Importance="Diagnostic" Text="'ad07eb31-c3cf-40cd-869e-82b30267af65' -  (Generalization): no bound template." />
+  <Message Timestamp="2015-10-26T19:30:06" Importance="Diagnostic" Text="'Goudkoorts_Kopen::' -  (Association): no bound template." />
+  <Message Timestamp="2015-10-26T19:30:06" Importance="Diagnostic" Text="'bd343e81-825e-49a6-9258-cd5b31759043' -  (Generalization): no bound template." />
+  <Message Timestamp="2015-10-26T19:30:06" Importance="Diagnostic" Text="'98bafc02-61e6-4433-95f4-59ea2f805133' -  (Generalization): no bound template." />
+  <Message Timestamp="2015-10-26T19:30:06" Importance="Diagnostic" Text="'a61fcb42-ec45-4be9-9500-233d0c91adef' -  (Generalization): no bound template." />
+  <Message Timestamp="2015-10-26T19:30:06" Importance="Diagnostic" Text="'Goudkoorts_Kopen::' -  (Association): no bound template." />
+  <Message Timestamp="2015-10-26T19:30:06" Importance="Diagnostic" Text="'Goudkoorts_Kopen::' -  (Association): no bound template." />
+  <Message Timestamp="2015-10-26T19:30:06" Importance="Diagnostic" Text="'855d2d4f-bbc3-4f1c-96c2-f1e0fdad9c1c' -  (Generalization): no bound template." />
+  <Message Timestamp="2015-10-26T19:30:06" Importance="Diagnostic" Text="'8091efac-99c3-4f9a-a921-7a7e3df40a23' -  (Generalization): no bound template." />
+  <Message Timestamp="2015-10-26T19:30:06" Importance="High" Text="Code generation complete. Errors: 0. Warnings: 0." />
+</Log>

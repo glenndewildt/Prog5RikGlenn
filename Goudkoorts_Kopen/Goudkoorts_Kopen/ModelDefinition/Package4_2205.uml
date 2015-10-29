@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="c5f2214c-36ba-4aab-ac52-f9c2ad3cde82"
+  name="Goudkoorts_Verkopen"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="d5efbb97-284e-4b9f-a5ae-67722273bf57"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DGoudkoorts_Verkopen"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="618e62fc-e884-4b5f-af59-31ca85cfbb88"
+        name="Program"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="774dd033-3797-4c96-9350-77dbaad6c1ad"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDjango%2FDocuments%2FVisual Studio 2013%2FProjects%2FGoudkoorts_Kopen%2FGoudkoorts_Verkopen%2Fbin%2FDebug%2FGoudkoorts_Verkopen.exe&quot; Namespace%3DGoudkoorts_Verkopen Type%3DProgram"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="f05dcde2-245c-4500-95c6-0f3ed89f2b21"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="622fd503-8a26-41be-b926-200270c1fcee">
+                <propertyInstance
+                  Id="62059912-7958-4673-82a5-0ba260bd8aff"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8763ad43-a381-4f25-a664-f7c75728845a">
+                <propertyInstance
+                  Id="cf75c26a-3152-4789-8952-b99dd2a0edfd"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d47783a5-71f8-4663-8bea-f531677725d9">
+                <propertyInstance
+                  Id="4b6aef4b-46c1-4804-817a-6241d9d9ca3f"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="77a3e000-68f0-47d2-831b-1a710272ee33">
+                <propertyInstance
+                  Id="3be54444-0f6b-44b5-98a0-029a018e3a7e"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="50a542a8-f9af-47e5-aacf-93a5d3ec2829">
+                <propertyInstance
+                  Id="810cec6e-9576-427e-999b-a2b9bc72aa5a"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="2be2f1d4-8dc9-4c7e-b50c-1745ddfdfd55"
+            name="Program"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d39fabed-fc79-4637-8cd9-75d35c6950d8"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDjango%2FDocuments%2FVisual Studio 2013%2FProjects%2FGoudkoorts_Kopen%2FGoudkoorts_Verkopen%2Fbin%2FDebug%2FGoudkoorts_Verkopen.exe&quot; Namespace%3DGoudkoorts_Verkopen Type%3DProgram Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="34d56021-1af0-40c9-85a8-e3be99ea29d0"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="70bc92c4-8194-46ff-9fa7-80ef61570e43">
+                    <propertyInstance
+                      Id="830b129c-5d64-42aa-aded-b2bf276cb27b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f6762e18-a2fe-4760-8e30-0b56762800a1">
+                    <propertyInstance
+                      Id="d962ee7a-8f91-4962-97e2-620f81fade06"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f3e5a81e-ef25-4635-a764-5fca4502b71d">
+                    <propertyInstance
+                      Id="cfc401d8-1427-4493-ae2f-5b03bc253385"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e64a7460-d762-46ed-8029-3b6af88f49ac">
+                    <propertyInstance
+                      Id="22e146c0-6559-4c86-a79e-76167d898c14"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9908093b-9f23-4111-ba6c-5e2f053f82a8">
+                    <propertyInstance
+                      Id="44c32ea9-3702-43cd-bd8b-79e1c7964040"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6f97de89-0573-4c1d-94c2-c28918c05a06">
+                    <propertyInstance
+                      Id="60cfaec0-12b0-4e4f-804e-0ad2b3b1671f"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="52b07a8a-e868-47af-be9e-6b3b6c9eb7ca"
+            name="Main"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="1b8e31c5-421e-4df2-86ef-7a9061607ebf"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDjango%2FDocuments%2FVisual Studio 2013%2FProjects%2FGoudkoorts_Kopen%2FGoudkoorts_Verkopen%2Fbin%2FDebug%2FGoudkoorts_Verkopen.exe&quot; Namespace%3DGoudkoorts_Verkopen Type%3DProgram Member%3D(Name%3DMain OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DString ArrayRank%3D1 ParentType%3DString))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="69970633-8db4-497d-89e2-677e26c70371"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1e55a110-a533-4b79-933f-4851eddd6a26">
+                    <propertyInstance
+                      Id="ce304abd-c697-40e2-a005-77528105f9b8"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5f932d91-8d01-42e9-9877-9d94ecfd8e79">
+                    <propertyInstance
+                      Id="851ec6a4-0ba3-49e9-80fa-53d5c813226b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8c92ff97-eba5-4df6-b6c5-0d29f9df1bcb">
+                    <propertyInstance
+                      Id="a41bae50-3470-4516-b79e-90a822baa19a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ddc5417d-d5a6-46cf-8ae2-c76ea8ae8912">
+                    <propertyInstance
+                      Id="42eff748-eaea-4a3c-9e9a-14cd033b2b01"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="012a5743-8e84-4ec7-8f9a-ca623d9ab544">
+                    <propertyInstance
+                      Id="556729cd-627b-4d6d-80cd-762babf50c47"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="62dd3965-7c70-4c0b-9108-380dc9ece823">
+                    <propertyInstance
+                      Id="cd9a991b-4442-4674-b111-a8118b1c015b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0575884d-68b5-44f2-8cfe-e838a442152a"
+                  name="args"
+                  direction="In"
+                  isOrdered="true">
+                  <referencesInternal>
+                    <reference
+                      Id="00e67640-17e5-47dc-8551-38bd053f743f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDjango%2FDocuments%2FVisual Studio 2013%2FProjects%2FGoudkoorts_Kopen%2FGoudkoorts_Verkopen%2Fbin%2FDebug%2FGoudkoorts_Verkopen.exe&quot; Namespace%3DGoudkoorts_Verkopen Type%3DProgram Member%3D(Name%3DMain OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DString ArrayRank%3D1 ParentType%3DString))]) ParameterIdentifier%3Dargs"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="24b004da-34cc-47a3-98c5-a9e57c27c01c"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c1ef9e70-ad2e-429b-a7ea-7e38dcb90b95"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Goudkoorts_Kopen.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

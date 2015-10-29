@@ -238,7 +238,7 @@ namespace KwisspelV3.ViewModel
 
         private void GetVraag()
         {
-            
+
             currentVraag = SelectedQuiz.VragenLijst[counterVraag];
             counterVraag++;
 
@@ -246,11 +246,16 @@ namespace KwisspelV3.ViewModel
             VraagAntwoorden = new ObservableCollection<AntwoordenVM>(vraagAntwoorden);
 
             int tempCounter = 0;
+            gameAntwoorden = new AntwoordenVM[10];
             foreach (var e in VraagAntwoorden)
             {
                 gameAntwoorden[tempCounter] = e;
                 tempCounter = tempCounter + 1;
             }
+            eersteAntwoord = new RelayCommand(EersteAntwoord, CanEersteAntwoord);
+            tweedeAntwoord = new RelayCommand(TweedeAntwoord, CanTweedeAntwoord);
+            derdeAntwoord = new RelayCommand(DerdeAntwoord, CanDerdeAntwoord);
+            vierdeAntwoord = new RelayCommand(VierdeAntwoord, CanVierdeAntwoord);
         }
 
         private void ShowQuizWindow()
