@@ -11,10 +11,38 @@ using System.Text;
 
 public class MainTrack
 {
+	public virtual Minecart Contains
+	{
+		get;
+		set;
+	}
+
+	public virtual MainTrack Next
+	{
+		get;
+		set;
+	}
+
+	public virtual MainTrack Previous
+	{
+		get;
+		set;
+	}
+
 	public virtual Minecart Minecart
 	{
 		get;
 		set;
+	}
+
+	public virtual void IsEmty()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual void Place()
+	{
+		throw new System.NotImplementedException();
 	}
 
 }

@@ -9,12 +9,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Switch2 : Switch
+public class DevergingSwtich : Switch
 {
+	public virtual bool IsDown
+	{
+		get;
+		set;
+	}
+
 	public virtual MainTrack Inactive
 	{
 		get;
 		set;
+	}
+
+	public DevergingSwtich()
+	{
 	}
 
 }

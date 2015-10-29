@@ -11,5 +11,9 @@ using System.Text;
 
 public class Switch : MainTrack
 {
+	public Switch()
+	{
+	}
+
 }
 

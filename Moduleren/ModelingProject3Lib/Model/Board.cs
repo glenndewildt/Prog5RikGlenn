@@ -11,6 +11,18 @@ using System.Text;
 
 public class Board
 {
+	public virtual int Score
+	{
+		get;
+		set;
+	}
+
+	public virtual bool GameOver
+	{
+		get;
+		set;
+	}
+
 	public virtual MainTrack MainTrack
 	{
 		get;
@@ -33,6 +45,21 @@ public class Board
 	{
 		get;
 		set;
+	}
+
+	public virtual void Move()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual void Spawn()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual void Tick()
+	{
+		throw new System.NotImplementedException();
 	}
 
 }

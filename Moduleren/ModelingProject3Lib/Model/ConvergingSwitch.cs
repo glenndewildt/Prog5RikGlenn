@@ -9,12 +9,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Switch1 : Switch
+public class ConvergingSwitch : Switch
 {
+	public virtual bool IsDown
+	{
+		get;
+		set;
+	}
+
 	public virtual MainTrack MainTrack
 	{
 		get;
 		set;
+	}
+
+	public ConvergingSwitch()
+	{
 	}
 
 }
