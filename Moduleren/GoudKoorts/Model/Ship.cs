@@ -21,6 +21,7 @@ public class Ship
 
 
     public Ship() {
+        aantal = 0;
         IsFull = false;
         IsHalfFull = false;
         IsEmpty = true;
@@ -28,23 +29,26 @@ public class Ship
 
    
     public void AddCart() {
-        aantal++;
-        if (aantal == 8) {
+        aantal = aantal + 1;
+        if (aantal == 1) {
             IsFull = true;
             IsEmpty = false;
             IsHalfFull= false;
         }
-        if (aantal == 4) {
+        if (aantal == 4)
+        {
             IsHalfFull = true;
             IsFull = false;
             IsEmpty = false;
         }
-        if(aantal == 0){
+        if (aantal == 0)
+        {
             IsEmpty = true;
             IsFull = false;
             IsHalfFull = false;
         }
     }
+
     public char[] getChars() { 
      shipE = new char[5];
         shipE[0] = '<';

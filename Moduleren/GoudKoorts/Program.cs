@@ -14,11 +14,9 @@ namespace GoudKoorts
             while (true)
             {
                 
-                if (Console.ReadLine().Equals(" "))
+                if (Console.ReadLine().Equals(""))
                 {
-
-                    
-                    for (int i = 0; i < 25; i++)
+                    for (int i = 0; i < 35; i++)
                     {
                         Console.Write(board.schipChar[i]);
                     }

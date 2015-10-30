@@ -26,6 +26,7 @@ public class Board
     public List<MainTrack> UsedTracks { get; set; }
     public Char[] schipChar { get; set; }
     public int schipSpace { get; set; }
+    public bool schipDock { get; set; }
 
 
     public Board()
@@ -35,8 +36,9 @@ public class Board
         DockPath = new LinkedList<MainTrack>();
         SavePath = new LinkedList<MainTrack>();
         SecondPath = new LinkedList<MainTrack>();
-        schipChar = new Char[30];
+        schipChar = new Char[35];
         schipSpace = 0;
+        schipDock = false;
 
         ConSwitch = new ConvergingSwitch[5];
         for (int x = 0; x < ConSwitch.Length; x++ )
@@ -149,7 +151,6 @@ public class Board
     
         dock.Losse();
         this.schipSpaced();
-        schipSpace++;
 
         foreach (var e in UsedTracks)
         {
@@ -173,17 +174,35 @@ public class Board
 
     public void schipSpaced()
     {
-        for (int i = 0; i < 30; i++)
+
+        if (schipSpace == 24)
         {
-            schipChar[i] = ' ';
+            schipDock = true;
         }
 
-        for (int j = 0; j < 5; j++)
+        if (!schipDock)
         {
-            char[] temp = ship.getChars();
-            schipChar[schipSpace + j] = temp[j];
+            for (int i = 0; i < 30; i++)
+            {
+                schipChar[i] = ' ';
+            }
+
+            for (int j = 0; j < 5; j++)
+            {
+                char[] temp = ship.getChars();
+                schipChar[schipSpace + j] = temp[j];
+            }
+            schipSpace++;
         }
-        
+        else
+        {
+            Console.Write(ship.aantal);
+            if (ship.aantal == 1)
+            {
+                schipDock = false;
+                schipSpace++;
+            }
+        }
     }
 
     public virtual void Spawn()
@@ -214,5 +233,6 @@ public class Board
     {
         throw new System.NotImplementedException();
     }
+
 }
 
