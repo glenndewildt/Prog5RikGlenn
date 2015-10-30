@@ -29,7 +29,7 @@ public class DevergingSwtich : Switch
 
 
 
-    public char ToChar()
+    public override char ToChar()
     {
         return 'I';
     }

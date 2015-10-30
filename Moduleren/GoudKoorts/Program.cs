@@ -26,6 +26,7 @@ namespace GoudKoorts
                 Console.Write(track.ToChar());
             }
             Console.WriteLine();
+            Console.ReadLine();
         }
     }
 }

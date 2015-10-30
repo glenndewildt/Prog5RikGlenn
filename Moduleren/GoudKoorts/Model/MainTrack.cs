@@ -13,11 +13,10 @@ public class MainTrack
 {
 	public virtual Minecart Contains{get;set;}
 
-	public virtual MainTrack Next{get;set;}
-
-	public virtual MainTrack Previous{get;set;}
-
-
+    public MainTrack()
+    {
+        
+    }
 
 	public virtual Boolean IsEmty()
 	{
@@ -35,13 +34,12 @@ public class MainTrack
         if (IsEmty())
         {
             Contains = cart;
-            Previous.Contains = null;
             return true;
         }
 
         return false;
 	}
-    public char ToChar()
+    public virtual char ToChar()
     {
         return '#';
     }

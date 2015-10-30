@@ -22,7 +22,8 @@ public class ConvergingSwitch : Switch
     public void Switch(){
   
     }
-    public char ToChar() {
+    public override char ToChar()
+    {
         return 'C';
     }
 }

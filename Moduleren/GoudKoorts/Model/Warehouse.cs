@@ -15,8 +15,7 @@ public class Warehouse : MainTrack
     
     }
 
-
-    public char ToChar()
+    public override char ToChar()
     {
         return 'W';
     }

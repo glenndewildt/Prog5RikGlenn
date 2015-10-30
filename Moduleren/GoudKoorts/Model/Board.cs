@@ -13,12 +13,12 @@ public class Board
 {
     public virtual int Score { get; set; }
     public virtual bool GameOver { get; set; }
-    public virtual MainTrack MainTrack { get; set; }
-    public virtual Warehouse[] Warehouses { get; set; }
-    public virtual ConvergingSwitch[] ConSwitch { get; set; }
-    public virtual DevergingSwtich[] DevSwitch { get; set; }
-    public virtual MainTrack[] Basis { get; set; }
-    public virtual Ship Ship { get; set; }
+    public MainTrack MainTrack { get; set; }
+    public Warehouse[] Warehouses { get; set; }
+    public ConvergingSwitch[] ConSwitch { get; set; }
+    public DevergingSwtich[] DevSwitch { get; set; }
+    public MainTrack[] Basis { get; set; }
+    public Ship Ship { get; set; }
     public LinkedList<MainTrack> DockPath { get; set; }
     public LinkedList<MainTrack> SavePath { get; set; }
     public LinkedList<MainTrack> SecondPath { get; set; }
@@ -26,23 +26,27 @@ public class Board
 
     public Board()
     {
+        DockPath = new LinkedList<MainTrack>();
+        SavePath = new LinkedList<MainTrack>();
+        SecondPath = new LinkedList<MainTrack>();
+
         ConSwitch = new ConvergingSwitch[5];
-        for (int x = 0; x < ConSwitch.Length - 1; x++ )
+        for (int x = 0; x < ConSwitch.Length; x++ )
         {
             ConSwitch[x] = new ConvergingSwitch();
         }
         DevSwitch = new DevergingSwtich[5];
-        for (int x = 0; x < DevSwitch.Length - 1; x++)
+        for (int x = 0; x < DevSwitch.Length; x++)
         {
             DevSwitch[x] = new DevergingSwtich();
         }
         Basis  = new MainTrack[10];
-        for (int x = 0; x < Basis.Length - 1; x++)
+        for (int x = 0; x < Basis.Length; x++)
         {
             Basis[x] = new MainTrack();
         }
         Warehouses = new Warehouse[3];
-        for (int x = 0; x < Warehouses.Length - 1; x++)
+        for (int x = 0; x < Warehouses.Length; x++)
         {
             Warehouses[x] = new Warehouse();
         }
@@ -71,11 +75,11 @@ public class Board
                 }
                 if (x == 0)
                 {
-                    if (i == 0)
-                    {
+                   if (i == 0)
+                   {
                         DockPath.AddLast(Warehouses[0]);
-                    }
-                    DockPath.AddLast(new MainTrack());
+                   }
+                   DockPath.AddLast(new MainTrack());
                 }
                 if (x == 1)
                 {
