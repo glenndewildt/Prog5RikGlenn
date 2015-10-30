@@ -57,34 +57,40 @@ public class Board
 
     public void MakePath()
     {
+        bool end = false;
         
         for (int x = 0; x <= 2; x++)
         {
             for (int i = 0; i < 25; i++)
             {
-                if (i == 3) {
-                    DockPath.AddLast(ConSwitch[0]);
-                    DockPath.AddLast(Basis[0]);
-                    DockPath.AddLast(DevSwitch[0]);
-
-                }
-
-                if (i == 7) {
-                    DockPath.AddLast(ConSwitch[2]);
-                  
-                }
+              
                 if (x == 0)
                 {
                    if (i == 0)
                    {
                         DockPath.AddLast(Warehouses[0]);
                    }
+                   if (i == 3)
+                   {
+                       DockPath.AddLast(ConSwitch[0]);
+                       DockPath.AddLast(Basis[0]);
+                       DockPath.AddLast(DevSwitch[0]);
+
+                   }
+
+                   if (i == 9)
+                   {
+                       DockPath.AddLast(ConSwitch[2]);
+
+                   }
                    DockPath.AddLast(new MainTrack());
                 }
                 if (x == 1)
                 {
+                   
                     if (i == 6) {
                         SecondPath.AddLast(ConSwitch[2]);
+                        end = true;
                     }
                     if (i == 5)
                     {
@@ -103,6 +109,7 @@ public class Board
                     {
                         SecondPath.AddLast(Warehouses[1]);
                     }
+                    if(end == false)
                     SecondPath.AddLast(new MainTrack());
                 }
                 if (x == 2)
