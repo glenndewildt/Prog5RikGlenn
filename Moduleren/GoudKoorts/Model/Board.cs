@@ -22,6 +22,7 @@ public class Board
     public LinkedList<MainTrack> DockPath { get; set; }
     public LinkedList<MainTrack> SavePath { get; set; }
     public LinkedList<MainTrack> SecondPath { get; set; }
+    public List<MainTrack> UsedTracks { get; set; }
 
 
     public Board()
@@ -52,7 +53,7 @@ public class Board
         }
         Ship = new Ship();
         MakePath();
-
+        Spawn();
     }
 
     public void MakePath()
@@ -133,18 +134,36 @@ public class Board
 
     public virtual void Move()
     {
-        throw new System.NotImplementedException();
+        foreach (var e in UsedTracks)
+        {
+            e.Move();
+        }
+        
     }
 
     public virtual void Spawn()
     {
-        throw new System.NotImplementedException();
+        Minecart mineCart = new Minecart();
+        Random randomPath = new Random();
+        int random = randomPath.Next(2);
+        if (random == 0)
+        {
+            DockPath.First.Next.Value.Place(mineCart);
+        }
+        else if (random == 1)
+        {
+            SecondPath.First.Next.Value.Place(mineCart);
+        }
+        else if (random == 2)
+        {
+            SavePath.First.Next.Value.Place(mineCart);
+        }
+        
     }
 
     public virtual void Tick()
     {
         throw new System.NotImplementedException();
     }
-
 }
 

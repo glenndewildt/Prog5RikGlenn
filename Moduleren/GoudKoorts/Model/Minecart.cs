@@ -17,10 +17,28 @@ public class Minecart
 		set;
 	}
 
-	public virtual void IsEmty()
+	public virtual bool IsEmpty()
 	{
-		throw new System.NotImplementedException();
+        if (isFull)
+        {
+            return true;
+        }
+        return false;
 	}
 
+    public void emptyMineCart()
+    {
+        isFull = false;
+    }
+
+    public char ToChar()
+    {
+        if(!IsEmpty()){
+            return '█';
+        }
+        return '_';
+    }
+
+    
 }
 

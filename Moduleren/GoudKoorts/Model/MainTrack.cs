@@ -18,7 +18,7 @@ public class MainTrack
         
     }
 
-	public virtual Boolean IsEmty()
+	public Boolean IsEmty()
 	{
         if (Contains == null)
         {
@@ -29,7 +29,7 @@ public class MainTrack
         }
 	}
 
-	public virtual bool Place(Minecart cart)
+	public bool Place(Minecart cart)
 	{
         if (IsEmty())
         {
@@ -41,7 +41,22 @@ public class MainTrack
 	}
     public virtual char ToChar()
     {
-        return '#';
+        if (Contains == null)
+        {
+            return '#';
+        }
+        else
+        {
+            return Contains.ToChar();
+        }
+    }
+
+    public void Move()
+    {
+
+        if (Contains != null)
+        {
+        }
     }
 
 }
