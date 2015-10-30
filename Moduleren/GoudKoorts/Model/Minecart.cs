@@ -11,19 +11,18 @@ using System.Text;
 
 public class Minecart
 {
-	public virtual bool isFull
-	{
-		get;
-		set;
-	}
+	public virtual bool isFull{get;set;}
 
+    public Minecart() {
+        isFull = true;
+    }
 	public virtual bool IsEmpty()
 	{
         if (isFull)
         {
-            return true;
+            return false;
         }
-        return false;
+        return true;
 	}
 
     public void emptyMineCart()

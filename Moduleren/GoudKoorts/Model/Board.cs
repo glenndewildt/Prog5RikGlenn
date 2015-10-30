@@ -11,6 +11,7 @@ using System.Text;
 
 public class Board
 {
+    public Dock dock { get; set; }
     public virtual int Score { get; set; }
     public virtual bool GameOver { get; set; }
     public MainTrack MainTrack { get; set; }
@@ -28,6 +29,7 @@ public class Board
 
     public Board()
     {
+        dock = new Dock();
         UsedTracks = new List<MainTrack>();
         DockPath = new LinkedList<MainTrack>();
         SavePath = new LinkedList<MainTrack>();
@@ -70,6 +72,9 @@ public class Board
               
                 if (x == 0)
                 {
+                    if (i == 20) {
+                        DockPath.AddLast(dock);
+                    }
                    if (i == 0)
                    {
                         DockPath.AddLast(Warehouses[0]);
@@ -137,9 +142,13 @@ public class Board
 
     public virtual void Move()
     {
+    
+            dock.Losse();
+        
         foreach (var e in UsedTracks)
         {
             if( e.Move(DockPath,UsedTracks)){
+                
                 return;
             }
             if (e.Move(SecondPath, UsedTracks))

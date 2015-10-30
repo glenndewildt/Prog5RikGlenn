@@ -15,6 +15,9 @@ public class Dock : MainTrack
 
 	public virtual Ship ship{get;set;}
 
+    public Dock() {
+        ship = new Ship();
+    }
     public bool ContainsShip()
     {
         if(ship != null){
@@ -23,16 +26,18 @@ public class Dock : MainTrack
         return false;
     }
 
+
     public void Losse()
     {
-        if (ContainsShip() && !Contains.IsEmpty())
+        if (ContainsShip() && Contains != null)
         {
             Contains.emptyMineCart();
             //ShipLading ++;
+            ship.AddCart();
         }
     }
 
-    public char ToChar()
+    public override char ToChar()
     {
         return 'D';
     }

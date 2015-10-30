@@ -11,10 +11,66 @@ using System.Text;
 
 public class Ship
 {
-	public virtual MainTrack MainTrack
-	{
-		
-	}
+    public bool IsFull { get; set; }
+    public bool IsEmpty { get; set; }
+    public bool IsHalfFull { get; set; }
+    public int aantal { get; set; }
 
+    public Ship() {
+        IsFull = false;
+        IsHalfFull = false;
+        IsEmpty = true;
+    }
+
+   
+    public void AddCart() {
+        aantal++;
+        if (aantal == 8) {
+            IsFull = true;
+            IsEmpty = false;
+            IsHalfFull= false;
+        }
+        if (aantal == 4) {
+            IsHalfFull = true;
+            IsFull = false;
+            IsEmpty = false;
+        }
+        if(aantal == 0){
+            IsEmpty = true;
+            IsFull = false;
+            IsHalfFull = false;
+        }
+    }
+    public char[] getChars() { 
+    char[] shipE = new char[5];
+     shipE[0] = '<';
+        shipE[1]= '(';
+        shipE[2] = 'E';
+        shipE[3] = ')';
+        shipE[4]= '>';
+     char[] shipV = new char[5];
+        shipV[0] = '<';
+        shipV[1]= '(';
+        shipV[2] = 'V';
+        shipV[3] = ')';
+        shipV[4]= '>';
+
+     char[] shipH = new char[5];
+        shipH[0] = '<';
+        shipH[1]= '(';
+        shipH[2] = 'H';
+        shipH[3] = ')';
+        shipH[4] = '>';
+   if(IsFull == true){
+   return shipV;
+   }
+   else if(IsHalfFull == true){
+   return shipH;
+   }else if(IsEmpty == true){
+   return shipV;
+   }else{
+   return null;
+   }
+    }
 }
 
