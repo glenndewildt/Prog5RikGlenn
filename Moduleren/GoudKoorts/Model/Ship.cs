@@ -14,14 +14,14 @@ public class Ship
     public bool IsFull { get; set; }
     public bool IsEmpty { get; set; }
     public bool IsHalfFull { get; set; }
-    public int aantal { get; set; }
+    public int aantal = 0;
     public char[] shipH { get; set; }
     public char[] shipE { get; set; }
     public char[] shipV { get; set; }
 
 
     public Ship() {
-        aantal = 0;
+       
         IsFull = false;
         IsHalfFull = false;
         IsEmpty = true;
@@ -29,7 +29,8 @@ public class Ship
 
    
     public void AddCart() {
-        aantal = aantal + 1;
+        ++aantal;
+
         if (aantal == 1) {
             IsFull = true;
             IsEmpty = false;
@@ -73,15 +74,13 @@ public class Ship
         if(IsFull == true){
             return shipV;
         }
-        else if(IsHalfFull == true){
+         if(IsHalfFull == true){
             return shipH;
         }
-        else if(IsEmpty == true){
-            return shipV;
+         if(IsEmpty == true){
+            return shipE;
         }
-        else{
-            return null;
-        }
+         return null;
     }
 }
 

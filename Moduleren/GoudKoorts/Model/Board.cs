@@ -149,7 +149,7 @@ public class Board
     public virtual void Move()
     {
     
-        dock.Losse();
+        dock.Losse(ship);
         this.schipSpaced();
 
         foreach (var e in UsedTracks)

@@ -27,8 +27,9 @@ public class Dock : MainTrack
     }
 
 
-    public void Losse()
+    public void Losse(Ship ship)
     {
+        this.ship = ship;
         if (ContainsShip() && Contains != null)
         {
             Contains.emptyMineCart();
