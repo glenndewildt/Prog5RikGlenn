@@ -36,7 +36,7 @@ public class Board
         DockPath = new LinkedList<MainTrack>();
         SavePath = new LinkedList<MainTrack>();
         SecondPath = new LinkedList<MainTrack>();
-        schipChar = new Char[35];
+        schipChar = new Char[50];
         schipSpace = 0;
         schipDock = false;
 
@@ -182,11 +182,11 @@ public class Board
 
         if (!schipDock)
         {
-            for (int i = 0; i < 30; i++)
+            for (int i = 0; i < 35; i++)
             {
                 schipChar[i] = ' ';
             }
-
+            if(i == 40;)
             for (int j = 0; j < 5; j++)
             {
                 char[] temp = ship.getChars();
