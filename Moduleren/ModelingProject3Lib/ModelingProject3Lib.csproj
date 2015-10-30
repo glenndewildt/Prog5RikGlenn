@@ -39,6 +39,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GeneratedCode\Board.cs" />
+    <Compile Include="GeneratedCode\ConvergingSwitch.cs" />
+    <Compile Include="GeneratedCode\DevergingSwtich.cs" />
+    <Compile Include="GeneratedCode\Dock.cs" />
+    <Compile Include="GeneratedCode\MainTrack.cs" />
+    <Compile Include="GeneratedCode\Minecart.cs" />
+    <Compile Include="GeneratedCode\SafeTrack.cs" />
+    <Compile Include="GeneratedCode\Ship.cs" />
+    <Compile Include="GeneratedCode\Switch.cs" />
+    <Compile Include="GeneratedCode\Warehouse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

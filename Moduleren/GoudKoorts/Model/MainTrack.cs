@@ -11,11 +11,40 @@ using System.Text;
 
 public class MainTrack
 {
-	public virtual Minecart Minecart
+	public virtual Minecart Contains{get;set;}
+
+	public virtual MainTrack Next{get;set;}
+
+	public virtual MainTrack Previous{get;set;}
+
+
+
+	public virtual Boolean IsEmty()
 	{
-		get;
-		set;
+        if (Contains == null)
+        {
+            return true;
+        }
+        else {
+            return false;
+        }
 	}
+
+	public virtual bool Place(Minecart cart)
+	{
+        if (IsEmty())
+        {
+            Contains = cart;
+            Previous.Contains = null;
+            return true;
+        }
+
+        return false;
+	}
+    public char ToChar()
+    {
+        return '#';
+    }
 
 }
 

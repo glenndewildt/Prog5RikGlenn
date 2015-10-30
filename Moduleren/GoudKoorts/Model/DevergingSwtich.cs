@@ -9,7 +9,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Emty : MainTrack
+public class DevergingSwtich : Switch
 {
+	public virtual bool IsDown
+	{
+		get;
+		set;
+	}
+
+	public virtual MainTrack Inactive
+	{
+		get;
+		set;
+	}
+
+	public DevergingSwtich()
+	{
+	}
+
+
+
+    public char ToChar()
+    {
+        return 'I';
+    }
 }
 

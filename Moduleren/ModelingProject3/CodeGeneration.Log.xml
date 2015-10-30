@@ -6,65 +6,59 @@
   <MessageClass Name="Error" Label="Error" Option="Show errors" />
   <MessageClass Name="Property" Label="Property" Option="Show metadata" />
   <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
-  <Message Timestamp="2015-10-29T21:02:54" Importance="High" Text="Code generation or text transformation started." />
-  <Message Timestamp="2015-10-29T21:02:54" Importance="Diagnostic" Text="Name = ClassTemplate" />
-  <Message Timestamp="2015-10-29T21:02:54" Importance="Diagnostic" Text="Overwrite = True" />
-  <Message Timestamp="2015-10-29T21:02:54" Importance="Diagnostic" Text="ProjectPath = ..\ModelingProject3Lib\ModelingProject3Lib.csproj" />
-  <Message Timestamp="2015-10-29T21:02:54" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
-  <Message Timestamp="2015-10-29T21:02:54" Importance="Diagnostic" Text="TargetName = {Name}" />
-  <Message Timestamp="2015-10-29T21:02:54" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
-  <Message Timestamp="2015-10-29T21:02:54" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
-  <Message Timestamp="2015-10-29T21:02:54" Importance="Medium" Text="ModelingProject3's Text Template Binding: 'ClassTemplate' will apply ClassTemplate.t4 to: 'ModelingProject3::BoardInjector' -  (Class), 'ModelingProject3::Dock' -  (Class), 'ModelingProject3::Board' -  (Class), 'ModelingProject3::Ship' -  (Class), 'ModelingProject3::Warehouse' -  (Class), 'ModelingProject3::Switch' -  (Class), 'ModelingProject3::MainTrack' -  (Class), 'ModelingProject3::DevergingSwtich' -  (Class), 'ModelingProject3::Minecart' -  (Class), 'ModelingProject3::Emty' -  (Class), 'ModelingProject3::SafeTrack' -  (Class), 'ModelingProject3::ConvergingSwitch' -  (Class) " />
-  <Message Timestamp="2015-10-29T21:02:55" Importance="Medium" Text="'ModelingProject3::BoardInjector' -  (Class) : success (file created) - C:\Users\Glenn\Documents\GitHub\Prog5RikGlenn\Moduleren\ModelingProject3Lib\GeneratedCode\BoardInjector.cs" />
-  <Message Timestamp="2015-10-29T21:02:55" Importance="Medium" Text="'ModelingProject3::Dock' -  (Class) : success (file created) - C:\Users\Glenn\Documents\GitHub\Prog5RikGlenn\Moduleren\ModelingProject3Lib\GeneratedCode\Dock.cs" />
-  <Message Timestamp="2015-10-29T21:02:55" Importance="Medium" Text="'ModelingProject3::Board' -  (Class) : success (file created) - C:\Users\Glenn\Documents\GitHub\Prog5RikGlenn\Moduleren\ModelingProject3Lib\GeneratedCode\Board.cs" />
-  <Message Timestamp="2015-10-29T21:02:55" Importance="Medium" Text="'ModelingProject3::Ship' -  (Class) : success (file created) - C:\Users\Glenn\Documents\GitHub\Prog5RikGlenn\Moduleren\ModelingProject3Lib\GeneratedCode\Ship.cs" />
-  <Message Timestamp="2015-10-29T21:02:56" Importance="Medium" Text="'ModelingProject3::Warehouse' -  (Class) : success (file created) - C:\Users\Glenn\Documents\GitHub\Prog5RikGlenn\Moduleren\ModelingProject3Lib\GeneratedCode\Warehouse.cs" />
-  <Message Timestamp="2015-10-29T21:02:56" Importance="Medium" Text="'ModelingProject3::Switch' -  (Class) : success (file created) - C:\Users\Glenn\Documents\GitHub\Prog5RikGlenn\Moduleren\ModelingProject3Lib\GeneratedCode\Switch.cs" />
-  <Message Timestamp="2015-10-29T21:02:56" Importance="Medium" Text="'ModelingProject3::MainTrack' -  (Class) : success (file created) - C:\Users\Glenn\Documents\GitHub\Prog5RikGlenn\Moduleren\ModelingProject3Lib\GeneratedCode\MainTrack.cs" />
-  <Message Timestamp="2015-10-29T21:02:56" Importance="Medium" Text="'ModelingProject3::DevergingSwtich' -  (Class) : success (file created) - C:\Users\Glenn\Documents\GitHub\Prog5RikGlenn\Moduleren\ModelingProject3Lib\GeneratedCode\DevergingSwtich.cs" />
-  <Message Timestamp="2015-10-29T21:02:57" Importance="Medium" Text="'ModelingProject3::Minecart' -  (Class) : success (file created) - C:\Users\Glenn\Documents\GitHub\Prog5RikGlenn\Moduleren\ModelingProject3Lib\GeneratedCode\Minecart.cs" />
-  <Message Timestamp="2015-10-29T21:02:57" Importance="Medium" Text="'ModelingProject3::Emty' -  (Class) : success (file created) - C:\Users\Glenn\Documents\GitHub\Prog5RikGlenn\Moduleren\ModelingProject3Lib\GeneratedCode\Emty.cs" />
-  <Message Timestamp="2015-10-29T21:02:57" Importance="Medium" Text="'ModelingProject3::SafeTrack' -  (Class) : success (file created) - C:\Users\Glenn\Documents\GitHub\Prog5RikGlenn\Moduleren\ModelingProject3Lib\GeneratedCode\SafeTrack.cs" />
-  <Message Timestamp="2015-10-29T21:02:57" Importance="Medium" Text="'ModelingProject3::ConvergingSwitch' -  (Class) : success (file created) - C:\Users\Glenn\Documents\GitHub\Prog5RikGlenn\Moduleren\ModelingProject3Lib\GeneratedCode\ConvergingSwitch.cs" />
-  <Message Timestamp="2015-10-29T21:02:57" Importance="Diagnostic" Text="Name = StructTemplate" />
-  <Message Timestamp="2015-10-29T21:02:57" Importance="Diagnostic" Text="Overwrite = True" />
-  <Message Timestamp="2015-10-29T21:02:57" Importance="Diagnostic" Text="ProjectPath = ..\ModelingProject3Lib\ModelingProject3Lib.csproj" />
-  <Message Timestamp="2015-10-29T21:02:57" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
-  <Message Timestamp="2015-10-29T21:02:57" Importance="Diagnostic" Text="TargetName = {Name}" />
-  <Message Timestamp="2015-10-29T21:02:57" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
-  <Message Timestamp="2015-10-29T21:02:57" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
-  <Message Timestamp="2015-10-29T21:02:57" Importance="Medium" Text="ModelingProject3's Text Template Binding: 'StructTemplate' will apply StructTemplate.t4 to: 'ModelingProject3::BoardInjector' -  (Class), 'ModelingProject3::Dock' -  (Class), 'ModelingProject3::Board' -  (Class), 'ModelingProject3::Ship' -  (Class), 'ModelingProject3::Warehouse' -  (Class), 'ModelingProject3::Switch' -  (Class), 'ModelingProject3::MainTrack' -  (Class), 'ModelingProject3::DevergingSwtich' -  (Class), 'ModelingProject3::Minecart' -  (Class), 'ModelingProject3::Emty' -  (Class), 'ModelingProject3::SafeTrack' -  (Class), 'ModelingProject3::ConvergingSwitch' -  (Class) " />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'ModelingProject3::BoardInjector' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'ModelingProject3::Dock' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'ModelingProject3::Board' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'ModelingProject3::Ship' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'ModelingProject3::Warehouse' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'ModelingProject3::Switch' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'ModelingProject3::MainTrack' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'ModelingProject3::DevergingSwtich' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'ModelingProject3::Minecart' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'ModelingProject3::Emty' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'ModelingProject3::SafeTrack' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'ModelingProject3::ConvergingSwitch' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="The selection included 18 elements which were not bound to a template." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'ModelingProject3::' -  (Association): no bound template." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'ModelingProject3::' -  (Association): no bound template." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'ModelingProject3::' -  (Association): no bound template." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'7ff4d532-6093-4c49-9fac-fce77d2a37f4' -  (Generalization): no bound template." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'ModelingProject3::' -  (Association): no bound template." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'ModelingProject3::' -  (Association): no bound template." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'ModelingProject3::' -  (Association): no bound template." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'ModelingProject3::' -  (Association): no bound template." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'ModelingProject3::' -  (Association): no bound template." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'775ddbc6-0b87-426d-9a79-95b4d88dc10a' -  (Generalization): no bound template." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'75625176-5a08-4d52-bf86-a3706f5ed52e' -  (Generalization): no bound template." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'a101443d-8ca1-4150-a02f-0e870e3258c7' -  (Generalization): no bound template." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'ModelingProject3::' -  (Association): no bound template." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'ModelingProject3::' -  (Association): no bound template." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'ModelingProject3::' -  (Association): no bound template." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'8a5741b4-553d-4f3c-9293-cc714d215f27' -  (Generalization): no bound template." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'6bf2bc2d-0a2c-4412-8bd4-343b7fe83971' -  (Generalization): no bound template." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="Diagnostic" Text="'8b31b8c5-cd45-4df0-9c30-d30dac7a6af4' -  (Generalization): no bound template." />
-  <Message Timestamp="2015-10-29T21:02:58" Importance="High" Text="Code generation complete. Errors: 0. Warnings: 0." />
+  <Message Timestamp="2015-10-30T14:50:28" Importance="High" Text="Code generation or text transformation started." />
+  <Message Timestamp="2015-10-30T14:50:28" Importance="Diagnostic" Text="Name = ClassTemplate" />
+  <Message Timestamp="2015-10-30T14:50:28" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2015-10-30T14:50:28" Importance="Diagnostic" Text="ProjectPath = ..\ModelingProject3Lib\ModelingProject3Lib.csproj" />
+  <Message Timestamp="2015-10-30T14:50:28" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2015-10-30T14:50:28" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2015-10-30T14:50:28" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2015-10-30T14:50:28" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2015-10-30T14:50:28" Importance="Medium" Text="ModelingProject3's Text Template Binding: 'ClassTemplate' will apply ClassTemplate.t4 to: 'ModelingProject3::Dock' -  (Class), 'ModelingProject3::Board' -  (Class), 'ModelingProject3::Ship' -  (Class), 'ModelingProject3::Warehouse' -  (Class), 'ModelingProject3::Switch' -  (Class), 'ModelingProject3::MainTrack' -  (Class), 'ModelingProject3::DevergingSwtich' -  (Class), 'ModelingProject3::Minecart' -  (Class), 'ModelingProject3::SafeTrack' -  (Class), 'ModelingProject3::ConvergingSwitch' -  (Class) " />
+  <Message Timestamp="2015-10-30T14:50:29" Importance="Medium" Text="'ModelingProject3::Dock' -  (Class) : success (file created) - C:\Users\Glenn\Documents\GitHub\Prog5RikGlenn\Moduleren\ModelingProject3Lib\GeneratedCode\Dock.cs" />
+  <Message Timestamp="2015-10-30T14:50:29" Importance="Medium" Text="'ModelingProject3::Board' -  (Class) : success (file created) - C:\Users\Glenn\Documents\GitHub\Prog5RikGlenn\Moduleren\ModelingProject3Lib\GeneratedCode\Board.cs" />
+  <Message Timestamp="2015-10-30T14:50:29" Importance="Medium" Text="'ModelingProject3::Ship' -  (Class) : success (file created) - C:\Users\Glenn\Documents\GitHub\Prog5RikGlenn\Moduleren\ModelingProject3Lib\GeneratedCode\Ship.cs" />
+  <Message Timestamp="2015-10-30T14:50:29" Importance="Medium" Text="'ModelingProject3::Warehouse' -  (Class) : success (file created) - C:\Users\Glenn\Documents\GitHub\Prog5RikGlenn\Moduleren\ModelingProject3Lib\GeneratedCode\Warehouse.cs" />
+  <Message Timestamp="2015-10-30T14:50:30" Importance="Medium" Text="'ModelingProject3::Switch' -  (Class) : success (file created) - C:\Users\Glenn\Documents\GitHub\Prog5RikGlenn\Moduleren\ModelingProject3Lib\GeneratedCode\Switch.cs" />
+  <Message Timestamp="2015-10-30T14:50:30" Importance="Medium" Text="'ModelingProject3::MainTrack' -  (Class) : success (file created) - C:\Users\Glenn\Documents\GitHub\Prog5RikGlenn\Moduleren\ModelingProject3Lib\GeneratedCode\MainTrack.cs" />
+  <Message Timestamp="2015-10-30T14:50:30" Importance="Medium" Text="'ModelingProject3::DevergingSwtich' -  (Class) : success (file created) - C:\Users\Glenn\Documents\GitHub\Prog5RikGlenn\Moduleren\ModelingProject3Lib\GeneratedCode\DevergingSwtich.cs" />
+  <Message Timestamp="2015-10-30T14:50:30" Importance="Medium" Text="'ModelingProject3::Minecart' -  (Class) : success (file created) - C:\Users\Glenn\Documents\GitHub\Prog5RikGlenn\Moduleren\ModelingProject3Lib\GeneratedCode\Minecart.cs" />
+  <Message Timestamp="2015-10-30T14:50:31" Importance="Medium" Text="'ModelingProject3::SafeTrack' -  (Class) : success (file created) - C:\Users\Glenn\Documents\GitHub\Prog5RikGlenn\Moduleren\ModelingProject3Lib\GeneratedCode\SafeTrack.cs" />
+  <Message Timestamp="2015-10-30T14:50:31" Importance="Medium" Text="'ModelingProject3::ConvergingSwitch' -  (Class) : success (file created) - C:\Users\Glenn\Documents\GitHub\Prog5RikGlenn\Moduleren\ModelingProject3Lib\GeneratedCode\ConvergingSwitch.cs" />
+  <Message Timestamp="2015-10-30T14:50:31" Importance="Diagnostic" Text="Name = StructTemplate" />
+  <Message Timestamp="2015-10-30T14:50:31" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2015-10-30T14:50:31" Importance="Diagnostic" Text="ProjectPath = ..\ModelingProject3Lib\ModelingProject3Lib.csproj" />
+  <Message Timestamp="2015-10-30T14:50:31" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2015-10-30T14:50:31" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2015-10-30T14:50:31" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2015-10-30T14:50:31" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2015-10-30T14:50:31" Importance="Medium" Text="ModelingProject3's Text Template Binding: 'StructTemplate' will apply StructTemplate.t4 to: 'ModelingProject3::Dock' -  (Class), 'ModelingProject3::Board' -  (Class), 'ModelingProject3::Ship' -  (Class), 'ModelingProject3::Warehouse' -  (Class), 'ModelingProject3::Switch' -  (Class), 'ModelingProject3::MainTrack' -  (Class), 'ModelingProject3::DevergingSwtich' -  (Class), 'ModelingProject3::Minecart' -  (Class), 'ModelingProject3::SafeTrack' -  (Class), 'ModelingProject3::ConvergingSwitch' -  (Class) " />
+  <Message Timestamp="2015-10-30T14:50:31" Importance="Diagnostic" Text="'ModelingProject3::Dock' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-10-30T14:50:31" Importance="Diagnostic" Text="'ModelingProject3::Board' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-10-30T14:50:31" Importance="Diagnostic" Text="'ModelingProject3::Ship' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-10-30T14:50:31" Importance="Diagnostic" Text="'ModelingProject3::Warehouse' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-10-30T14:50:31" Importance="Diagnostic" Text="'ModelingProject3::Switch' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-10-30T14:50:31" Importance="Diagnostic" Text="'ModelingProject3::MainTrack' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-10-30T14:50:31" Importance="Diagnostic" Text="'ModelingProject3::DevergingSwtich' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-10-30T14:50:31" Importance="Diagnostic" Text="'ModelingProject3::Minecart' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-10-30T14:50:31" Importance="Diagnostic" Text="'ModelingProject3::SafeTrack' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-10-30T14:50:31" Importance="Diagnostic" Text="'ModelingProject3::ConvergingSwitch' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-10-30T14:50:32" Importance="Diagnostic" Text="The selection included 16 elements which were not bound to a template." />
+  <Message Timestamp="2015-10-30T14:50:32" Importance="Diagnostic" Text="'ModelingProject3::' -  (Association): no bound template." />
+  <Message Timestamp="2015-10-30T14:50:32" Importance="Diagnostic" Text="'ModelingProject3::' -  (Association): no bound template." />
+  <Message Timestamp="2015-10-30T14:50:32" Importance="Diagnostic" Text="'ModelingProject3::' -  (Association): no bound template." />
+  <Message Timestamp="2015-10-30T14:50:32" Importance="Diagnostic" Text="'ModelingProject3::' -  (Association): no bound template." />
+  <Message Timestamp="2015-10-30T14:50:32" Importance="Diagnostic" Text="'ModelingProject3::' -  (Association): no bound template." />
+  <Message Timestamp="2015-10-30T14:50:32" Importance="Diagnostic" Text="'7ff4d532-6093-4c49-9fac-fce77d2a37f4' -  (Generalization): no bound template." />
+  <Message Timestamp="2015-10-30T14:50:32" Importance="Diagnostic" Text="'ModelingProject3::' -  (Association): no bound template." />
+  <Message Timestamp="2015-10-30T14:50:32" Importance="Diagnostic" Text="'ModelingProject3::' -  (Association): no bound template." />
+  <Message Timestamp="2015-10-30T14:50:32" Importance="Diagnostic" Text="'775ddbc6-0b87-426d-9a79-95b4d88dc10a' -  (Generalization): no bound template." />
+  <Message Timestamp="2015-10-30T14:50:32" Importance="Diagnostic" Text="'75625176-5a08-4d52-bf86-a3706f5ed52e' -  (Generalization): no bound template." />
+  <Message Timestamp="2015-10-30T14:50:32" Importance="Diagnostic" Text="'a101443d-8ca1-4150-a02f-0e870e3258c7' -  (Generalization): no bound template." />
+  <Message Timestamp="2015-10-30T14:50:32" Importance="Diagnostic" Text="'ModelingProject3::' -  (Association): no bound template." />
+  <Message Timestamp="2015-10-30T14:50:32" Importance="Diagnostic" Text="'8a5741b4-553d-4f3c-9293-cc714d215f27' -  (Generalization): no bound template." />
+  <Message Timestamp="2015-10-30T14:50:32" Importance="Diagnostic" Text="'ModelingProject3::' -  (Association): no bound template." />
+  <Message Timestamp="2015-10-30T14:50:32" Importance="Diagnostic" Text="'8b31b8c5-cd45-4df0-9c30-d30dac7a6af4' -  (Generalization): no bound template." />
+  <Message Timestamp="2015-10-30T14:50:32" Importance="Diagnostic" Text="'ModelingProject3::' -  (Association): no bound template." />
+  <Message Timestamp="2015-10-30T14:50:32" Importance="High" Text="Code generation complete. Errors: 0. Warnings: 0." />
 </Log>

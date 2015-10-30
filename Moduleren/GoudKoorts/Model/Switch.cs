@@ -9,7 +9,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Switch : MainTrack
+public  abstract class Switch : MainTrack
 {
+	public Switch()
+	{
+
+	}
+
+
 }
 

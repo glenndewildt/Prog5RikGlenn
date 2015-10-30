@@ -9,7 +9,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Emty : MainTrack
+public class ConvergingSwitch : Switch
 {
+	public virtual bool IsDown{get;set;}
+
+	public virtual MainTrack MainTrack{get;set;}
+
+	public ConvergingSwitch()
+	{
+	}
+
+    public void Switch(){
+  
+    }
+    public char ToChar() {
+        return 'C';
+    }
 }
 

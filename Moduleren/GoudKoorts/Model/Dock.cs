@@ -11,17 +11,9 @@ using System.Text;
 
 public class Dock : MainTrack
 {
-	public virtual Board Board
-	{
-		get;
-		set;
-	}
+	public virtual Board Board{get;set;}
 
-	public virtual Ship Ship
-	{
-		get;
-		set;
-	}
+	public virtual Ship Ship{get;set;}
 
 }
 

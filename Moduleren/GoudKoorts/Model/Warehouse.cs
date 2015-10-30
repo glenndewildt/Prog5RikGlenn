@@ -11,5 +11,14 @@ using System.Text;
 
 public class Warehouse : MainTrack
 {
+    public Warehouse() { 
+    
+    }
+
+
+    public char ToChar()
+    {
+        return 'W';
+    }
 }
 

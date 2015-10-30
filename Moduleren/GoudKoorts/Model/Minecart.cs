@@ -11,5 +11,16 @@ using System.Text;
 
 public class Minecart
 {
+	public virtual bool isFull
+	{
+		get;
+		set;
+	}
+
+	public virtual void IsEmty()
+	{
+		throw new System.NotImplementedException();
+	}
+
 }
 

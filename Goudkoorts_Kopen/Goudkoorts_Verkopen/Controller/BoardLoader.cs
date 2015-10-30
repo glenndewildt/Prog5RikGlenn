@@ -137,7 +137,7 @@ using System.Threading.Tasks;
 			cSwitch.IsUp = false;
 			cSwitch.Inactive = getAtPosition(2,3);
 			board.Switches[0] = cSwitch;
-
+            
 			cSwitch = (ConvergingSwitch)getAtPosition(3, 9);
 			cSwitch.Inactive = getAtPosition(4, 9);
 			board.Switches[4] = cSwitch;

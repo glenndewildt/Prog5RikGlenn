@@ -10,7 +10,8 @@ public class Board
 	public Switch[] Switches { get; set; }
 	public int Score { get; set; }
 	public Ship Ship { get; set; }
-	public LinkedList<LinkedList<BaseTrack>> FirstRow { set; get; }
+    public LinkedList<BaseTrack>[] Tracks { get; set; }
+    
 	public bool GameOver { get; set; }
 	private Random RandomGenerator;
 
@@ -23,6 +24,12 @@ public class Board
 		Ship = new Ship();
 	}
 
+    public void MakeTracks(Switch[] switches, Warehouse[] warenhouses) { 
+    for (wa){
+    
+    
+    }
+    }
 	public int Tick()
 	{
 		if (!Ship.IsDocked)

@@ -11,29 +11,129 @@ using System.Text;
 
 public class Board
 {
-	public virtual MainTrack MainTrack
-	{
-		get;
-		set;
-	}
+    public virtual int Score { get; set; }
+    public virtual bool GameOver { get; set; }
+    public virtual MainTrack MainTrack { get; set; }
+    public virtual Warehouse[] Warehouses { get; set; }
+    public virtual ConvergingSwitch[] ConSwitch { get; set; }
+    public virtual DevergingSwtich[] DevSwitch { get; set; }
+    public virtual MainTrack[] Basis { get; set; }
+    public virtual Ship Ship { get; set; }
+    public LinkedList<MainTrack> DockPath { get; set; }
+    public LinkedList<MainTrack> SavePath { get; set; }
+    public LinkedList<MainTrack> SecondPath { get; set; }
 
-	public virtual Warehouse Warehouse
-	{
-		get;
-		set;
-	}
 
-	public virtual IEnumerable<Switch> Switch
-	{
-		get;
-		set;
-	}
+    public Board()
+    {
+        ConSwitch = new ConvergingSwitch[5];
+        for (int x = 0; x < ConSwitch.Length - 1; x++ )
+        {
+            ConSwitch[x] = new ConvergingSwitch();
+        }
+        DevSwitch = new DevergingSwtich[5];
+        for (int x = 0; x < DevSwitch.Length - 1; x++)
+        {
+            DevSwitch[x] = new DevergingSwtich();
+        }
+        Basis  = new MainTrack[10];
+        for (int x = 0; x < Basis.Length - 1; x++)
+        {
+            Basis[x] = new MainTrack();
+        }
+        Warehouses = new Warehouse[3];
+        for (int x = 0; x < Warehouses.Length - 1; x++)
+        {
+            Warehouses[x] = new Warehouse();
+        }
+        Ship = new Ship();
+        MakePath();
 
-	public virtual Ship Ship
-	{
-		get;
-		set;
-	}
+    }
+
+    public void MakePath()
+    {
+        
+        for (int x = 0; x <= 2; x++)
+        {
+            for (int i = 0; i < 25; i++)
+            {
+                if (i == 3) {
+                    DockPath.AddLast(ConSwitch[0]);
+                    DockPath.AddLast(Basis[0]);
+                    DockPath.AddLast(DevSwitch[0]);
+
+                }
+
+                if (i == 7) {
+                    DockPath.AddLast(ConSwitch[2]);
+                  
+                }
+                if (x == 0)
+                {
+                    if (i == 0)
+                    {
+                        DockPath.AddLast(Warehouses[0]);
+                    }
+                    DockPath.AddLast(new MainTrack());
+                }
+                if (x == 1)
+                {
+                    if (i == 6) {
+                        SecondPath.AddLast(ConSwitch[2]);
+                    }
+                    if (i == 5)
+                    {
+                        SecondPath.AddLast(ConSwitch[1]);
+                        SecondPath.AddLast(Basis[1]);
+                        SecondPath.AddLast(DevSwitch[1]);
+
+                    }
+                    if (i == 3)
+                    {
+                        SecondPath.AddLast(ConSwitch[0]);
+                        SecondPath.AddLast(Basis[0]);
+                        SecondPath.AddLast(DevSwitch[0]);
+                    }
+                    if (i == 0)
+                    {
+                        SecondPath.AddLast(Warehouses[1]);
+                    }
+                    SecondPath.AddLast(new MainTrack());
+                }
+                if (x == 2)
+                {
+                    if (i == 8) {
+                        SavePath.AddLast(ConSwitch[1]);
+                        SavePath.AddLast(Basis[1]);
+                        SavePath.AddLast(DevSwitch[1]);
+                    
+                    }
+                    if (i == 0)
+                    {
+                        SavePath.AddLast(Warehouses[2]);
+                    }
+                    SavePath.AddLast(new MainTrack());
+                }
+            }
+
+        }
+    }
+
+    public virtual void Move()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public virtual void Spawn()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public virtual void Tick()
+    {
+        throw new System.NotImplementedException();
+    }
 
 }
 
