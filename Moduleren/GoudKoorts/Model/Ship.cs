@@ -13,8 +13,7 @@ public class Ship
 {
 	public virtual MainTrack MainTrack
 	{
-		get;
-		set;
+		
 	}
 
 }

@@ -13,7 +13,28 @@ public class Dock : MainTrack
 {
 	public virtual Board Board{get;set;}
 
-	public virtual Ship Ship{get;set;}
+	public virtual Ship ship{get;set;}
 
+    public bool ContainsShip()
+    {
+        if(ship != null){
+            return true;
+        }
+        return false;
+    }
+
+    public void Losse()
+    {
+        if (ContainsShip() && !Contains.IsEmpty())
+        {
+            Contains.emptyMineCart();
+            //ShipLading ++;
+        }
+    }
+
+    public char ToChar()
+    {
+        return 'D';
+    }
 }
 
