@@ -19,12 +19,13 @@ public class Board
     public ConvergingSwitch[] ConSwitch { get; set; }
     public DevergingSwtich[] DevSwitch { get; set; }
     public MainTrack[] Basis { get; set; }
-    public Ship Ship { get; set; }
+    public Ship ship { get; set; }
     public LinkedList<MainTrack> DockPath { get; set; }
     public LinkedList<MainTrack> SavePath { get; set; }
     public LinkedList<MainTrack> SecondPath { get; set; }
     public List<MainTrack> UsedTracks { get; set; }
     public Char[] schipChar { get; set; }
+    public int schipSpace { get; set; }
 
 
     public Board()
@@ -34,7 +35,8 @@ public class Board
         DockPath = new LinkedList<MainTrack>();
         SavePath = new LinkedList<MainTrack>();
         SecondPath = new LinkedList<MainTrack>();
-        schipChar = new Char[25];
+        schipChar = new Char[30];
+        schipSpace = 0;
 
         ConSwitch = new ConvergingSwitch[5];
         for (int x = 0; x < ConSwitch.Length; x++ )
@@ -56,9 +58,11 @@ public class Board
         {
             Warehouses[x] = new Warehouse();
         }
-        Ship = new Ship();
+        ship = new Ship();
         MakePath();
         Spawn();
+        this.schipSpaced();
+        schipSpace++;
     }
 
     public void MakePath()
@@ -143,8 +147,10 @@ public class Board
     public virtual void Move()
     {
     
-            dock.Losse();
-        
+        dock.Losse();
+        this.schipSpaced();
+        schipSpace++;
+
         foreach (var e in UsedTracks)
         {
             if( e.Move(DockPath,UsedTracks)){
@@ -159,8 +165,23 @@ public class Board
             {
                 return;
             }
-
            
+        }
+
+        
+    }
+
+    public void schipSpaced()
+    {
+        for (int i = 0; i < 30; i++)
+        {
+            schipChar[i] = ' ';
+        }
+
+        for (int j = 0; j < 5; j++)
+        {
+            char[] temp = ship.getChars();
+            schipChar[schipSpace + j] = temp[j];
         }
         
     }
