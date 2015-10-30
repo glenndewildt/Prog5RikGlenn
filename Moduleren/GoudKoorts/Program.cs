@@ -10,29 +10,43 @@ namespace GoudKoorts
     {
         static void Main(string[] args)
         {
-            Board board= new Board();
-
+            Board board = new Board();
             Console.Write("LOADING BOARDINJECTOR");
             Console.WriteLine();
             Console.Write("DONE.");
             Console.WriteLine();
 
+            while (true)
+            {
 
-            foreach(var track in board.DockPath){
-                Console.Write(track.ToChar());
+                if (Console.ReadLine().Equals(" "))
+                {
+                    board.Move();
+
+                    foreach (var track in board.DockPath)
+                    {
+                        Console.Write(track.ToChar());
+                    }
+                    Console.WriteLine();
+                    foreach (var track in board.SecondPath)
+                    {
+                        Console.Write(track.ToChar());
+                    }
+                    Console.WriteLine();
+                    foreach (var track in board.SavePath)
+                    {
+                        Console.Write(track.ToChar());
+                    }
+                    Console.WriteLine();
+                }
+
+
+
             }
-            Console.WriteLine();
-            foreach (var track in board.SecondPath)
-            {
-                Console.Write(track.ToChar());
-            }
-            Console.WriteLine();
-            foreach (var track in board.SavePath)
-            {
-                Console.Write(track.ToChar());
-            }
-            Console.WriteLine();
-            Console.ReadLine();
+
+
+
+
         }
     }
 }

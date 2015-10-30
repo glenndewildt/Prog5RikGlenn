@@ -27,6 +27,7 @@ public class Board
 
     public Board()
     {
+        UsedTracks = new List<MainTrack>();
         DockPath = new LinkedList<MainTrack>();
         SavePath = new LinkedList<MainTrack>();
         SecondPath = new LinkedList<MainTrack>();
@@ -136,7 +137,19 @@ public class Board
     {
         foreach (var e in UsedTracks)
         {
-            e.Move();
+            if( e.Move(DockPath,UsedTracks)){
+                return;
+            }
+            if (e.Move(SecondPath, UsedTracks))
+            {
+                return;
+            }
+            if (e.Move(SavePath, UsedTracks))
+            {
+                return;
+            }
+
+           
         }
         
     }
@@ -145,19 +158,23 @@ public class Board
     {
         Minecart mineCart = new Minecart();
         Random randomPath = new Random();
-        int random = randomPath.Next(2);
+        int random = randomPath.Next(3);
         if (random == 0)
         {
             DockPath.First.Next.Value.Place(mineCart);
+            UsedTracks.Add(DockPath.First.Next.Value);
         }
         else if (random == 1)
         {
             SecondPath.First.Next.Value.Place(mineCart);
+            UsedTracks.Add(SecondPath.First.Next.Value);
         }
         else if (random == 2)
         {
             SavePath.First.Next.Value.Place(mineCart);
+            UsedTracks.Add(SavePath.First.Next.Value);
         }
+        
         
     }
 

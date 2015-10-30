@@ -51,12 +51,23 @@ public class MainTrack
         }
     }
 
-    public void Move()
+    public bool Move(LinkedList<MainTrack> route, List<MainTrack> usedTracks)
     {
 
         if (Contains != null)
         {
+            if (route.Find(this) == null) {
+                return false;
+            }
+            if (route.Find(this).Next.Value.IsEmty()) {
+                route.Find(this).Next.Value.Place(this.Contains);
+                usedTracks.Add(route.Find(this).Next.Value);
+                usedTracks.Remove(route.Find(this).Value);
+                this.Contains = null;
+                return true;
+            }
         }
+        return false;
     }
 
 }
