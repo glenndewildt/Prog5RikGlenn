@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Timers;
 
 public class Board
 {
@@ -31,6 +32,13 @@ public class Board
 
     public Board()
     {
+        // timer
+
+        Timer aTimer = new System.Timers.Timer();
+        aTimer.Elapsed += new ElapsedEventHandler(timer_Tick);
+        aTimer.Interval = 1000;
+        aTimer.Enabled = true;
+        //end timer
         dock = new Dock();
         UsedTracks = new List<MainTrack>();
         DockPath = new LinkedList<MainTrack>();
@@ -183,6 +191,8 @@ public class Board
         {
             ship.aantal = 0;
             schipSpace = 0;
+            ship.IsEmpty = true;
+            ship.IsFull = false;
         }
 
         if (!schipDock)
@@ -234,9 +244,9 @@ public class Board
         
     }
 
-    public virtual void Tick()
+    void timer_Tick(object sender, EventArgs e)
     {
-        throw new System.NotImplementedException();
+        Spawn();
     }
 
 }
