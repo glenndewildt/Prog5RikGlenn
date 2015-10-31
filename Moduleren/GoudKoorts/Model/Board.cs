@@ -179,6 +179,11 @@ public class Board
         {
             schipDock = true;
         }
+        if (schipSpace == 36)
+        {
+            ship.aantal = 0;
+            schipSpace = 0;
+        }
 
         if (!schipDock)
         {
@@ -186,7 +191,7 @@ public class Board
             {
                 schipChar[i] = ' ';
             }
-            if(i == 40;)
+            
             for (int j = 0; j < 5; j++)
             {
                 char[] temp = ship.getChars();
