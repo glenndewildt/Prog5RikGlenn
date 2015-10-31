@@ -38,22 +38,113 @@ namespace GoudKoorts
             Console.WriteLine();
             for (int i = 0; i < 35; i++)
             {
+                
                 Console.Write(board.schipChar[i]);
             }
             Console.WriteLine();
             foreach (var track in board.DockPath)
             {
-                Console.Write(track.ToChar());
+                if (track.ToChar() == 'C')
+                {
+                    Console.Write(' ');
+                    
+                }
+           
+               
+                else if (track.ToChar() == 'I')
+                {
+                    Console.Write(' ');
+                    
+                }
+                else {
+                    Console.Write(track.ToChar());
+            }
+                
+            }
+            Console.WriteLine();
+            foreach (var track in board.DockPath)
+            {
+                if (track.ToChar() == 'C')
+                {
+                    Console.Write('C');
+
+                }
+
+
+                else if (track.ToChar() == 'I')
+                {
+                    Console.Write('I');
+
+                }
+                else
+                {
+                    Console.Write(' ');
+                }
+
             }
             Console.WriteLine();
             foreach (var track in board.SecondPath)
             {
-                Console.Write(track.ToChar());
+                if (track.GetType() == typeof(DevergingSwtich))
+                {
+                    Console.Write(' ');
+
+                }
+
+
+            
+
+                else if (track.GetType() == typeof(ConvergingSwitch)) {
+                    Console.Write(' ');
+                }
+                else
+                {
+                    Console.Write(track.ToChar());
+                }
             }
+
             Console.WriteLine();
             foreach (var track in board.SavePath)
             {
-                Console.Write(track.ToChar());
+                if (track.ToChar() == 'C')
+                {
+                    Console.Write('C');
+
+                }
+
+
+                else if (track.ToChar() == 'I')
+                {
+                    Console.Write('I');
+
+                }
+               
+                else
+                {
+                    Console.Write(' ');
+                }
+
+            }
+
+            Console.WriteLine();
+            foreach (var track in board.SavePath)
+            {
+                if (track.ToChar() == 'C')
+                {
+                    Console.Write(' ');
+
+                }
+
+
+                else if (track.ToChar() == 'I')
+                {
+                    Console.Write(' ');
+
+                }
+                else
+                {
+                    Console.Write(track.ToChar());
+                }
             }
             Console.WriteLine();
             board.Move();

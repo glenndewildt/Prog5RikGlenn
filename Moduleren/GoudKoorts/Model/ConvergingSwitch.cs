@@ -24,7 +24,14 @@ public class ConvergingSwitch : Switch
     }
     public override char ToChar()
     {
-        return 'C';
+        if (Contains == null)
+        {
+            return 'C';
+        }
+        else
+        {
+            return Contains.ToChar();
+        }
     }
 }
 

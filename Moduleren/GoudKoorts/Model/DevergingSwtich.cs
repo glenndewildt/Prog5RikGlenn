@@ -31,7 +31,14 @@ public class DevergingSwtich : Switch
 
     public override char ToChar()
     {
-        return 'I';
+        if (Contains == null)
+        {
+            return 'C';
+        }
+        else
+        {
+            return Contains.ToChar();
+        }
     }
 }
 
