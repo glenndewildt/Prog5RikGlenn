@@ -115,28 +115,28 @@ public class MainTrack
                         Console.WriteLine(d.Link1.Value);
                         Console.WriteLine();
 
-                        route.Find(this).Next.Value = d.Link1.Value;
-                        if (route.Find(this).Next.Value.IsEmty())
-                        {
+                        route.Find(this).Next.Value.Place(this.Contains);
+                        route.Find(this).Value.Contains = null;
+                      
                             usedTracks.Add(route.Find(this).Next.Value);
                             usedTracks.Remove(route.Find(this).Value);
-                            this.Contains = null;
+                            
                             return true;
-                        }
+                        
                     }
                     else if (d.IsDown)
                     {
                         Console.WriteLine(d.Link2.Value);
                         Console.WriteLine();
 
-                        route.Find(this).Next.Value = d.Link2.Value;
-                        if (route.Find(this).Next.Value.IsEmty())
-                        {
+                        route.Find(this).Next.Value.Place(this.Contains);
+                        route.Find(this).Value.Contains = null;
+                       
                             usedTracks.Add(route.Find(this).Next.Value);
                             usedTracks.Remove(route.Find(this).Value);
-                            this.Contains = null;
+                           
                             return true;
-                        }
+                        
                     }
 
                     return false;

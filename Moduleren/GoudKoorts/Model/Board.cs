@@ -38,7 +38,7 @@ public class Board
 
         Timer aTimer = new System.Timers.Timer();
         aTimer.Elapsed += new ElapsedEventHandler(timer_Tick);
-        aTimer.Interval = 3000;
+        aTimer.Interval = 6000;
         aTimer.Enabled = true;
         //end timer
         dock = new Dock();
@@ -113,8 +113,9 @@ public class Board
                    }
                     else if (i == 10)
                     {
-                        ConSwitch[2].addLink(DockPath.Last);
+                        
                         DockPath.AddLast(ConSwitch[2]);
+                        ConSwitch[2].addLink(DockPath.Last);
 
                     }
                     else
@@ -126,8 +127,9 @@ public class Board
                 {
                    
                     if (i == 8) {
-                        ConSwitch[2].addLink(SecondPath.Last);
+                       
                         SecondPath.AddLast(ConSwitch[2]);
+                        ConSwitch[2].addLink(SecondPath.Last);
                         end = true;
                     }
                     else if (i == 6)
@@ -153,6 +155,7 @@ public class Board
                     }
                     else if (i == 4)
                     {
+                    
                         SecondPath.AddLast(new MainTrack());
                         DevSwitch[0].addLink(SecondPath.Last);
 
