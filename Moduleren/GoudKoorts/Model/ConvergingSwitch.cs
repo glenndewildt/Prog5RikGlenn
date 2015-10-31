@@ -41,7 +41,11 @@ public class ConvergingSwitch : Switch
     {
         if (Contains == null)
         {
-            return 'C';
+            if (!IsDown)
+            {
+                return '└';
+            }
+            return '┌';
         }
         else
         {

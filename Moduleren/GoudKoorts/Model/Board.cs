@@ -108,6 +108,7 @@ public class Board
                    }
                     else if (i == 9)
                     {
+                        ConSwitch[2].addLink(DockPath.Last);
                         DockPath.AddLast(ConSwitch[2]);
 
                     }
@@ -120,12 +121,13 @@ public class Board
                 {
                    
                     if (i == 7) {
+                        ConSwitch[2].addLink(SecondPath.Last);
                         SecondPath.AddLast(ConSwitch[2]);
                         end = true;
                     }
                     else if (i == 6)
                     {
-
+                        ConSwitch[1].addLink(SecondPath.Last);
                         SecondPath.AddLast(ConSwitch[1]);
                         SecondPath.AddLast(Basis[1]);
                         SecondPath.AddLast(DevSwitch[1]);
@@ -133,7 +135,7 @@ public class Board
                     }
                     else if (i == 3)
                     {
-                        ConSwitch[0].addLink(DockPath.Last);
+                        ConSwitch[0].addLink(SecondPath.Last);
                         SecondPath.AddLast(ConSwitch[0]);
                         SecondPath.AddLast(Basis[0]);
                         SecondPath.AddLast(DevSwitch[0]);
@@ -148,6 +150,7 @@ public class Board
                 if (x == 2)
                 {
                     if (i == 8) {
+                        ConSwitch[1].addLink(SavePath.Last);
                         SavePath.AddLast(ConSwitch[1]);
                         SavePath.AddLast(Basis[1]);
                         SavePath.AddLast(DevSwitch[1]);
@@ -293,7 +296,7 @@ public class Board
     {
         Minecart mineCart = new Minecart();
         Random randomPath = new Random();
-        int random = 0;
+        int random = 1;
         if (random == 0)
         {
             DockPath.First.Next.Value.Place(mineCart);
