@@ -17,7 +17,7 @@ namespace GoudKoorts
 
             Timer aTimer = new System.Timers.Timer();
             aTimer.Elapsed += new ElapsedEventHandler(timer_Tick);
-            aTimer.Interval = 100;
+            aTimer.Interval = 800;
             aTimer.Enabled = true;
             //end timer
 
@@ -32,7 +32,7 @@ namespace GoudKoorts
 
         private static void timer_Tick(object sender, ElapsedEventArgs e)
         {
-            
+            Console.Clear();
             for (int i = 0; i < 35; i++)
             {
                 Console.Write(board.schipChar[i]);
@@ -54,6 +54,8 @@ namespace GoudKoorts
             }
             Console.WriteLine();
             board.Move();
+           
         }
+        
     }
 }
