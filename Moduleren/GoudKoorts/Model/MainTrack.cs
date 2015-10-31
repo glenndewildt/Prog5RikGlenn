@@ -11,7 +11,7 @@ using System.Text;
 
 public class MainTrack
 {
-	public virtual Minecart Contains{get;set;}
+    public virtual Minecart Contains { get; set; }
 
     public bool GameOver;
 
@@ -20,19 +20,20 @@ public class MainTrack
         GameOver = false;
     }
 
-	public Boolean IsEmty()
-	{
+    public Boolean IsEmty()
+    {
         if (Contains == null)
         {
             return true;
         }
-        else {
+        else
+        {
             return false;
         }
-	}
+    }
 
-	public bool Place(Minecart cart)
-	{
+    public bool Place(Minecart cart)
+    {
         if (IsEmty())
         {
             Contains = cart;
@@ -40,7 +41,7 @@ public class MainTrack
         }
 
         return false;
-	}
+    }
     public virtual char ToChar()
     {
         if (Contains == null)
@@ -63,7 +64,8 @@ public class MainTrack
 
         if (Contains != null)
         {
-            if (route.Find(this) == null) {
+            if (route.Find(this) == null)
+            {
                 return false;
             }
 
@@ -71,12 +73,40 @@ public class MainTrack
             {
                 if (route.Find(this).Next.Value.GetType() == typeof(ConvergingSwitch))
                 {
-                    ConvergingSwitch c = (ConvergingSwitch) route.Find(this).Next.Value;
-                    if (c.Link1.Value == this)
+                    ConvergingSwitch c = (ConvergingSwitch)route.Find(this).Next.Value;
+
+                    if (route.Find(this).Value.Equals(c.Link1.Value) && !c.IsDown)
                     {
-                         
+                        Console.WriteLine("komt erin");
+                        if (route.Find(this).Next.Value.IsEmty())
+                        {
+                            route.Find(this).Next.Value.Place(this.Contains);
+                            usedTracks.Add(route.Find(this).Next.Value);
+                            usedTracks.Remove(route.Find(this).Value);
+                            this.Contains = null;
+                            Console.Write("correct");
+                            return true;
+                        }
                     }
-                }  
+                    else if (route.Find(this).Value.Equals(c.Link2.Value) && c.IsDown)
+                    {
+                        if (route.Find(this).Next.Value.IsEmty())
+                        {
+                            route.Find(this).Next.Value.Place(this.Contains);
+                            usedTracks.Add(route.Find(this).Next.Value);
+                            usedTracks.Remove(route.Find(this).Value);
+                            this.Contains = null;
+                            Console.Write("correct");
+                            return true;
+                        }
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+
+                }
 
                 if (route.Find(this).Next.Value.IsEmty())
                 {
@@ -88,7 +118,8 @@ public class MainTrack
                 }
                 else
                 {
-                    if (route.Find(this).Next.Value.GetType() != typeof(SafeTrack)){
+                    if (route.Find(this).Next.Value.GetType() != typeof(SafeTrack))
+                    {
                         GameOver = true;
                     }
                     else
@@ -97,7 +128,7 @@ public class MainTrack
                     }
                     return false;
                 }
-                
+
             }
         }
         return false;

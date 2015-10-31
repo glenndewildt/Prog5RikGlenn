@@ -293,7 +293,7 @@ public class Board
     {
         Minecart mineCart = new Minecart();
         Random randomPath = new Random();
-        int random = 2;
+        int random = 0;
         if (random == 0)
         {
             DockPath.First.Next.Value.Place(mineCart);

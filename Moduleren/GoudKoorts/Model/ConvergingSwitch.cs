@@ -20,6 +20,7 @@ public class ConvergingSwitch : Switch
 	public ConvergingSwitch()
 	{
         IsDown = true;
+
 	}
 
     public void Switch(){
