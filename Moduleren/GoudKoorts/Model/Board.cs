@@ -114,11 +114,11 @@ public class Board
                 if (x == 1)
                 {
                    
-                    if (i == 6) {
+                    if (i == 7) {
                         SecondPath.AddLast(ConSwitch[2]);
                         end = true;
                     }
-                    else if (i == 5)
+                    else if (i == 6)
                     {
                         SecondPath.AddLast(ConSwitch[1]);
                         SecondPath.AddLast(Basis[1]);
@@ -253,7 +253,7 @@ public class Board
     {
         Minecart mineCart = new Minecart();
         Random randomPath = new Random();
-        int random = randomPath.Next(3);
+        int random = 1;
         if (random == 0)
         {
             DockPath.First.Next.Value.Place(mineCart);
