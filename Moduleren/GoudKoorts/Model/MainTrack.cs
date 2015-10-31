@@ -69,6 +69,14 @@ public class MainTrack
 
             if (route.Find(this).Next != null)
             {
+                if (route.Find(this).Next.Value.GetType() == typeof(ConvergingSwitch))
+                {
+                    ConvergingSwitch c = (ConvergingSwitch) route.Find(this).Next.Value;
+                    if (c.Link1.Value == this)
+                    {
+                         
+                    }
+                }  
 
                 if (route.Find(this).Next.Value.IsEmty())
                 {
@@ -78,7 +86,6 @@ public class MainTrack
                     this.Contains = null;
                     return true;
                 }
-                  
                 else
                 {
                     if (route.Find(this).Next.Value.GetType() != typeof(SafeTrack)){
