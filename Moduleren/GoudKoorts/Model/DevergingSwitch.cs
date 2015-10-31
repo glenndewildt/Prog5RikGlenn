@@ -11,20 +11,11 @@ using System.Text;
 
 public class DevergingSwtich : Switch
 {
-	public virtual bool IsDown
-	{
-		get;
-		set;
-	}
 
-	public virtual MainTrack Inactive
-	{
-		get;
-		set;
-	}
 
 	public DevergingSwtich()
 	{
+        IsDown = false;
 	}
 
 
@@ -33,7 +24,7 @@ public class DevergingSwtich : Switch
     {
         if (Contains == null)
         {
-            return 'C';
+            return 'I';
         }
         else
         {

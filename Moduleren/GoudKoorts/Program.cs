@@ -81,10 +81,13 @@ namespace GoudKoorts
                 Console.WriteLine(board.Score);
                 Console.WriteLine();
                 Console.WriteLine("Play Again? y/n");
-                Console.ReadLine();
-                
-                Board board1 = new Board();
-                
+                if (Console.ReadLine().Equals("y"))
+                {
+                    board = new Board();
+
+                    aTimer.Enabled = true;
+                }
+
             }
         }
 

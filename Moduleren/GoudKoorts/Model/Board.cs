@@ -104,9 +104,14 @@ public class Board
                        DockPath.AddLast(ConSwitch[0]);
                        DockPath.AddLast(Basis[0]);
                        DockPath.AddLast(DevSwitch[0]);
+                       
 
+                   }else if ( i == 4){
+                       DockPath.AddLast(new MainTrack());
+                       DevSwitch[0].addLink(DockPath.Last);
+                   
                    }
-                    else if (i == 9)
+                    else if (i == 10)
                     {
                         ConSwitch[2].addLink(DockPath.Last);
                         DockPath.AddLast(ConSwitch[2]);
@@ -120,7 +125,7 @@ public class Board
                 if (x == 1)
                 {
                    
-                    if (i == 7) {
+                    if (i == 8) {
                         ConSwitch[2].addLink(SecondPath.Last);
                         SecondPath.AddLast(ConSwitch[2]);
                         end = true;
@@ -133,12 +138,24 @@ public class Board
                         SecondPath.AddLast(DevSwitch[1]);
 
                     }
+                   else if (i == 7)
+                    {
+                        SecondPath.AddLast(new MainTrack());
+                        DevSwitch[1].addLink(SecondPath.Last);
+
+                    }
                     else if (i == 3)
                     {
                         ConSwitch[0].addLink(SecondPath.Last);
                         SecondPath.AddLast(ConSwitch[0]);
                         SecondPath.AddLast(Basis[0]);
                         SecondPath.AddLast(DevSwitch[0]);
+                    }
+                    else if (i == 4)
+                    {
+                        SecondPath.AddLast(new MainTrack());
+                        DevSwitch[0].addLink(SecondPath.Last);
+
                     }
                     else if (i == 0)
                     {
@@ -155,6 +172,12 @@ public class Board
                         SavePath.AddLast(Basis[1]);
                         SavePath.AddLast(DevSwitch[1]);
                     
+                    }
+                    else if (i == 9)
+                    {
+                        SavePath.AddLast(new MainTrack());
+                        DevSwitch[1].addLink(SavePath.Last);
+
                     }
                     else if (i == 0)
                     {
