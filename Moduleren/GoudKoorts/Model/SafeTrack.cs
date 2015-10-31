@@ -11,5 +11,17 @@ using System.Text;
 
 public class SafeTrack : MainTrack
 {
+
+    public override char ToChar()
+    {
+        if (Contains == null)
+        {
+            return 'S';
+        }
+        else
+        {
+            return Contains.ToChar();
+        }
+    }
 }
 

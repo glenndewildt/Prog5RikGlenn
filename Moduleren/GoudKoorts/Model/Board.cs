@@ -90,24 +90,26 @@ public class Board
                     if (i == 20) {
                         DockPath.AddLast(dock);
                     }
-                   if (i == 0)
+                   else if (i == 0)
                    {
                         DockPath.AddLast(Warehouses[0]);
                    }
-                   if (i == 3)
+                   else if (i == 3)
                    {
                        DockPath.AddLast(ConSwitch[0]);
                        DockPath.AddLast(Basis[0]);
                        DockPath.AddLast(DevSwitch[0]);
 
                    }
+                    else if (i == 9)
+                    {
+                        DockPath.AddLast(ConSwitch[2]);
 
-                   if (i == 9)
-                   {
-                       DockPath.AddLast(ConSwitch[2]);
-
-                   }
-                   DockPath.AddLast(new MainTrack());
+                    }
+                    else
+                    {
+                        DockPath.AddLast(new MainTrack());
+                    }
                 }
                 if (x == 1)
                 {
@@ -116,24 +118,24 @@ public class Board
                         SecondPath.AddLast(ConSwitch[2]);
                         end = true;
                     }
-                    if (i == 5)
+                    else if (i == 5)
                     {
                         SecondPath.AddLast(ConSwitch[1]);
                         SecondPath.AddLast(Basis[1]);
                         SecondPath.AddLast(DevSwitch[1]);
 
                     }
-                    if (i == 3)
+                    else if (i == 3)
                     {
                         SecondPath.AddLast(ConSwitch[0]);
                         SecondPath.AddLast(Basis[0]);
                         SecondPath.AddLast(DevSwitch[0]);
                     }
-                    if (i == 0)
+                    else if (i == 0)
                     {
                         SecondPath.AddLast(Warehouses[1]);
                     }
-                    if(end == false)
+                    else if(end == false)
                     SecondPath.AddLast(new MainTrack());
                 }
                 if (x == 2)
@@ -144,11 +146,18 @@ public class Board
                         SavePath.AddLast(DevSwitch[1]);
                     
                     }
-                    if (i == 0)
+                    else if (i == 0)
                     {
                         SavePath.AddLast(Warehouses[2]);
                     }
-                    SavePath.AddLast(new MainTrack());
+                    else if (i < 17)
+                    {
+                        SavePath.AddLast(new MainTrack());
+                    }
+                    else
+                    {
+                        SavePath.AddLast(new SafeTrack());
+                    }
                 }
             }
 
