@@ -51,6 +51,11 @@ public class MainTrack
         }
     }
 
+    public virtual bool Botsing()
+    {
+        return true;
+    }
+
     public bool Move(LinkedList<MainTrack> route, List<MainTrack> usedTracks)
     {
 
@@ -70,7 +75,12 @@ public class MainTrack
                     this.Contains = null;
                     return true;
                 }
-                return false;
+                else
+                {
+                    Console.WriteLine("CRASH");
+                    return false;
+                }
+                
             }
         }
         return false;

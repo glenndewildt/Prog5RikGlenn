@@ -200,7 +200,7 @@ public class Board
     public void schipSpaced()
     {
 
-        if (schipSpace == 24)
+        if (schipSpace == 20)
         {
             schipDock = true;
         }
