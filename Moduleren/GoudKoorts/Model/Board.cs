@@ -47,6 +47,7 @@ public class Board
         schipChar = new Char[50];
         schipSpace = 0;
         schipDock = false;
+        Score = 0;
 
         ConSwitch = new ConvergingSwitch[5];
         for (int x = 0; x < ConSwitch.Length; x++ )
@@ -156,9 +157,10 @@ public class Board
 
     public virtual void Move()
     {
-        if (schipDock)
+        if (schipDock && dock.ContainsShip() && dock.Contains != null)
         {
             dock.Losse(ship);
+            Score++;
         }
         this.schipSpaced();
 

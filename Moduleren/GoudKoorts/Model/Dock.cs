@@ -11,8 +11,6 @@ using System.Text;
 
 public class Dock : MainTrack
 {
-	public virtual Board Board{get;set;}
-
 	public virtual Ship ship{get;set;}
 
     public Dock() {
@@ -30,12 +28,10 @@ public class Dock : MainTrack
     public void Losse(Ship ship)
     {
         this.ship = ship;
-        if (ContainsShip() && Contains != null)
-        {
-            Contains.emptyMineCart();
-            //ShipLading ++;
-            ship.AddCart();
-        }
+        Contains.emptyMineCart();
+        //ShipLading ++;
+        ship.AddCart();
+        
     }
 
     public override char ToChar()
