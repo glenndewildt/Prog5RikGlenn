@@ -66,6 +66,7 @@ public class MainTrack
             if (route.Find(this) == null) {
                 return false;
             }
+
             if (route.Find(this).Next != null)
             {
 
@@ -77,6 +78,7 @@ public class MainTrack
                     this.Contains = null;
                     return true;
                 }
+                  
                 else
                 {
                     if (route.Find(this).Next.Value.GetType() != typeof(SafeTrack)){

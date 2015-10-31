@@ -59,9 +59,17 @@ namespace GoudKoorts
             {
                 Console.Write(track.ToChar());
             }
-
+            
 
             Console.WriteLine();
+            if (board.ConSwitch[0].Link1 != null) {
+                Console.WriteLine(board.ConSwitch[0].Link1.GetType());
+            }
+            if (board.ConSwitch[0].Link2 != null)
+            {
+                Console.WriteLine(board.ConSwitch[0].Link2.GetType());
+            }
+        
             board.Move();
 
             if (board.GameOver)

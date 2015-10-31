@@ -100,6 +100,7 @@ public class Board
                    }
                    else if (i == 3)
                    {
+                       ConSwitch[0].addLink(DockPath.Last);
                        DockPath.AddLast(ConSwitch[0]);
                        DockPath.AddLast(Basis[0]);
                        DockPath.AddLast(DevSwitch[0]);
@@ -124,6 +125,7 @@ public class Board
                     }
                     else if (i == 6)
                     {
+
                         SecondPath.AddLast(ConSwitch[1]);
                         SecondPath.AddLast(Basis[1]);
                         SecondPath.AddLast(DevSwitch[1]);
@@ -131,6 +133,7 @@ public class Board
                     }
                     else if (i == 3)
                     {
+                        ConSwitch[0].addLink(DockPath.Last);
                         SecondPath.AddLast(ConSwitch[0]);
                         SecondPath.AddLast(Basis[0]);
                         SecondPath.AddLast(DevSwitch[0]);

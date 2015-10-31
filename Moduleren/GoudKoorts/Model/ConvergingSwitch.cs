@@ -12,15 +12,28 @@ using System.Text;
 public class ConvergingSwitch : Switch
 {
 	public virtual bool IsDown{get;set;}
+    public LinkedListNode<MainTrack> Link1 { get; set; }
+    public LinkedListNode<MainTrack> Link2 { get; set; }
 
 	public virtual MainTrack MainTrack{get;set;}
 
 	public ConvergingSwitch()
 	{
+        IsDown = true;
 	}
 
     public void Switch(){
 
+    }
+
+    public void addLink(LinkedListNode<MainTrack> link) {
+        if (Link1 == null)
+        {
+            Link1 = link;
+        }
+        else if (Link2 == null) {
+            Link2 = link;
+        }
     }
 
     public override char ToChar()
