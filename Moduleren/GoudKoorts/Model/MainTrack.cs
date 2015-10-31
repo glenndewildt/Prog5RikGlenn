@@ -77,14 +77,13 @@ public class MainTrack
 
                     if (route.Find(this).Value.Equals(c.Link1.Value) && !c.IsDown)
                     {
-                        Console.WriteLine("komt erin");
                         if (route.Find(this).Next.Value.IsEmty())
                         {
                             route.Find(this).Next.Value.Place(this.Contains);
                             usedTracks.Add(route.Find(this).Next.Value);
                             usedTracks.Remove(route.Find(this).Value);
                             this.Contains = null;
-                            Console.Write("correct");
+
                             return true;
                         }
                     }
@@ -96,7 +95,7 @@ public class MainTrack
                             usedTracks.Add(route.Find(this).Next.Value);
                             usedTracks.Remove(route.Find(this).Value);
                             this.Contains = null;
-                            Console.Write("correct");
+
                             return true;
                         }
                     }
@@ -106,6 +105,41 @@ public class MainTrack
                     }
 
 
+                }
+                if (route.Find(this).Value.GetType() == typeof(DevergingSwitch))
+                {
+                    DevergingSwitch d = (DevergingSwitch)route.Find(this).Value;
+
+                    if (!d.IsDown)
+                    {
+                        Console.WriteLine(d.Link1.Value);
+                        Console.WriteLine();
+
+                        route.Find(this).Next.Value = d.Link1.Value;
+                        if (route.Find(this).Next.Value.IsEmty())
+                        {
+                            usedTracks.Add(route.Find(this).Next.Value);
+                            usedTracks.Remove(route.Find(this).Value);
+                            this.Contains = null;
+                            return true;
+                        }
+                    }
+                    else if (d.IsDown)
+                    {
+                        Console.WriteLine(d.Link2.Value);
+                        Console.WriteLine();
+
+                        route.Find(this).Next.Value = d.Link2.Value;
+                        if (route.Find(this).Next.Value.IsEmty())
+                        {
+                            usedTracks.Add(route.Find(this).Next.Value);
+                            usedTracks.Remove(route.Find(this).Value);
+                            this.Contains = null;
+                            return true;
+                        }
+                    }
+
+                    return false;
                 }
 
                 if (route.Find(this).Next.Value.IsEmty())

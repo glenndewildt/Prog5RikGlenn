@@ -9,11 +9,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class DevergingSwtich : Switch
+public class DevergingSwitch : Switch
 {
 
 
-	public DevergingSwtich()
+	public DevergingSwitch()
 	{
         IsDown = false;
 	}

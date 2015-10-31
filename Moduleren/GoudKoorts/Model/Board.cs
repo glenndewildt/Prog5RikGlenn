@@ -18,7 +18,7 @@ public class Board
     public MainTrack MainTrack { get; set; }
     public Warehouse[] Warehouses { get; set; }
     public ConvergingSwitch[] ConSwitch { get; set; }
-    public DevergingSwtich[] DevSwitch { get; set; }
+    public DevergingSwitch[] DevSwitch { get; set; }
     public MainTrack[] Basis { get; set; }
     public Ship ship { get; set; }
     public LinkedList<MainTrack> DockPath { get; set; }
@@ -58,10 +58,10 @@ public class Board
         {
             ConSwitch[x] = new ConvergingSwitch();
         }
-        DevSwitch = new DevergingSwtich[5];
+        DevSwitch = new DevergingSwitch[5];
         for (int x = 0; x < DevSwitch.Length; x++)
         {
-            DevSwitch[x] = new DevergingSwtich();
+            DevSwitch[x] = new DevergingSwitch();
         }
         Basis  = new MainTrack[10];
         for (int x = 0; x < Basis.Length; x++)
