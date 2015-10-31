@@ -156,8 +156,10 @@ public class Board
 
     public virtual void Move()
     {
-    
-        dock.Losse(ship);
+        if (schipDock)
+        {
+            dock.Losse(ship);
+        }
         this.schipSpaced();
 
   
@@ -229,7 +231,7 @@ public class Board
             Console.Write(ship.aantal);
             if (ship.IsFull == true)
             {
-
+                Score = Score + 10;
                 schipDock = false;
                 schipSpace++;
             }
