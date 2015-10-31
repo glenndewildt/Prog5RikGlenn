@@ -33,9 +33,6 @@ namespace GoudKoorts
         private static void timer_Tick(object sender, ElapsedEventArgs e)
         {
             Console.Clear();
-            Console.WriteLine();
-            Console.WriteLine(board.Score);
-            Console.WriteLine();
             for (int i = 0; i < 35; i++)
             {
                 
