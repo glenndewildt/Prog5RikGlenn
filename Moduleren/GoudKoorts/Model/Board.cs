@@ -160,21 +160,23 @@ public class Board
         dock.Losse(ship);
         this.schipSpaced();
 
-        foreach (var e in UsedTracks)
-        {
-            if( e.Move(DockPath,UsedTracks)){
-                
-                return;
-            }
-            if (e.Move(SecondPath, UsedTracks))
+  
+
+        for (int x = UsedTracks.Count-1; x >= 0; x--) {
+
+            if (UsedTracks.ElementAt(x).Move(DockPath, UsedTracks))
             {
-                return;
+
+
             }
-            if (e.Move(SavePath, UsedTracks))
+            if (UsedTracks.ElementAt(x).Move(SecondPath, UsedTracks))
             {
-                return;
+
             }
-           
+            if (UsedTracks.ElementAt(x).Move(SavePath, UsedTracks))
+            {
+
+            }
         }
 
         
