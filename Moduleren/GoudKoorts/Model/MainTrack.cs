@@ -13,9 +13,11 @@ public class MainTrack
 {
 	public virtual Minecart Contains{get;set;}
 
+    public bool GameOver;
+
     public MainTrack()
     {
-       
+        GameOver = false;
     }
 
 	public Boolean IsEmty()
@@ -77,7 +79,13 @@ public class MainTrack
                 }
                 else
                 {
-                    Console.WriteLine("CRASH");
+                    if (route.Find(this).Next.Value.GetType() != typeof(SafeTrack)){
+                        GameOver = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("NO CRASH");
+                    }
                     return false;
                 }
                 

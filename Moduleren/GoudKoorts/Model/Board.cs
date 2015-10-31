@@ -24,7 +24,9 @@ public class Board
     public LinkedList<MainTrack> DockPath { get; set; }
     public LinkedList<MainTrack> SavePath { get; set; }
     public LinkedList<MainTrack> SecondPath { get; set; }
-    public List<MainTrack> UsedTracks { get; set; }
+    public List<MainTrack> DockUsedTracks { get; set; }
+    public List<MainTrack> SecondUsedTracks { get; set; }
+    public List<MainTrack> SaveUsedTracks { get; set; }
     public Char[] schipChar { get; set; }
     public int schipSpace { get; set; }
     public bool schipDock { get; set; }
@@ -40,7 +42,9 @@ public class Board
         aTimer.Enabled = true;
         //end timer
         dock = new Dock();
-        UsedTracks = new List<MainTrack>();
+        DockUsedTracks = new List<MainTrack>();
+        SecondUsedTracks = new List<MainTrack>();
+        SaveUsedTracks = new List<MainTrack>();
         DockPath = new LinkedList<MainTrack>();
         SavePath = new LinkedList<MainTrack>();
         SecondPath = new LinkedList<MainTrack>();
@@ -173,24 +177,58 @@ public class Board
         }
         this.schipSpaced();
 
-  
 
-        for (int x = UsedTracks.Count-1; x >= 0; x--) {
 
-            if (UsedTracks.ElementAt(x).Move(DockPath, UsedTracks))
+        for (int x = DockUsedTracks.Count - 1; x >= 0; x--)
+        {
+
+            if (DockUsedTracks.ElementAt(x).Move(DockPath, DockUsedTracks))
             {
-
-                if (DockPath.Last.Value.Contains != null) {
+                if (DockPath.Last.Value.Contains != null)
+                {
                     DockPath.Last.Value.Contains = null;
                 }
             }
-            if (UsedTracks.ElementAt(x).Move(SecondPath, UsedTracks))
+            else
             {
-
+                if (DockUsedTracks.ElementAt(x).GameOver)
+                {
+                    GameOver = true;
+                }
             }
-            if (UsedTracks.ElementAt(x).Move(SavePath, UsedTracks))
+        }
+        for (int x = SecondUsedTracks.Count-1; x >= 0; x--) {
+            if (SecondUsedTracks.ElementAt(x).Move(SecondPath, SecondUsedTracks))
             {
-
+                if (SecondPath.Last.Value.Contains != null)
+                {
+                    //SecondPath.Last.Value.Contains = null;
+                }
+            }
+            else
+            {
+                if (SecondUsedTracks.ElementAt(x).GameOver)
+                {
+                    GameOver = true;
+                }
+            }
+            
+        }
+        for (int x = SaveUsedTracks.Count - 1; x >= 0; x--)
+        {
+            if (SaveUsedTracks.ElementAt(x).Move(SavePath, SaveUsedTracks))
+            {
+                if (SavePath.Last.Value.Contains != null)
+                {
+                    //SavePath.Last.Value.Contains = null;
+                }
+            }
+            else
+            {
+                if (SaveUsedTracks.ElementAt(x).GameOver)
+                {
+                    GameOver = true;
+                }
             }
         }
 
@@ -239,7 +277,6 @@ public class Board
                 schipChar[schipSpace + j] = temp[j];
             }
 
-            Console.Write(ship.aantal);
             if (ship.IsFull == true)
             {
                 Score = Score + 10;
@@ -253,21 +290,21 @@ public class Board
     {
         Minecart mineCart = new Minecart();
         Random randomPath = new Random();
-        int random = 1;
+        int random = 2;
         if (random == 0)
         {
             DockPath.First.Next.Value.Place(mineCart);
-            UsedTracks.Add(DockPath.First.Next.Value);
+            DockUsedTracks.Add(DockPath.First.Next.Value);
         }
         else if (random == 1)
         {
             SecondPath.First.Next.Value.Place(mineCart);
-            UsedTracks.Add(SecondPath.First.Next.Value);
+            SecondUsedTracks.Add(SecondPath.First.Next.Value);
         }
         else if (random == 2)
         {
             SavePath.First.Next.Value.Place(mineCart);
-            UsedTracks.Add(SavePath.First.Next.Value);
+            SaveUsedTracks.Add(SavePath.First.Next.Value);
         }
         
         

@@ -11,12 +11,13 @@ namespace GoudKoorts
     {
 
         static Board board = new Board();
+        static Timer aTimer;
         static void Main(string[] args)
         {
 
             // timer
 
-            Timer aTimer = new System.Timers.Timer();
+            aTimer = new System.Timers.Timer();
             aTimer.Elapsed += new ElapsedEventHandler(timer_Tick);
             aTimer.Interval = 800;
             aTimer.Enabled = true;
@@ -26,15 +27,11 @@ namespace GoudKoorts
             {
 
             }
-
-
-
-
         }
 
         private static void timer_Tick(object sender, ElapsedEventArgs e)
         {
-
+            
             Console.Clear();
             Console.WriteLine();
             Console.WriteLine(board.Score);
@@ -46,7 +43,7 @@ namespace GoudKoorts
                 Console.Write(board.schipChar[i]);
             }
 
-           
+
             Console.WriteLine();
             foreach (var track in board.DockPath)
             {
@@ -67,6 +64,20 @@ namespace GoudKoorts
             Console.WriteLine();
             board.Move();
 
+            if (board.GameOver)
+            {
+                aTimer.Enabled = false;
+                Console.Clear();
+                Console.WriteLine("GAME OVER!");
+                Console.WriteLine();
+                Console.WriteLine(board.Score);
+                Console.WriteLine();
+                Console.WriteLine("Play Again? y/n");
+                if (Console.ReadLine().Equals("y"))
+                {
+                    Program newProgram = new Program();
+                }
+            }
         }
 
     }

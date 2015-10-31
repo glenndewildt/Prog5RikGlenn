@@ -20,8 +20,9 @@ public class ConvergingSwitch : Switch
 	}
 
     public void Switch(){
-  
+
     }
+
     public override char ToChar()
     {
         if (Contains == null)
