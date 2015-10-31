@@ -36,7 +36,7 @@ public class Board
 
         Timer aTimer = new System.Timers.Timer();
         aTimer.Elapsed += new ElapsedEventHandler(timer_Tick);
-        aTimer.Interval = 1000;
+        aTimer.Interval = 10000;
         aTimer.Enabled = true;
         //end timer
         dock = new Dock();
@@ -247,6 +247,7 @@ public class Board
     void timer_Tick(object sender, EventArgs e)
     {
         Spawn();
+       
     }
 
 }
