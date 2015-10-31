@@ -17,7 +17,7 @@ namespace GoudKoorts
 
             Timer aTimer = new System.Timers.Timer();
             aTimer.Elapsed += new ElapsedEventHandler(timer_Tick);
-            aTimer.Interval = 1000;
+            aTimer.Interval = 100;
             aTimer.Enabled = true;
             //end timer
 

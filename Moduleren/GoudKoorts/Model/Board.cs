@@ -36,7 +36,7 @@ public class Board
 
         Timer aTimer = new System.Timers.Timer();
         aTimer.Elapsed += new ElapsedEventHandler(timer_Tick);
-        aTimer.Interval = 10000;
+        aTimer.Interval = 3000;
         aTimer.Enabled = true;
         //end timer
         dock = new Dock();
@@ -167,7 +167,9 @@ public class Board
             if (UsedTracks.ElementAt(x).Move(DockPath, UsedTracks))
             {
 
-
+                if (DockPath.Last.Value.Contains != null) {
+                    DockPath.Last.Value.Contains = null;
+                }
             }
             if (UsedTracks.ElementAt(x).Move(SecondPath, UsedTracks))
             {
@@ -214,7 +216,7 @@ public class Board
         else
         {
             Console.Write(ship.aantal);
-            if (ship.aantal == 1)
+            if (ship.IsFull == true)
             {
                 schipDock = false;
                 schipSpace++;

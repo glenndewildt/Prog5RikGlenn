@@ -31,7 +31,7 @@ public class Ship
     public void AddCart() {
         ++aantal;
 
-        if (aantal == 1) {
+        if (aantal == 8) {
             IsFull = true;
             IsEmpty = false;
             IsHalfFull= false;
