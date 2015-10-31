@@ -108,7 +108,7 @@ namespace GoudKoorts
             Console.WriteLine();
             foreach (var track in board.SecondPath)
             {
-                if (counter != 4 && counter != 9)
+                if (counter != 4 && counter != 8)
                 {
                     if (track.GetType() == typeof(DevergingSwtich))
                     {
