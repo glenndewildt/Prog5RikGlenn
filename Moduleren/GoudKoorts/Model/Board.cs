@@ -215,9 +215,21 @@ public class Board
         }
         else
         {
+            for (int i = 0; i < 35; i++)
+            {
+                schipChar[i] = ' ';
+            }
+
+            for (int j = 0; j < 5; j++)
+            {
+                char[] temp = ship.getChars();
+                schipChar[schipSpace + j] = temp[j];
+            }
+
             Console.Write(ship.aantal);
             if (ship.IsFull == true)
             {
+
                 schipDock = false;
                 schipSpace++;
             }
