@@ -73,10 +73,10 @@ namespace GoudKoorts
                 Console.WriteLine(board.Score);
                 Console.WriteLine();
                 Console.WriteLine("Play Again? y/n");
-                if (Console.ReadLine().Equals("y"))
-                {
-                    Program newProgram = new Program();
-                }
+                Console.ReadLine();
+                
+                Board board1 = new Board();
+                
             }
         }
 

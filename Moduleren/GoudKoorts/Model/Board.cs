@@ -49,7 +49,7 @@ public class Board
         SavePath = new LinkedList<MainTrack>();
         SecondPath = new LinkedList<MainTrack>();
         schipChar = new Char[50];
-        schipSpace = 0;
+        schipSpace = 18;
         schipDock = false;
         Score = 0;
 
