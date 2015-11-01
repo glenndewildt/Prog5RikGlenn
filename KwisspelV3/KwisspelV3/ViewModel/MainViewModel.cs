@@ -189,9 +189,16 @@ namespace KwisspelV3.ViewModel
             Vragen = new ObservableCollection<VragenVM>(vragen);
 
             //Categorie vragen ophalen
-            VraagCategorienVM vraagCat = new VraagCategorienVM();
-            vraagCat.Id = 1;
-            vraagCat.SoortName = "Java Vragen";
+          
+            if (context.VraagCategorie.Count()== 0)
+            {
+                context.VraagCategorie.Add(new VraagCategorie() { Id = 1, Name = "Taal" });
+                context.VraagCategorie.Add(new VraagCategorie() { Id = 2, Name = "Scheikunde" });
+                context.VraagCategorie.Add(new VraagCategorie() { Id = 3, Name = "Wiskunde" });
+                context.VraagCategorie.Add(new VraagCategorie() { Id = 4, Name = "Techniek" });
+                context.VraagCategorie.Add(new VraagCategorie() { Id = 5, Name = "bier" });
+                context.SaveChanges();
+            }
 
             IEnumerable<VraagCategorienVM> categorie = context.VraagCategorie.ToList().Select(c => new VraagCategorienVM(c));
             Categorie = new ObservableCollection<VraagCategorienVM>(categorie);
