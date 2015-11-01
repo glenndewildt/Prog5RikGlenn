@@ -20,7 +20,6 @@ namespace GoudKoorts
             Output = new OutputView();
             Input = new InputView();
 
-         
         }
 
  
