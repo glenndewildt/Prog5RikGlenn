@@ -24,7 +24,14 @@ public class DevergingSwitch : Switch
     {
         if (Contains == null)
         {
-            return 'I';
+            if (IsDown)
+            {
+                return '┐';
+            }
+            else
+            {
+                return '┘';
+            }
         }
         else
         {
