@@ -17,12 +17,11 @@ namespace GoudKoorts
         }
 
         public void GetInput (){
-       while (true)
+            while (!Program.board.GameOver)
             {
 
                 var a = Console.ReadKey();
 
-                Console.WriteLine(a.Key);
                 if (a.KeyChar.Equals('q'))
                 {
                     Program.board.Switch('1');

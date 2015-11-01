@@ -22,7 +22,7 @@ namespace GoudKoorts
 
         private static void ViewBoard(object sender, ElapsedEventArgs e)
         {
-        Console.Clear();
+            Console.Clear();
             Console.WriteLine();
             Console.WriteLine(Program.board.Score);
             Console.WriteLine();
