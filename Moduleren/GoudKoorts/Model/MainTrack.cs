@@ -116,7 +116,7 @@ public class MainTrack
                         Console.WriteLine(d.Link1.Value);
                         Console.WriteLine();
 
-                        route.Find(this).Next.Value.Place(this.Contains);
+                        d.Link1.Value.Place(this.Contains);
                         route.Find(this).Value.Contains = null;
                       
                             usedTracks.Add(route.Find(this).Next.Value);
@@ -130,7 +130,7 @@ public class MainTrack
                         Console.WriteLine(d.Link2.Value);
                         Console.WriteLine();
 
-                        route.Find(this).Next.Value.Place(this.Contains);
+                        d.Link2.Value.Place(this.Contains);
                         route.Find(this).Value.Contains = null;
                        
                             usedTracks.Add(route.Find(this).Next.Value);
