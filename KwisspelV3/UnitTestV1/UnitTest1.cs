@@ -27,6 +27,8 @@ namespace UnitTestV1
        [TestMethod]
       public void AddVraag()
         {
+           
+
             MainViewModel Main = new MainViewModel();
             int a = Main.Vragen.Count;
 
