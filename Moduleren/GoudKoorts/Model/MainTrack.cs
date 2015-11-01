@@ -118,8 +118,9 @@ public class MainTrack
 
                         d.Link1.Value.Place(this.Contains);
                         route.Find(this).Value.Contains = null;
-
-                        usedTracks.Add(d.Link1.Value);
+                        usedTracks.Add(route.Find(this).Next.Value);
+                     
+                        
                             usedTracks.Remove(route.Find(this).Value);
                             this.Contains = null;
                             return true;
@@ -132,8 +133,8 @@ public class MainTrack
 
                         d.Link2.Value.Place(this.Contains);
                         route.Find(this).Value.Contains = null;
-
-                        usedTracks.Add(d.Link2.Value);
+                        usedTracks.Add(route.Find(this).Next.Value);
+                    
                             usedTracks.Remove(route.Find(this).Value);
                             this.Contains = null;
                             return true;
