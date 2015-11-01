@@ -271,12 +271,15 @@ namespace KwisspelV3.ViewModel
                     if (SelectedQuiz.VragenLijst == null) {
                         SelectedQuiz.VragenLijst = new List<Vraag>();
                     }
-                    if (SelectedQuiz.VragenLijst.Count <= 10)
+                    if (SelectedQuiz.VragenLijst.Count <= 10 )
                     {
-                        if (SelectedQuiz.quiz.Vragen == null)
+                        for(int i = 0; i < SelectedQuiz.VragenLijst.Count - 1; i++)
                         {
-                            SelectedQuiz.quiz.Vragen = new List<Vraag>();
-
+                            if (SelectedVraag.Tekst.Equals(SelectedQuiz.VragenLijst[i].Tekst))
+                            {
+                                MessageBox.Show("Dubbele Vraag", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                                return;
+                            }
                         }
                         SelectedQuiz.quiz.Vragen.Add(SelectedVraag.vraag);
 
@@ -304,8 +307,18 @@ namespace KwisspelV3.ViewModel
                 if (SelectedVraag.Tekst == null || SelectedVraag.Tekst == "")
                 {
                     MessageBox.Show("Vul de vraag in het vraagveld in", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    addVraagWindow.Hide();
                     return;
                 }
+                foreach (var e in Vragen)
+                {
+                    if(SelectedVraag.Tekst.Equals(e.vraag.Tekst)){
+                        MessageBox.Show("Dubbele Vraag", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        addVraagWindow.Hide();
+                        return;
+                    }
+                }
+                 
                 SelectedVraag.Categorie = SelectedCategorie.categorie;
                 Vragen.Add(SelectedVraag);
                 context.Vragen.Add(SelectedVraag.vraag);

@@ -71,7 +71,7 @@ namespace GoudKoorts
             Console.WriteLine();
             foreach (var w in board.SecondPath)
             {
-Console.Write( w.ToChar());
+            Console.Write( w.ToChar());
             }
             Console.WriteLine();
             foreach (var w in board.SavePath)

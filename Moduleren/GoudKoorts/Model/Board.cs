@@ -42,7 +42,7 @@ public class Board
         //end timer
         dock = new Dock();
         UsedTracks = new List<MainTrack>();
-
+        GameOver = false;
         DockPath = new LinkedList<MainTrack>();
         SavePath = new LinkedList<MainTrack>();
         SecondPath = new LinkedList<MainTrack>();
@@ -302,7 +302,6 @@ public class Board
                 }
 
             }
-
             else if (UsedTracks.ElementAt(x).Move(SavePath, UsedTracks))
             {
                 if (SavePath.Last.Value.Contains != null)
@@ -313,7 +312,13 @@ public class Board
 
 
             }
-
+            else
+            {
+                if (UsedTracks.ElementAt(x).GameOver)
+                {
+                    GameOver = true;
+                }
+            }
         }
 
 

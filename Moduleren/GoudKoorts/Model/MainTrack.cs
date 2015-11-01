@@ -54,11 +54,6 @@ public class MainTrack
         }
     }
 
-    public virtual bool Botsing()
-    {
-        return true;
-    }
-
     public bool Move(LinkedList<MainTrack> route, List<MainTrack> usedTracks)
     {
 
@@ -151,7 +146,7 @@ public class MainTrack
                 }
                 else
                 {
-                    if (route.Find(this).Next.Value.GetType() != typeof(SafeTrack))
+                    if (route.Find(this).Value.GetType() != typeof(SafeTrack))
                     {
                         GameOver = true;
                     }
