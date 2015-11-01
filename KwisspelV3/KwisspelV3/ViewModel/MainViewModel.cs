@@ -367,7 +367,10 @@ namespace KwisspelV3.ViewModel
 
         private void DellVraag()
         {
-
+            if (SelectedVraag.Tekst == null)
+            {
+            return ;
+            }
             context.Vragen.Remove(SelectedVraag.vraag);
             Vragen.Remove(SelectedVraag);
             context.SaveChanges();
@@ -402,7 +405,7 @@ namespace KwisspelV3.ViewModel
         private void DellQuiz()
         {
 
-            if (SelectedQuiz != null)
+            if (SelectedQuiz.Name != null)
             {
                 context.Quizen.Remove(SelectedQuiz.quiz);
                 Quizen.Remove(SelectedQuiz);
