@@ -25,11 +25,10 @@ namespace GoudKoorts
             aTimer.Enabled = true;
             //end timer
 
-            while (true)
+            while (!board.GameOver)
             {
                 var a = Console.ReadKey();
 
-                Console.WriteLine(a.Key);
                 if (a.KeyChar.Equals('q')) {
                     board.Switch('1');
                 }
@@ -44,7 +43,7 @@ namespace GoudKoorts
                 if (a.KeyChar.Equals('r'))
                 {
                     board.Switch('4');
-                } if (a.KeyChar.Equals('y'))
+                } if (a.KeyChar.Equals('t'))
                 {
                     board.Switch('5');
                 }
