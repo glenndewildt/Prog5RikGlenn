@@ -64,10 +64,11 @@ namespace GoudKoorts
 
                 Console.Write(board.schipChar[i]);
             }
-            Console.WriteLine();
+      
 
 
             int counter = 0;
+            Console.WriteLine();
             foreach (var track in board.DockPath)
             {
                 if (counter != 4)
@@ -100,9 +101,6 @@ namespace GoudKoorts
             Console.WriteLine();
             foreach (var track in board.DockPath)
             {
-<<<<<<< HEAD
-            Console.Write( w.ToChar());
-=======
                 if (counter != 4)
                 {
                     if (track.GetType() == typeof(DevergingSwitch))
@@ -126,7 +124,6 @@ namespace GoudKoorts
                 }
                 counter++;
 
->>>>>>> origin/master
             }
             counter = 0;
             Console.WriteLine();
