@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2015-11-01T22:53:06" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '31871765-b2c0-4736-b993-ee39f894f16c' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Final::KwisspelV3' -  (Package)" />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Final::KwisspelV3::Database' -  (Package)" />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Final::KwisspelV3::Database::Antwoord' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Final::KwisspelV3::Database::Quiz' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Final::KwisspelV3::Database::Vraag' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Final::KwisspelV3::Database::VraagCategorie' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="Medium" Text="Element reverse engineered into the UML model: 'Final::KwisspelV3::MyContext' -  (Class)" />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Final::KwisspelV3::MyContext::Antwoorden' -  (Property)" />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Final::KwisspelV3::MyContext::MyContext' -  (Operation)" />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Final::KwisspelV3::MyContext::Quizen' -  (Property)" />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Final::KwisspelV3::MyContext::VraagCategorie' -  (Property)" />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Final::KwisspelV3::MyContext::Vragen' -  (Property)" />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Final::System' -  (Package)" />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Final::System::Data' -  (Package)" />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Final::System::Data::Entity' -  (Package)" />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Final::System::Data::Entity::DbContext' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Final::System::Data::Entity::DbSet' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Final::System::Data::Entity::DbSet&lt;Antwoord‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Final::System::Data::Entity::DbSet&lt;Quiz‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Final::System::Data::Entity::DbSet&lt;Vraag‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Final::System::Data::Entity::DbSet&lt;VraagCategorie‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Final::KwisspelV3::MyContext to Final::System::Data::Entity::DbSet&lt;Antwoord‎&gt; (Association)" />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Final::KwisspelV3::MyContext to Final::System::Data::Entity::DbSet&lt;Quiz‎&gt; (Association)" />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Final::KwisspelV3::MyContext to Final::System::Data::Entity::DbSet&lt;VraagCategorie‎&gt; (Association)" />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Final::KwisspelV3::MyContext to Final::System::Data::Entity::DbSet&lt;Vraag‎&gt; (Association)" />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Final::KwisspelV3::MyContext to Final::System::Data::Entity::DbContext (Generalization)" />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="High" Text="(1) type(s) fully reverse engineered." />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="High" Text="(10) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2015-11-01T22:53:08" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>

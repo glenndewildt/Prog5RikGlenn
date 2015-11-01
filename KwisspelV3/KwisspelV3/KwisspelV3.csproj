@@ -142,7 +142,6 @@
     </Compile>
     <Compile Include="Database\Antwoord.cs" />
     <Compile Include="Database\MyContext.cs" />
-    <Compile Include="Database\MyDbIntializer.cs" />
     <Compile Include="Database\Vraag.cs" />
     <Compile Include="Database\VraagCategorie.cs" />
     <Compile Include="MainWindow.xaml.cs">

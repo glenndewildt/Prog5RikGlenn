@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="f6711968-53ff-49d9-9e68-45f3146643e9"
+  name="KwisspelV3"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="76558e5a-5c1a-4107-a148-d5c0edcb879b"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DKwisspelV3"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="22e93bed-b86e-4dc5-91ed-0b2fc877c4ad"
+        LastKnownName="ViewModel"
+        LastKnownLocation="Package1_2243.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="b268abbc-bbdc-42df-9e45-f962911036f4"
+        LastKnownName="Database"
+        LastKnownLocation="Package2_2243.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2c0a1ff7-be6f-4c48-83b0-9b5439363736"
+        name="AddQuiz"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="52ab2a4f-46bb-4daa-8332-9857ed11bc45"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FGlenn%2FSource%2FRepos%2FProg5RikGlenn5%2FKwisspelV3%2FKwisspelV3%2Fbin%2FDebug%2FKwisspelV3.exe Namespace%3DKwisspelV3 Type%3DAddQuiz"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="e7efbd3c-4895-4ba3-93c4-41e5e3d261d1"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5818081e-3807-4284-87eb-4acc38be15fe">
+                <propertyInstance
+                  Id="080a5be4-cb72-452b-99d0-db8749762b45"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c0a1bf57-0103-43e4-9a3e-bd71bf334ab9">
+                <propertyInstance
+                  Id="bc3291dc-50a4-4a0d-838e-5f4b25f56a10"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0a9eb2b7-552d-471a-a040-98a1f4f681ff">
+                <propertyInstance
+                  Id="425c71a7-4873-42c7-b9ab-c0b061a24359"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3c535421-b82e-4684-963b-854ebfc1c112">
+                <propertyInstance
+                  Id="3a1e96d1-af5e-4c28-8fd2-bb6185a43d92"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5647ff1b-2bb1-48f5-9e14-fc85322eb75b">
+                <propertyInstance
+                  Id="c1c5d420-3bab-4b6c-9efa-992ce37ff7b3"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ac98340b-f4c9-4a21-a27f-feb203358042"
+        name="AddAntwoord"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="93777524-2441-4c74-b5f3-8c9b0dc6191b"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FGlenn%2FSource%2FRepos%2FProg5RikGlenn5%2FKwisspelV3%2FKwisspelV3%2Fbin%2FDebug%2FKwisspelV3.exe Namespace%3DKwisspelV3 Type%3DAddAntwoord"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="7fbd663e-2114-4d9a-a6d0-1ac0c22544da"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="be14b640-1a7e-4166-a605-e26ca7a8f16f">
+                <propertyInstance
+                  Id="6bcf277b-f3e3-4667-b8cf-0c0b311f6df2"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="589b3d0c-cc56-4f06-a2f9-400a82ffea4a">
+                <propertyInstance
+                  Id="58d3a538-c711-479a-b943-bfe225ecc0b6"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ee41bbd6-b4c7-4303-9580-256f1763645b">
+                <propertyInstance
+                  Id="67bc37bc-874f-4808-8e6e-9ad743a16927"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c2ba63de-e1b7-4b26-be9f-ebd8cf14b99c">
+                <propertyInstance
+                  Id="d16923fb-beba-4158-a7bd-2e7a4e516def"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6d6f1bb3-047e-407b-8779-b6ce546807e1">
+                <propertyInstance
+                  Id="2fefc7f6-ca61-4354-8b71-9cca162a685d"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9e4d9615-ad03-4ea2-b26f-e75444f98dd9"
+        name="EndGameWindow"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="021f47da-0912-4331-a85a-657142993f60"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FGlenn%2FSource%2FRepos%2FProg5RikGlenn5%2FKwisspelV3%2FKwisspelV3%2Fbin%2FDebug%2FKwisspelV3.exe Namespace%3DKwisspelV3 Type%3DEndGameWindow"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="308c880d-358c-447e-a10a-76716e1b846c"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="59ada6c3-f133-4ade-92e9-c0340e517e26">
+                <propertyInstance
+                  Id="4661f226-6843-4d3c-9839-eb0dcfbe6517"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="029158d2-8703-46e4-928d-b3b36e0e8c91">
+                <propertyInstance
+                  Id="477709f4-6814-4a2c-a071-83679e370823"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6ab23e5f-61fc-42c6-a792-dcb49826cd06">
+                <propertyInstance
+                  Id="d1146d67-bde9-4ad0-bd1b-1aa5c8ad0aef"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4f41f3f1-079f-49f4-b43a-d337775d0b49">
+                <propertyInstance
+                  Id="dd0d8479-098d-4ce5-bf7f-6f2298e62b2b"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b4c72149-7841-4bd8-8538-66cdb10d1624">
+                <propertyInstance
+                  Id="b2ca19fb-80e1-415a-80c7-49f7986c4235"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3f0766c2-d2fd-42e9-b3e1-d423562ee242"
+        name="GameWindow"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="ae8e6076-f03a-4e29-840f-7520264de893"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FGlenn%2FSource%2FRepos%2FProg5RikGlenn5%2FKwisspelV3%2FKwisspelV3%2Fbin%2FDebug%2FKwisspelV3.exe Namespace%3DKwisspelV3 Type%3DGameWindow"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="7735079d-5735-400a-b4e3-b64557a8bae4"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7c683100-653f-411a-936a-ad1b592be651">
+                <propertyInstance
+                  Id="82c9f2ba-baca-4634-a8ce-cf10a4b59f73"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a69b5c8d-3dcc-4e00-850c-8a828d7bda2f">
+                <propertyInstance
+                  Id="7977bb22-3799-4105-a7d8-23531854a2b9"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d912f7e8-c20e-49cc-b080-57844f046b3b">
+                <propertyInstance
+                  Id="544ceef7-8d47-45ed-a2d2-35a5062e71f0"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7e22f1c8-dda9-4e77-a263-a06ac2157a11">
+                <propertyInstance
+                  Id="cfc080a2-d436-4591-9332-28278f130521"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b9dfc0cf-5a5f-4ae0-93bf-946020f0b8c6">
+                <propertyInstance
+                  Id="f41305c7-725d-41c9-99ad-93cddd1f49fa"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2ba19d47-4abe-4e67-bfcd-44b196f12b60"
+        name="QuizWindow"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="07bf7167-0192-4372-8421-1ca1e1a2b3ed"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FGlenn%2FSource%2FRepos%2FProg5RikGlenn5%2FKwisspelV3%2FKwisspelV3%2Fbin%2FDebug%2FKwisspelV3.exe Namespace%3DKwisspelV3 Type%3DQuizWindow"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="cd7eda1e-4cc4-40b8-a69a-44f580a0a912"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="85a7fd3f-de41-4121-b5ca-432e15a5d76d">
+                <propertyInstance
+                  Id="705d98b7-f881-40fa-99f7-b57cad1040af"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="38cdf69e-d9c8-40c1-97b5-c076b4aa6125">
+                <propertyInstance
+                  Id="fcde1775-61bd-46dd-9bb5-5814bd2b041e"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="00384876-7e9b-414a-82a1-a466b40497f0">
+                <propertyInstance
+                  Id="c0275437-b328-4c40-8054-180e1f56a63a"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cb5ad33f-57f1-4e44-b2db-b58b88a4b5d4">
+                <propertyInstance
+                  Id="9bb0769a-eecd-438e-a5b5-621e023983b8"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c3f9972b-554d-48ce-acfc-f604e7b45043">
+                <propertyInstance
+                  Id="59ef1eeb-a8c7-4f29-b84d-976b5b992318"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="267bba97-8bb9-4529-a018-b338dc4a5e8e"
+        name="AddVraag"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="2dc03023-eac5-4f24-9ab5-2c850d98b43d"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FGlenn%2FSource%2FRepos%2FProg5RikGlenn5%2FKwisspelV3%2FKwisspelV3%2Fbin%2FDebug%2FKwisspelV3.exe Namespace%3DKwisspelV3 Type%3DAddVraag"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="f6291431-eb55-4a96-90f6-62d916b46bf4"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ac960833-51b9-4d1e-b56e-b5d54320fac6">
+                <propertyInstance
+                  Id="ca5e49c4-d8e8-4e84-a595-70b99aa7755d"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e169d287-d8d5-48c1-b5e3-6edb62fd6af2">
+                <propertyInstance
+                  Id="38210ffc-623a-4dca-b467-40ee2d67468e"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b4d3049f-b723-47a4-841d-ccdac2b2f589">
+                <propertyInstance
+                  Id="d2a5c312-8d2f-460c-80fe-e06735724c12"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1cf88dab-dfba-40b3-bb60-4e00cc04146b">
+                <propertyInstance
+                  Id="30a21503-685e-4c82-882b-8a1c86e2a968"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b79fab4b-5af5-414b-83a0-3199b32fa982">
+                <propertyInstance
+                  Id="f26481f5-1e2d-4852-8f73-d3dfe41445b3"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

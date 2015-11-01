@@ -16,7 +16,7 @@ namespace UnitTestV1
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void AantalVragenGelijkAanDataBase()
         {
             MainViewModel Main = new MainViewModel();
            int v =  Main.context.Vragen.Count();
@@ -24,23 +24,7 @@ namespace UnitTestV1
             Assert.AreEqual(Main.Vragen.Count(),v, "Het aantal objecten in de database zijn gelijk aan het aantal Vragen in de Vragen lijst");
         }
 
-       [TestMethod]
-      public void AddVraag()
-        {
-           
 
-            MainViewModel Main = new MainViewModel();
-            int a = Main.Vragen.Count;
-
-            Main.SelectedVraag.Tekst = "Hoi";
-            Main.SelectedCategorie.SoortName = "Taal";
-            Main.SaveVraag();
-
-            int b = Main.Vragen.Count;
-
-            Assert.AreEqual((a + 1), b);
-
-        }
         
     }
 }
