@@ -5,10 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 
+
 namespace GoudKoorts
 {
     class Program
     {
+
 
         static Board board = new Board();
         static Timer aTimer;
@@ -25,7 +27,7 @@ namespace GoudKoorts
 
             while (true)
             {
-
+   
             }
         }
 

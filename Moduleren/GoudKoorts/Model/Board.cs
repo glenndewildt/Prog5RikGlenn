@@ -200,6 +200,34 @@ public class Board
         }
     }
 
+    public void Switch(char c) {
+        if (c == 1) {
+            if (ConSwitch[0].IsDown == true)
+            {
+                ConSwitch[0].IsDown = false;
+            }
+            else {
+                ConSwitch[0].IsDown = true;
+            }
+        
+        }
+        if (c == 2)
+        {
+
+        }
+        if (c == 3)
+        {
+
+        }
+        if (c == 4)
+        {
+
+        }
+        if (c == 5)
+        {
+
+        }
+    }
     public virtual void Move()
     {
         if (schipDock && dock.ContainsShip() && dock.Contains != null)

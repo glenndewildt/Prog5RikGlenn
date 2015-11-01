@@ -95,6 +95,7 @@ public class MainTrack
                             usedTracks.Add(route.Find(this).Next.Value);
                             usedTracks.Remove(route.Find(this).Value);
                             this.Contains = null;
+                            
 
                             return true;
                         }
@@ -120,7 +121,7 @@ public class MainTrack
                       
                             usedTracks.Add(route.Find(this).Next.Value);
                             usedTracks.Remove(route.Find(this).Value);
-                            
+                            this.Contains = null;
                             return true;
                         
                     }
@@ -134,7 +135,7 @@ public class MainTrack
                        
                             usedTracks.Add(route.Find(this).Next.Value);
                             usedTracks.Remove(route.Find(this).Value);
-                           
+                            this.Contains = null;
                             return true;
                         
                     }
