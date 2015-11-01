@@ -27,7 +27,12 @@ namespace GoudKoorts
 
             while (true)
             {
-   
+                var a = Console.ReadKey();
+
+                Console.WriteLine(a.Key);
+                if (a.KeyChar.Equals('q')) {
+                    board.Switch('1');
+                }
             }
         }
 

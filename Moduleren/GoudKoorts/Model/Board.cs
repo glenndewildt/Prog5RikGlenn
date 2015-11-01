@@ -201,7 +201,7 @@ public class Board
     }
 
     public void Switch(char c) {
-        if (c == 1) {
+        if (c.Equals('1')) {
             if (ConSwitch[0].IsDown == true)
             {
                 ConSwitch[0].IsDown = false;
@@ -211,20 +211,53 @@ public class Board
             }
         
         }
-        if (c == 2)
+        if (c.Equals('2'))
         {
+            if (ConSwitch[1].IsDown == true)
+            {
+                ConSwitch[1].IsDown = false;
+            }
+            else
+            {
+                ConSwitch[1].IsDown = true;
+            }
 
         }
-        if (c == 3)
+        if (c.Equals('3'))
         {
+            if (ConSwitch[2].IsDown == true)
+            {
+                ConSwitch[2].IsDown = false;
+            }
+            else
+            {
+                ConSwitch[2].IsDown = true;
+            }
 
         }
-        if (c == 4)
+        if (c.Equals('4'))
         {
+            if (DevSwitch[0].IsDown == true)
+            {
+                DevSwitch[0].IsDown = false;
+            }
+            else
+            {
+                DevSwitch[0].IsDown = true;
+            }
 
         }
-        if (c == 5)
+
+        if (c.Equals('5'))
         {
+            if (DevSwitch[1].IsDown == true)
+            {
+                DevSwitch[1].IsDown = false;
+            }
+            else
+            {
+                DevSwitch[1].IsDown = true;
+            }
 
         }
     }
