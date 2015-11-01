@@ -17,29 +17,29 @@ namespace GoudKoorts
         }
 
         public void GetInput (){
-            while (!Program.board.GameOver)
+            while (!Program.controller.GameOver)
             {
 
                 var a = Console.ReadKey();
 
                 if (a.KeyChar.Equals('q'))
                 {
-                    Program.board.Switch('1');
+                    Program.controller.Switch('1');
                 }
                 if (a.KeyChar.Equals('w'))
                 {
-                    Program.board.Switch('2');
+                    Program.controller.Switch('2');
                 }
                 if (a.KeyChar.Equals('e'))
                 {
-                    Program.board.Switch('3');
+                    Program.controller.Switch('3');
                 }
                 if (a.KeyChar.Equals('r'))
                 {
-                    Program.board.Switch('4');
-                } if (a.KeyChar.Equals('y'))
+                    Program.controller.Switch('4');
+                } if (a.KeyChar.Equals('t'))
                 {
-                    Program.board.Switch('5');
+                    Program.controller.Switch('5');
                 }
 
 
