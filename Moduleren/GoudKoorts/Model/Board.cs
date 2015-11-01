@@ -131,7 +131,7 @@ public class Board
                     {
                         ConSwitch[2].addLink(SecondPath.Last);
                         SecondPath.AddLast(ConSwitch[2]);
-                       
+                        end = true;
                        
                     }
                     else if (i == 6)
