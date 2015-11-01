@@ -27,6 +27,7 @@ namespace GoudKoorts
 
         public Controller() {
             // timer
+            aTimer = new Timer();
             boardInjector = new BoardInjector();
             aTimer.Elapsed += new ElapsedEventHandler(timer_Tick);
             aTimer.Interval = 8000;
