@@ -24,9 +24,8 @@ public class Board
     public LinkedList<MainTrack> DockPath { get; set; }
     public LinkedList<MainTrack> SavePath { get; set; }
     public LinkedList<MainTrack> SecondPath { get; set; }
-    public List<MainTrack> DockUsedTracks { get; set; }
-    public List<MainTrack> SecondUsedTracks { get; set; }
-    public List<MainTrack> SaveUsedTracks { get; set; }
+    public List<MainTrack> UsedTracks { get; set; }
+
     public Char[] schipChar { get; set; }
     public int schipSpace { get; set; }
     public bool schipDock { get; set; }
@@ -42,9 +41,8 @@ public class Board
         aTimer.Enabled = true;
         //end timer
         dock = new Dock();
-        DockUsedTracks = new List<MainTrack>();
-        SecondUsedTracks = new List<MainTrack>();
-        SaveUsedTracks = new List<MainTrack>();
+        UsedTracks = new List<MainTrack>();
+
         DockPath = new LinkedList<MainTrack>();
         SavePath = new LinkedList<MainTrack>();
         SecondPath = new LinkedList<MainTrack>();
@@ -54,7 +52,7 @@ public class Board
         Score = 0;
 
         ConSwitch = new ConvergingSwitch[5];
-        for (int x = 0; x < ConSwitch.Length; x++ )
+        for (int x = 0; x < ConSwitch.Length; x++)
         {
             ConSwitch[x] = new ConvergingSwitch();
         }
@@ -63,7 +61,7 @@ public class Board
         {
             DevSwitch[x] = new DevergingSwitch();
         }
-        Basis  = new MainTrack[10];
+        Basis = new MainTrack[10];
         for (int x = 0; x < Basis.Length; x++)
         {
             Basis[x] = new MainTrack();
@@ -83,39 +81,42 @@ public class Board
     public void MakePath()
     {
         bool end = false;
-        
+
         for (int x = 0; x <= 2; x++)
         {
             for (int i = 0; i < 25; i++)
             {
-              
+
                 if (x == 0)
                 {
-                    if (i == 20) {
+                    if (i == 20)
+                    {
                         DockPath.AddLast(dock);
                     }
-                   else if (i == 0)
-                   {
+                    else if (i == 0)
+                    {
                         DockPath.AddLast(Warehouses[0]);
-                   }
-                   else if (i == 3)
-                   {
-                       ConSwitch[0].addLink(DockPath.Last);
-                       DockPath.AddLast(ConSwitch[0]);
-                       DockPath.AddLast(Basis[0]);
-                       DockPath.AddLast(DevSwitch[0]);
-                       
+                    }
+                    else if (i == 3)
+                    {
+                        ConSwitch[0].addLink(DockPath.Last);
+                        DockPath.AddLast(ConSwitch[0]);
+                        DockPath.AddLast(Basis[0]);
+                        DockPath.AddLast(DevSwitch[0]);
 
-                   }else if ( i == 4){
-                       DockPath.AddLast(new MainTrack());
-                       DevSwitch[0].addLink(DockPath.Last);
-                   
-                   }
+
+                    }
+                    else if (i == 4)
+                    {
+                        DockPath.AddLast(new MainTrack());
+                        DevSwitch[0].addLink(DockPath.Last);
+
+                    }
                     else if (i == 10)
                     {
-                        
-                        DockPath.AddLast(ConSwitch[2]);
                         ConSwitch[2].addLink(DockPath.Last);
+                        DockPath.AddLast(ConSwitch[2]);
+                       
 
                     }
                     else
@@ -125,12 +126,13 @@ public class Board
                 }
                 if (x == 1)
                 {
-                   
-                    if (i == 8) {
-                       
-                        SecondPath.AddLast(ConSwitch[2]);
+
+                    if (i == 8)
+                    {
                         ConSwitch[2].addLink(SecondPath.Last);
-                        end = true;
+                        SecondPath.AddLast(ConSwitch[2]);
+                       
+                       
                     }
                     else if (i == 6)
                     {
@@ -140,7 +142,7 @@ public class Board
                         SecondPath.AddLast(DevSwitch[1]);
 
                     }
-                   else if (i == 7)
+                    else if (i == 7)
                     {
                         SecondPath.AddLast(new MainTrack());
                         DevSwitch[1].addLink(SecondPath.Last);
@@ -155,7 +157,7 @@ public class Board
                     }
                     else if (i == 4)
                     {
-                    
+
                         SecondPath.AddLast(new MainTrack());
                         DevSwitch[0].addLink(SecondPath.Last);
 
@@ -164,17 +166,18 @@ public class Board
                     {
                         SecondPath.AddLast(Warehouses[1]);
                     }
-                    else if(end == false)
-                    SecondPath.AddLast(new MainTrack());
+                    else if (end == false)
+                        SecondPath.AddLast(new MainTrack());
                 }
                 if (x == 2)
                 {
-                    if (i == 8) {
+                    if (i == 8)
+                    {
                         ConSwitch[1].addLink(SavePath.Last);
                         SavePath.AddLast(ConSwitch[1]);
                         SavePath.AddLast(Basis[1]);
                         SavePath.AddLast(DevSwitch[1]);
-                    
+
                     }
                     else if (i == 9)
                     {
@@ -200,16 +203,19 @@ public class Board
         }
     }
 
-    public void Switch(char c) {
-        if (c.Equals('1')) {
+    public void Switch(char c)
+    {
+        if (c.Equals('1'))
+        {
             if (ConSwitch[0].IsDown == true)
             {
                 ConSwitch[0].IsDown = false;
             }
-            else {
+            else
+            {
                 ConSwitch[0].IsDown = true;
             }
-        
+
         }
         if (c.Equals('2'))
         {
@@ -272,60 +278,45 @@ public class Board
 
 
 
-        for (int x = DockUsedTracks.Count - 1; x >= 0; x--)
+        for (int x = UsedTracks.Count - 1; x >= 0; x--)
         {
 
-            if (DockUsedTracks.ElementAt(x).Move(DockPath, DockUsedTracks))
+
+            if (UsedTracks.ElementAt(x).Move(DockPath, UsedTracks))
             {
+
                 if (DockPath.Last.Value.Contains != null)
                 {
                     DockPath.Last.Value.Contains = null;
+
                 }
+
+
             }
-            else
-            {
-                if (DockUsedTracks.ElementAt(x).GameOver)
-                {
-                    GameOver = true;
-                }
-            }
-        }
-        for (int x = SecondUsedTracks.Count-1; x >= 0; x--) {
-            if (SecondUsedTracks.ElementAt(x).Move(SecondPath, SecondUsedTracks))
+            else if (UsedTracks.ElementAt(x).Move(SecondPath, UsedTracks))
             {
                 if (SecondPath.Last.Value.Contains != null)
                 {
-                    //SecondPath.Last.Value.Contains = null;
+                    SecondPath.Last.Value.Contains = null;
+
                 }
+
             }
-            else
-            {
-                if (SecondUsedTracks.ElementAt(x).GameOver)
-                {
-                    GameOver = true;
-                }
-            }
-            
-        }
-        for (int x = SaveUsedTracks.Count - 1; x >= 0; x--)
-        {
-            if (SaveUsedTracks.ElementAt(x).Move(SavePath, SaveUsedTracks))
+
+            else if (UsedTracks.ElementAt(x).Move(SavePath, UsedTracks))
             {
                 if (SavePath.Last.Value.Contains != null)
                 {
-                    //SavePath.Last.Value.Contains = null;
+                    SavePath.Last.Value.Contains = null;
+
                 }
+
+
             }
-            else
-            {
-                if (SaveUsedTracks.ElementAt(x).GameOver)
-                {
-                    GameOver = true;
-                }
-            }
+
         }
 
-        
+
     }
 
     public void schipSpaced()
@@ -349,7 +340,7 @@ public class Board
             {
                 schipChar[i] = ' ';
             }
-            
+
             for (int j = 0; j < 5; j++)
             {
                 char[] temp = ship.getChars();
@@ -387,26 +378,26 @@ public class Board
         if (random == 0)
         {
             DockPath.First.Next.Value.Place(mineCart);
-            DockUsedTracks.Add(DockPath.First.Next.Value);
+            UsedTracks.Add(DockPath.First.Next.Value);
         }
         else if (random == 1)
         {
             SecondPath.First.Next.Value.Place(mineCart);
-            SecondUsedTracks.Add(SecondPath.First.Next.Value);
+            UsedTracks.Add(SecondPath.First.Next.Value);
         }
         else if (random == 2)
         {
             SavePath.First.Next.Value.Place(mineCart);
-            SaveUsedTracks.Add(SavePath.First.Next.Value);
+            UsedTracks.Add(SavePath.First.Next.Value);
         }
-        
-        
+
+
     }
 
     void timer_Tick(object sender, EventArgs e)
     {
         Spawn();
-       
+
     }
 
 }

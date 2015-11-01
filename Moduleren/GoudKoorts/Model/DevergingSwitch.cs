@@ -15,7 +15,7 @@ public class DevergingSwitch : Switch
 
 	public DevergingSwitch()
 	{
-        IsDown = false;
+        IsDown = true;
 	}
 
 

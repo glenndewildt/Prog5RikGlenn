@@ -58,156 +58,27 @@ namespace GoudKoorts
             Console.WriteLine();
             Console.WriteLine(board.Score);
             Console.WriteLine();
+
             for (int i = 0; i < 35; i++)
             {
 
                 Console.Write(board.schipChar[i]);
             }
-
-            int counter = 0;
             Console.WriteLine();
-            foreach (var track in board.DockPath)
-            {
-                if (counter != 4)
-                {
-                    if (track.GetType() == typeof(DevergingSwitch))
-                    {
-                        Console.Write(' ');
-
-                    }
-
-                    else if (track.GetType() == typeof(ConvergingSwitch))
-                    {
-
-                        Console.Write(' ');
-                    }
-                    else
-                    {
-                        Console.Write(track.ToChar());
-                    }
-                }
-                else
-                {
-                    Console.Write(' ');
-                }
-                counter = counter + 1;
+            foreach (var w in board.DockPath) {
+                Console.Write( w.ToChar());
             }
-
-
-            counter = 0;
             Console.WriteLine();
-            foreach (var track in board.DockPath)
+            foreach (var w in board.SecondPath)
             {
-                if (counter != 3)
-                {
-                    if (track.GetType() == typeof(DevergingSwitch))
-                    {
-                        Console.Write(track.ToChar());
-
-                    }
-
-                    else if (track.GetType() == typeof(ConvergingSwitch))
-                    {
-                        Console.Write(track.ToChar());
-                    }
-                    else
-                    {
-                        Console.Write(' ');
-                    }
-                }
-                else
-                {
-                    Console.Write(track.ToChar());
-                }
-                counter++;
-
+Console.Write( w.ToChar());
             }
-            counter = 0;
             Console.WriteLine();
-            foreach (var track in board.SecondPath)
+            foreach (var w in board.SavePath)
             {
-                if (counter != 5 && counter != 9)
-                {
-                    if (track.GetType() == typeof(DevergingSwitch))
-                    {
-                        Console.Write(' ');
-
-                    }
-
-                    else if (track.GetType() == typeof(ConvergingSwitch))
-                    {
-
-                        Console.Write(' ');
-                    }
-                    else
-                    {
-                        Console.Write(track.ToChar());
-                    }
-                }
-                else
-                {
-                    Console.Write(' ');
-                }
-                counter = counter + 1;
-
-
+              Console.Write(   w.ToChar());
             }
-            counter = 0;
             Console.WriteLine();
-            foreach (var track in board.SavePath)
-            {
-                if (counter != 9)
-                {
-                    if (track.GetType() == typeof(DevergingSwitch))
-                    {
-                        Console.Write(track.ToChar());
-
-                    }
-
-                    else if (track.GetType() == typeof(ConvergingSwitch))
-                    {
-                        Console.Write(track.ToChar());
-                    }
-                    else
-                    {
-                        Console.Write(' ');
-                    }
-                }
-                else
-                {
-                    Console.Write(track.ToChar());
-
-                }
-                counter++;
-            }
-            counter = 0;
-            Console.WriteLine();
-            foreach (var track in board.SavePath)
-            {
-                if (counter != 9)
-                {
-                    if (track.GetType() == typeof(DevergingSwitch))
-                    {
-                        Console.Write(' ');
-
-                    }
-
-                    else if (track.GetType() == typeof(ConvergingSwitch))
-                    {
-                        Console.Write(' ');
-                    }
-                    else
-                    {
-                        Console.Write(track.ToChar());
-                    }
-                }
-                else
-                {
-                    Console.Write(' ');
-                }
-                counter++;
-            }
-
             board.Move();
 
             if (board.GameOver)
