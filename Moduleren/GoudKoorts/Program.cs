@@ -33,6 +33,21 @@ namespace GoudKoorts
                 if (a.KeyChar.Equals('q')) {
                     board.Switch('1');
                 }
+                if (a.KeyChar.Equals('w'))
+                {
+                    board.Switch('2');
+                }
+                if (a.KeyChar.Equals('e'))
+                {
+                    board.Switch('3');
+                }
+                if (a.KeyChar.Equals('r'))
+                {
+                    board.Switch('4');
+                } if (a.KeyChar.Equals('y'))
+                {
+                    board.Switch('5');
+                }
             }
         }
 
