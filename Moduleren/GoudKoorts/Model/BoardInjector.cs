@@ -11,11 +11,168 @@ using System.Text;
 
 public class BoardInjector
 {
-	public virtual Board Board
-	{
-		get;
-		set;
-	}
+    public LinkedList<MainTrack> DockPath { get; set; }
+    public LinkedList<MainTrack> SavePath { get; set; }
+    public LinkedList<MainTrack> SecondPath { get; set; }
+    public MainTrack MainTrack { get; set; }
+    public Warehouse[] Warehouses { get; set; }
+    public ConvergingSwitch[] ConSwitch { get; set; }
+    public DevergingSwitch[] DevSwitch { get; set; }
+    public Dock dock { get; set; }
+    public MainTrack[] Basis { get; set; }
+
+   public BoardInjector() {
+       dock = new Dock();
+        DockPath = new LinkedList<MainTrack>();
+        SavePath = new LinkedList<MainTrack>();
+        SecondPath = new LinkedList<MainTrack>();
+        ConSwitch = new ConvergingSwitch[5];
+        for (int x = 0; x < ConSwitch.Length; x++)
+        {
+            ConSwitch[x] = new ConvergingSwitch();
+        }
+        DevSwitch = new DevergingSwitch[5];
+        for (int x = 0; x < DevSwitch.Length; x++)
+        {
+            DevSwitch[x] = new DevergingSwitch();
+        }
+        Basis = new MainTrack[10];
+        for (int x = 0; x < Basis.Length; x++)
+        {
+            Basis[x] = new MainTrack();
+        }
+        Warehouses = new Warehouse[3];
+        for (int x = 0; x < Warehouses.Length; x++)
+        {
+            Warehouses[x] = new Warehouse();
+        }
+    }
+
+    public void MakePath()
+    {
+        bool end = false;
+
+        for (int x = 0; x <= 2; x++)
+        {
+            for (int i = 0; i < 25; i++)
+            {
+
+                if (x == 0)
+                {
+                    if (i == 20)
+                    {
+                        DockPath.AddLast(dock);
+                    }
+                    else if (i == 0)
+                    {
+                        DockPath.AddLast(Warehouses[0]);
+                    }
+                    else if (i == 3)
+                    {
+                        ConSwitch[0].addLink(DockPath.Last);
+                        DockPath.AddLast(ConSwitch[0]);
+                        DockPath.AddLast(Basis[0]);
+                        DockPath.AddLast(DevSwitch[0]);
+
+
+                    }
+                    else if (i == 4)
+                    {
+                        DockPath.AddLast(new MainTrack());
+                        DevSwitch[0].addLink(DockPath.Last);
+
+                    }
+                    else if (i == 10)
+                    {
+                        ConSwitch[2].addLink(DockPath.Last);
+                        DockPath.AddLast(ConSwitch[2]);
+
+
+                    }
+                    else
+                    {
+                        DockPath.AddLast(new MainTrack());
+                    }
+                }
+                if (x == 1)
+                {
+
+                    if (i == 8)
+                    {
+                        ConSwitch[2].addLink(SecondPath.Last);
+                        SecondPath.AddLast(ConSwitch[2]);
+                        end = true;
+
+                    }
+                    else if (i == 6)
+                    {
+                        ConSwitch[1].addLink(SecondPath.Last);
+                        SecondPath.AddLast(ConSwitch[1]);
+                        SecondPath.AddLast(Basis[1]);
+                        SecondPath.AddLast(DevSwitch[1]);
+
+                    }
+                    else if (i == 7)
+                    {
+                        SecondPath.AddLast(new MainTrack());
+                        DevSwitch[1].addLink(SecondPath.Last);
+
+                    }
+                    else if (i == 3)
+                    {
+                        ConSwitch[0].addLink(SecondPath.Last);
+                        SecondPath.AddLast(ConSwitch[0]);
+                        SecondPath.AddLast(Basis[0]);
+                        SecondPath.AddLast(DevSwitch[0]);
+                    }
+                    else if (i == 4)
+                    {
+
+                        SecondPath.AddLast(new MainTrack());
+                        DevSwitch[0].addLink(SecondPath.Last);
+
+                    }
+                    else if (i == 0)
+                    {
+                        SecondPath.AddLast(Warehouses[1]);
+                    }
+                    else if (end == false)
+                        SecondPath.AddLast(new MainTrack());
+                }
+                if (x == 2)
+                {
+                    if (i == 8)
+                    {
+                        ConSwitch[1].addLink(SavePath.Last);
+                        SavePath.AddLast(ConSwitch[1]);
+                        SavePath.AddLast(Basis[1]);
+                        SavePath.AddLast(DevSwitch[1]);
+
+                    }
+                    else if (i == 9)
+                    {
+                        SavePath.AddLast(new MainTrack());
+                        DevSwitch[1].addLink(SavePath.Last);
+
+                    }
+                    else if (i == 0)
+                    {
+                        SavePath.AddLast(Warehouses[2]);
+                    }
+                    else if (i < 17)
+                    {
+                        SavePath.AddLast(new MainTrack());
+                    }
+                    else
+                    {
+                        SavePath.AddLast(new SafeTrack());
+                    }
+                }
+            }
+
+        }
+    }
+
 
 }
 
