@@ -31,7 +31,7 @@ namespace KwisspelV3.ViewModel
 
         private EndGameWindow addEndGameWindow;
 
-        MyContext context;
+        public MyContext context { get; set; }
 
         public ObservableCollection<VragenVM> Vragen { get; set; }
         public ObservableCollection<VraagCategorienVM> Categorie { get; set; }
@@ -117,7 +117,7 @@ namespace KwisspelV3.ViewModel
             get { return _selectedQuiz; }
             set
             {
-
+                
                 _selectedQuiz = value;
                 RaisePropertyChanged(null);
             }
@@ -177,6 +177,7 @@ namespace KwisspelV3.ViewModel
             PlayCommand = new RelayCommand(PlayGame);
             SelectedQuiz = new QuizVM( context);
             SelectedVraag = new VragenVM(context);
+            SelectedCategorie = new VraagCategorienVM();
             currentVraag = new Vraag();
             gameAntwoorden = new AntwoordenVM[10];
             totaalPunten = 0;
@@ -306,7 +307,7 @@ namespace KwisspelV3.ViewModel
         }
 
 
-        private void SaveVraag()
+        public void SaveVraag()
         {
             
             if (SelectedCategorie != null)
