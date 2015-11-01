@@ -101,6 +101,7 @@
     <Compile Include="QuizWindow.xaml.cs">
       <DependentUpon>QuizWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Unittest\UnitTest1.cs" />
     <Compile Include="ViewModel\AntwoordenVM.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />

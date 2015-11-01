@@ -108,8 +108,7 @@ public class MainTrack
 
                     if (!d.IsDown)
                     {
-                        Console.WriteLine(d.Link1.Value);
-                        Console.WriteLine();
+
 
                         d.Link1.Value.Place(this.Contains);
                         route.Find(this).Value.Contains = null;
@@ -121,8 +120,7 @@ public class MainTrack
                     }
                     else if (d.IsDown)
                     {
-                        Console.WriteLine(d.Link2.Value);
-                        Console.WriteLine();
+
 
                         d.Link2.Value.Place(this.Contains);
                         route.Find(this).Value.Contains = null;
@@ -152,7 +150,6 @@ public class MainTrack
                     }
                     else
                     {
-                        Console.WriteLine("NO CRASH");
                     }
                     return false;
                 }

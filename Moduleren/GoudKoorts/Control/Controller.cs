@@ -22,12 +22,14 @@ namespace GoudKoorts
         public int schipSpace { get; set; }
         public bool schipDock { get; set; }
 
+        public Timer aTimer;
+
+
         public Controller() {
             // timer
             boardInjector = new BoardInjector();
-            Timer aTimer = new System.Timers.Timer();
             aTimer.Elapsed += new ElapsedEventHandler(timer_Tick);
-            aTimer.Interval = 6000;
+            aTimer.Interval = 8000;
             aTimer.Enabled = true;
             //end timer
            board = new Board();
@@ -142,7 +144,7 @@ namespace GoudKoorts
                 {
                     if (boardInjector.SecondPath.Last.Value.Contains != null)
                     {
-                        boardInjector.SecondPath.Last.Value.Contains = null;
+                       
 
                     }
 
@@ -151,7 +153,6 @@ namespace GoudKoorts
                 {
                     if (boardInjector.SavePath.Last.Value.Contains != null)
                     {
-                        boardInjector.SavePath.Last.Value.Contains = null;
 
                     }
 
@@ -246,6 +247,12 @@ namespace GoudKoorts
 
         void timer_Tick(object sender, EventArgs e)
         {
+            aTimer.Interval = (8000 - (Score * 1000));
+            if (aTimer.Interval <= 1000)
+            {
+                aTimer.Interval = 1000;
+            }
+           
             Spawn();
 
         }
