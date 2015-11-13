@@ -58,15 +58,19 @@ public class MainTrack
     {
 
         
-            if (route.Find(this) == null)
+            if (route.Find(this).Next.Value == null)
             {
                 return false;
             }
-            route.Find(this).Value.Place(route.Find(this).Previous.Value.Contains);
-            route.Find(this).Previous.Value.Contains = null;
-            usedTracks.Remove(route.Find(this).Previous.Value);
-            usedTracks.Add(route.Find(this).Value);
-            return true;
+            if (route.Find(this).Next.Value.IsEmty().Equals(true))
+            {
+                route.Find(this).Value.Place(route.Find(this).Previous.Value.Contains);
+                route.Find(this).Previous.Value.Contains = null;
+                usedTracks.Remove(route.Find(this).Previous.Value);
+                usedTracks.Add(route.Find(this).Value);
+                return true;
+            }
+            return false;
         }
         
     

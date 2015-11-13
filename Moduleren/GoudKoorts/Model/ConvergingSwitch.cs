@@ -25,8 +25,46 @@ public class ConvergingSwitch : Switch
     }
     public override bool Move(LinkedList<MainTrack> route, List<MainTrack> usedTracks)
     {
-        return true;
 
+
+        if (route.Find(this) == null)
+        {
+            return false;
+        }
+        if (route.Find(this).Value.IsEmty() == true) {
+            return false;
+        }
+        if(IsDown){
+            if (route.GetType() == Link1.GetType())
+            {
+                route.Find(this).Value.Place(route.Find(this).Previous.Value.Contains);
+                route.Find(this).Previous.Value.Contains = null;
+                usedTracks.Remove(route.Find(this).Previous.Value);
+                usedTracks.Add(route.Find(this).Value);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+      
+        }
+        else if(!IsDown){
+
+            if (route.GetType() == Link2.GetType())
+            {
+                route.Find(this).Value.Place(route.Find(this).Previous.Value.Contains);
+                route.Find(this).Previous.Value.Contains = null;
+                usedTracks.Remove(route.Find(this).Previous.Value);
+                usedTracks.Add(route.Find(this).Value);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        return false;
     }
         
 
