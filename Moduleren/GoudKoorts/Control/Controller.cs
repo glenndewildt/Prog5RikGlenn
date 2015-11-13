@@ -130,8 +130,14 @@ namespace GoudKoorts
             {
 
 
-                if (UsedTracks.ElementAt(x).Move(boardInjector.DockPath, UsedTracks))
+                if (boardInjector.DockPath.Find( UsedTracks.ElementAt(x)) != null)
                 {
+                    if (boardInjector.DockPath.Find(UsedTracks.ElementAt(x)).Next != null)
+                    {
+                        boardInjector.DockPath.Find(UsedTracks.ElementAt(x)).Next.Value.Move(boardInjector.DockPath, UsedTracks);
+                    
+                    }
+                   
 
                     if (boardInjector.DockPath.Last.Value.Contains != null)
                     {
@@ -141,19 +147,27 @@ namespace GoudKoorts
 
 
                 }
-                else if (UsedTracks.ElementAt(x).Move(boardInjector.SecondPath, UsedTracks))
+                else if (boardInjector.SavePath.Find(UsedTracks.ElementAt(x)) != null)
                 {
-                    if (boardInjector.SecondPath.Last.Value.Contains != null)
+                    boardInjector.SavePath.Find(UsedTracks.ElementAt(x)).Next.Value.Move(boardInjector.SavePath, UsedTracks);
+
+
+                    if (boardInjector.SavePath.Last.Value.Contains != null)
                     {
                        
 
                     }
 
+
                 }
-                else if (UsedTracks.ElementAt(x).Move(boardInjector.SavePath, UsedTracks))
+                else if (boardInjector.SecondPath.Find(UsedTracks.ElementAt(x)) != null)
                 {
-                    if (boardInjector.SavePath.Last.Value.Contains != null)
+                    boardInjector.SecondPath.Find(UsedTracks.ElementAt(x)).Next.Value.Move(boardInjector.SecondPath, UsedTracks);
+
+
+                    if (boardInjector.SecondPath.Last.Value.Contains != null)
                     {
+
 
                     }
 
@@ -226,7 +240,7 @@ namespace GoudKoorts
         {
             Minecart mineCart = new Minecart();
             Random randomPath = new Random();
-            int random = 1;
+            int random = 0;
             if (random == 0)
             {
                 boardInjector.DockPath.First.Next.Value.Place(mineCart);

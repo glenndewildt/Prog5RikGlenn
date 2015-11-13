@@ -54,110 +54,22 @@ public class MainTrack
         }
     }
 
-    public bool Move(LinkedList<MainTrack> route, List<MainTrack> usedTracks)
+    public virtual bool Move(LinkedList<MainTrack> route, List<MainTrack> usedTracks)
     {
 
-        if (Contains != null)
-        {
+        
             if (route.Find(this) == null)
             {
                 return false;
             }
-
-            if (route.Find(this).Next != null)
-            {
-                if (route.Find(this).Next.Value.GetType() == typeof(ConvergingSwitch))
-                {
-                    ConvergingSwitch c = (ConvergingSwitch)route.Find(this).Next.Value;
-
-                    if (route.Find(this).Value.Equals(c.Link1.Value) && !c.IsDown)
-                    {
-                        if (route.Find(this).Next.Value.IsEmty())
-                        {
-                            route.Find(this).Next.Value.Place(this.Contains);
-                            usedTracks.Add(route.Find(this).Next.Value);
-                            usedTracks.Remove(route.Find(this).Value);
-                            this.Contains = null;
-
-                            return true;
-                        }
-                    }
-                    else if (route.Find(this).Value.Equals(c.Link2.Value) && c.IsDown)
-                    {
-                        if (route.Find(this).Next.Value.IsEmty())
-                        {
-                            route.Find(this).Next.Value.Place(this.Contains);
-                            usedTracks.Add(route.Find(this).Next.Value);
-                            usedTracks.Remove(route.Find(this).Value);
-                            this.Contains = null;
-                            
-
-                            return true;
-                        }
-                    }
-                    else
-                    {
-                        return false;
-                    }
-
-
-                }
-                if (route.Find(this).Value.GetType() == typeof(DevergingSwitch))
-                {
-                    DevergingSwitch d = (DevergingSwitch)route.Find(this).Value;
-
-                    if (!d.IsDown)
-                    {
-
-
-                        d.Link1.Value.Place(this.Contains);
-                        route.Find(this).Value.Contains = null;
-                        usedTracks.Add(d.Link1.Value);
-                        usedTracks.Remove(route.Find(this).Value);
-                            this.Contains = null;
-                            return true;
-                        
-                    }
-                    else if (d.IsDown)
-                    {
-
-
-                        d.Link2.Value.Place(this.Contains);
-                        route.Find(this).Value.Contains = null;
-                        usedTracks.Add(d.Link2.Value);
-                        usedTracks.Remove(route.Find(this).Value);
-                            this.Contains = null;
-                            return true;
-                        
-                    }
-
-                    return false;
-                }
-
-                if (route.Find(this).Next.Value.IsEmty())
-                {
-                    route.Find(this).Next.Value.Place(this.Contains);
-                    usedTracks.Add(route.Find(this).Next.Value);
-                    usedTracks.Remove(route.Find(this).Value);
-                    this.Contains = null;
-                    return true;
-                }
-                else
-                {
-                    if (route.Find(this).Value.GetType() != typeof(SafeTrack))
-                    {
-                        GameOver = true;
-                    }
-                    else
-                    {
-                    }
-                    return false;
-                }
-
-            }
+            route.Find(this).Value.Place(route.Find(this).Previous.Value.Contains);
+            route.Find(this).Previous.Value.Contains = null;
+            usedTracks.Remove(route.Find(this).Previous.Value);
+            usedTracks.Add(route.Find(this).Value);
+            return true;
         }
-        return false;
-    }
+        
+    
 
 }
 
