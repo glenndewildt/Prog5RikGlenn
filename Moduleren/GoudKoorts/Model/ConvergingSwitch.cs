@@ -31,9 +31,7 @@ public class ConvergingSwitch : Switch
         {
             return false;
         }
-        if (route.Find(this).Value.IsEmty() == true) {
-            return false;
-        }
+     
         if(IsDown){
             if (route.GetType() == Link1.GetType())
             {

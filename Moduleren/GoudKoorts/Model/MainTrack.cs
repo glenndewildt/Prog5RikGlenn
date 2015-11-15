@@ -58,11 +58,8 @@ public class MainTrack
     {
 
         
-            if (route.Find(this).Next.Value == null)
-            {
-                return false;
-            }
-            if (route.Find(this).Next.Value.IsEmty().Equals(true))
+  
+            if (route.Find(this).Value.IsEmty().Equals(true) )
             {
                 route.Find(this).Value.Place(route.Find(this).Previous.Value.Contains);
                 route.Find(this).Previous.Value.Contains = null;
