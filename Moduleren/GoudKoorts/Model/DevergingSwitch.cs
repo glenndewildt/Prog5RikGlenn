@@ -18,6 +18,41 @@ public class DevergingSwitch : Switch
         IsDown = true;
 	}
 
+     public override bool Move(LinkedList<MainTrack> route, List<MainTrack> usedTracks)
+    {
+        
+
+        if (route.Find(this) == null)
+        {
+            return false;
+        }
+      
+     
+        if(!IsDown){
+            
+            
+               Link1.Value.Place(route.Find(this).Previous.Value.Contains);
+                route.Find(this).Previous.Value.Contains = null;
+                usedTracks.Remove(route.Find(this).Previous.Value);
+                usedTracks.Add(Link1.Value);
+                return true;
+          
+      
+        }
+        else if(IsDown){
+
+            
+                Link2.Value.Place(route.Find(this).Previous.Value.Contains);
+                route.Find(this).Previous.Value.Contains = null;
+                usedTracks.Remove(route.Find(this).Previous.Value);
+                usedTracks.Add(Link2.Value);
+                return true;
+            
+            
+        }
+        return false;
+    }
+        
 
 
     public override char ToChar()

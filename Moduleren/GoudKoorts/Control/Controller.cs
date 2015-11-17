@@ -147,14 +147,15 @@ namespace GoudKoorts
 
 
                 }
-                else if (boardInjector.SavePath.Find(UsedTracks.ElementAt(x)) != null)
+                else if (boardInjector.SavePath.Find(UsedTracks.ElementAt(x)) != null && boardInjector.SavePath.Find(UsedTracks.ElementAt(x)).Next != null)
                 {
-                    boardInjector.SavePath.Find(UsedTracks.ElementAt(x)).Next.Value.Move(boardInjector.SavePath, UsedTracks);
+                    
 
+                    boardInjector.SavePath.Find(UsedTracks.ElementAt(x)).Next.Value.Move(boardInjector.SavePath, UsedTracks);
 
                     if (boardInjector.SavePath.Last.Value.Contains != null)
                     {
-                       
+                        
 
                     }
 
