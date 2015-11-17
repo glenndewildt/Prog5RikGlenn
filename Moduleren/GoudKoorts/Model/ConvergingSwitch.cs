@@ -12,7 +12,7 @@ using System.Text;
 public class ConvergingSwitch : Switch
 {
 
-	public virtual MainTrack MainTrack{get;set;}
+
 
 	public ConvergingSwitch()
 	{
@@ -25,16 +25,19 @@ public class ConvergingSwitch : Switch
     }
     public override bool Move(LinkedList<MainTrack> route, List<MainTrack> usedTracks)
     {
-
+        
 
         if (route.Find(this) == null)
         {
             return false;
         }
+      
      
-        if(IsDown){
-            if (route.GetType() == Link1.GetType())
+        if(!IsDown){
+            
+            if (route.First.Equals(Link1.List.First))
             {
+                
                 route.Find(this).Value.Place(route.Find(this).Previous.Value.Contains);
                 route.Find(this).Previous.Value.Contains = null;
                 usedTracks.Remove(route.Find(this).Previous.Value);
@@ -47,9 +50,9 @@ public class ConvergingSwitch : Switch
             }
       
         }
-        else if(!IsDown){
+        else if(IsDown){
 
-            if (route.GetType() == Link2.GetType())
+            if (route.First.Equals(Link2.List.First))
             {
                 route.Find(this).Value.Place(route.Find(this).Previous.Value.Contains);
                 route.Find(this).Previous.Value.Contains = null;

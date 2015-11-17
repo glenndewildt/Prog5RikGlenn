@@ -240,7 +240,7 @@ namespace GoudKoorts
         {
             Minecart mineCart = new Minecart();
             Random randomPath = new Random();
-            int random = 0;
+            int random = randomPath.Next(2);
             if (random == 0)
             {
                 boardInjector.DockPath.First.Next.Value.Place(mineCart);

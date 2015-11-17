@@ -13,6 +13,7 @@ public class MainTrack
 {
     public virtual Minecart Contains { get; set; }
 
+
     public bool GameOver;
 
     public MainTrack()

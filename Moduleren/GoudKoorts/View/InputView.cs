@@ -20,7 +20,7 @@ namespace GoudKoorts
             while (!Program.controller.GameOver)
             {
 
-                var a = Console.ReadKey();
+                var a = Console.ReadKey(true);
 
                 if (a.KeyChar.Equals('q'))
                 {
