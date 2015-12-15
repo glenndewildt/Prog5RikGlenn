@@ -33,8 +33,10 @@ public class ConvergingSwitch : Switch
      
         if(!IsDown){
             
+
             if (route.First.Equals(Link1.List.First))
             {
+                
                 
                 route.Find(this).Value.Place(route.Find(this).Previous.Value.Contains);
                 route.Find(this).Previous.Value.Contains = null;
@@ -52,6 +54,7 @@ public class ConvergingSwitch : Switch
 
             if (route.First.Equals(Link2.List.First))
             {
+               
                 route.Find(this).Value.Place(route.Find(this).Previous.Value.Contains);
                 route.Find(this).Previous.Value.Contains = null;
                 usedTracks.Remove(route.Find(this).Previous.Value);

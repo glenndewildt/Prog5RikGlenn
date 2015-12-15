@@ -29,7 +29,7 @@ public class DevergingSwitch : Switch
       
      
         if(!IsDown){
-            
+        
             
                Link1.Value.Place(route.Find(this).Previous.Value.Contains);
                 route.Find(this).Previous.Value.Contains = null;
@@ -41,14 +41,13 @@ public class DevergingSwitch : Switch
         }
         else if(IsDown){
 
-            
+         
                 Link2.Value.Place(route.Find(this).Previous.Value.Contains);
                 route.Find(this).Previous.Value.Contains = null;
                 usedTracks.Remove(route.Find(this).Previous.Value);
                 usedTracks.Add(Link2.Value);
                 return true;
-            
-            
+  
         }
         return false;
     }

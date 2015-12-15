@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="fce46da9-c512-46cb-91a4-a9bf6dc340e1"
+  name="View" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="ba70f64f-fe84-48d1-b4c9-9daa1272da08"
+        name="OutputView"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="1031b9bc-f814-49b7-b996-66035ed83e0c"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FGlenn%2FSource%2FRepos%2FProg5RikGlenn5%2FModuleren%2FGoudKoorts%2Fbin%2FDebug%2FGoudKoorts.exe Namespace%3DGoudKoorts Type%3DOutputView"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="246047b9-08ad-4f76-bd07-98c904390d15"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="734fd54e-16fc-4e6d-a6cd-0b40e85e8db2">
+                <propertyInstance
+                  Id="0c612554-11b7-45f5-81fe-9541e25dcad9"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="219d8cf4-ed8a-4aa9-aebd-3b0266bde691">
+                <propertyInstance
+                  Id="ce2c44ad-4d8b-4b75-b6d2-576deaaf010d"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5b0abb70-6292-472c-82ea-051edf809394">
+                <propertyInstance
+                  Id="9f259db7-a3b3-4461-9908-0d8638eb9889"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c676342f-3c9a-4de9-a498-b371e49a5773">
+                <propertyInstance
+                  Id="bd42c286-ff3e-48ce-bc67-2497e83cbe2f"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="aa1a711d-2bce-4600-9e2b-4f9f53cac35e">
+                <propertyInstance
+                  Id="4f815572-fda2-4b83-88ff-51b2413419f7"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="d162c906-3d37-41ce-bd8a-136725a4591d"
+            name="aTimer"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="32f83e38-5016-47b1-8865-b95f8dc8d425"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FGlenn%2FSource%2FRepos%2FProg5RikGlenn5%2FModuleren%2FGoudKoorts%2Fbin%2FDebug%2FGoudKoorts.exe Namespace%3DGoudKoorts Type%3DOutputView Member%3DaTimer"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b12372cf-7bc2-4bc0-99ed-74982fcb80fd"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6f37f4e9-aa2f-40d9-ac7c-9c52f1c0dcd9">
+                    <propertyInstance
+                      Id="bd929bcc-7e64-4958-804f-febf6504e342"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bbf6e169-dacd-48ec-85f4-d3ab3a8e30ce">
+                    <propertyInstance
+                      Id="efd98bfb-a2c7-41d3-9f24-a98162fcd198"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0177eaa9-f672-4eba-8bb8-9d1b761d1119">
+                    <propertyInstance
+                      Id="51b0cea1-642a-4080-9377-3594f2a0d907"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ac4a145d-61be-4b44-b0d0-0084f7ace09d">
+                    <propertyInstance
+                      Id="6eecfac9-50cb-4a3b-80ed-7df311fd6417"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="633fc744-6a97-4de4-bdc2-926a828fddd7">
+                    <propertyInstance
+                      Id="ced43f70-34d5-43ed-9523-5ec76b0446c7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="098f0943-5dae-4f06-b637-190b5bf3cc54"
+                LastKnownName="Timer"
+                LastKnownLocation="Package1_2032.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="3b65718c-e038-4ce5-acf1-dc9dcd004ec0"
+            name="OutputView"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2cc3cd74-04f1-4781-97d4-0d0af00c20cc"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FGlenn%2FSource%2FRepos%2FProg5RikGlenn5%2FModuleren%2FGoudKoorts%2Fbin%2FDebug%2FGoudKoorts.exe Namespace%3DGoudKoorts Type%3DOutputView Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e06688c2-fd56-4512-a004-9db847acd300"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ae41baa4-df6d-44dd-8386-bc490e040657">
+                    <propertyInstance
+                      Id="846587bd-f333-431a-964a-66e7a76cb90b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7b0f874c-0e31-423f-9859-da24ec9d4020">
+                    <propertyInstance
+                      Id="eb53a3bd-2401-4ca5-a7ec-482953be8467"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6dae90c8-c77a-4dfc-afa6-0280d8029fac">
+                    <propertyInstance
+                      Id="d3395638-2f1d-4d03-bc14-f9356f427cb3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6fab9203-6ccd-407b-a345-7ea263379e28">
+                    <propertyInstance
+                      Id="d96f1425-ac24-4f9c-9d26-9cd19bc77928"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a85cd219-f1ad-4119-85cc-8f3282a5ac67">
+                    <propertyInstance
+                      Id="c36762c2-52c5-477b-9516-fa7a50368bd4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f0eadd03-abb7-4723-90b7-ad236dac4548">
+                    <propertyInstance
+                      Id="b6f50a79-abc8-46f7-8481-a0103c72e83d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="bfb457be-7193-42ec-b604-dd503e544318"
+            name="ViewBoard"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="cbae27c0-622b-46fe-ad6c-36c861bb3c87"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FGlenn%2FSource%2FRepos%2FProg5RikGlenn5%2FModuleren%2FGoudKoorts%2Fbin%2FDebug%2FGoudKoorts.exe Namespace%3DGoudKoorts Type%3DOutputView Member%3D(Name%3DViewBoard OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.dll&quot; Namespace%3DSystem.Timers Type%3DElapsedEventArgs)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a736c8d9-49fb-4efa-9d3e-9ff231f5195d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="367f2c96-d317-473d-bc42-5736c673b00e">
+                    <propertyInstance
+                      Id="484c3bbf-2d06-4cec-b317-87971777ccdb"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="309f4c12-6ce2-4f8e-9bfe-6aa7e6c09bc6">
+                    <propertyInstance
+                      Id="9a54329c-135a-4954-827e-932b96ae5838"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ea2c628c-95ef-4abd-91a5-eb37d243e07d">
+                    <propertyInstance
+                      Id="638f933f-8cac-4bb3-93bd-c369c3d77cac"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4a5ef2d6-b790-4d38-9b11-039570522adf">
+                    <propertyInstance
+                      Id="a959ab5e-02c8-414b-bf4e-b27e059754b6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="87567426-104d-4ed9-9f2f-a748fb69400f">
+                    <propertyInstance
+                      Id="08558711-7880-45bc-b9a7-e9310063e997"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6c7cc3ed-148e-40ef-937e-ad5a7f6ca155">
+                    <propertyInstance
+                      Id="fbc8d262-7027-42a4-b161-a5427247855b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a9c9db3f-8b21-4e8a-be09-26b34fd3c839"
+                  name="sender"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d20cecfc-c183-4d5f-ab79-7b3a48c88452"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FGlenn%2FSource%2FRepos%2FProg5RikGlenn5%2FModuleren%2FGoudKoorts%2Fbin%2FDebug%2FGoudKoorts.exe Namespace%3DGoudKoorts Type%3DOutputView Member%3D(Name%3DViewBoard OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.dll&quot; Namespace%3DSystem.Timers Type%3DElapsedEventArgs)]) ParameterIdentifier%3Dsender"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="820c8e14-5491-4bf6-9a1f-4d5703d21cd0"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package_2030.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1da6768c-1301-4300-849f-4b5811a7a1c1"
+                  name="e"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7f87e089-4e3c-4e03-8d20-943c6376e32c"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FGlenn%2FSource%2FRepos%2FProg5RikGlenn5%2FModuleren%2FGoudKoorts%2Fbin%2FDebug%2FGoudKoorts.exe Namespace%3DGoudKoorts Type%3DOutputView Member%3D(Name%3DViewBoard OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.dll&quot; Namespace%3DSystem.Timers Type%3DElapsedEventArgs)]) ParameterIdentifier%3De"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="cdd5f85b-fc6c-4496-9d84-a55c403deaff"
+                      LastKnownName="ElapsedEventArgs"
+                      LastKnownLocation="Package1_2032.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="756094ab-58a2-4f5b-911c-220fde30056c"
+        name="InputView"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="b0904e0a-cba2-449f-b922-6e9acf7d8c3d"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FGlenn%2FSource%2FRepos%2FProg5RikGlenn5%2FModuleren%2FGoudKoorts%2Fbin%2FDebug%2FGoudKoorts.exe Namespace%3DGoudKoorts Type%3DInputView"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="e1d0393a-f8fc-4b4e-ace5-326b15777d7f"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="75e35ed4-fbe6-42dd-a32e-44cf7d264ec1">
+                <propertyInstance
+                  Id="a75b46d9-9b4e-46e5-9fdc-515bf65a59c8"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ca1193a7-84eb-402d-8538-a0832fef45f4">
+                <propertyInstance
+                  Id="aff73d60-68d8-4c34-bd99-a610ed06c9a6"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d9eed771-b65c-4ffb-8e30-bf176b0bac94">
+                <propertyInstance
+                  Id="19d083db-717f-47d2-990f-d11fcc73bfb2"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4497ed17-6401-42b8-abea-0b28351a4170">
+                <propertyInstance
+                  Id="3c04de0c-0733-41c4-8ce6-72456ecf2fe8"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="51da7d47-2151-409e-af6b-b3d3916e504d">
+                <propertyInstance
+                  Id="31fee545-685e-49c2-8a4d-a6d9904ebfe2"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="0147d915-4cd4-4b9b-8f7c-a0ae43dc05ac"
+            name="InputView"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="6a8d22a8-f4ae-4664-851b-66d7d582454c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FGlenn%2FSource%2FRepos%2FProg5RikGlenn5%2FModuleren%2FGoudKoorts%2Fbin%2FDebug%2FGoudKoorts.exe Namespace%3DGoudKoorts Type%3DInputView Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c7866746-f2a9-441a-9de9-68b93a18d117"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b904c7a8-a7d4-4fe0-9d61-36406b85241a">
+                    <propertyInstance
+                      Id="19dabda3-27f6-4505-8853-83b713fb0ad9"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="17abda76-7ee0-4ee8-8bd3-5343ecc392a1">
+                    <propertyInstance
+                      Id="17607d00-7584-4e5f-84bb-bec31573d4a9"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b61230ad-513b-4903-9a20-ad63e3edb18a">
+                    <propertyInstance
+                      Id="cda4833c-11ca-4a45-aa2b-8855ecd94739"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f5b19f07-c504-4112-9749-2de5d23ae03b">
+                    <propertyInstance
+                      Id="5e8be469-84f4-4ac6-9755-48e1f3f9e26e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ff5ce698-96a7-4015-8bee-997470338153">
+                    <propertyInstance
+                      Id="21b814f8-c881-4a9f-b7a8-ef4eb0a9a397"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2a227780-facb-4500-8436-30856dceee1f">
+                    <propertyInstance
+                      Id="2746145c-8b50-4e15-a332-c4a04740c503"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="12ddebb7-bf3d-4eee-ba45-de3c851e5360"
+            name="GetInput"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ea01e31d-d77f-4e95-8acb-9da958d5ea20"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FGlenn%2FSource%2FRepos%2FProg5RikGlenn5%2FModuleren%2FGoudKoorts%2Fbin%2FDebug%2FGoudKoorts.exe Namespace%3DGoudKoorts Type%3DInputView Member%3DGetInput"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="0c88e94e-3893-4ec8-9a6b-b12f9857d260"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="05ca2e50-9a6c-44e5-afc0-25cd67d48027">
+                    <propertyInstance
+                      Id="1f4189b8-c017-4100-b69b-cf5e27bd55bd"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6e6275f4-4404-42b8-a82f-c7b9fd7335c6">
+                    <propertyInstance
+                      Id="ad40ba66-2022-4883-bc95-f06a49b8d479"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6b899e54-f98d-424d-aa6c-fa9e94d9aa7f">
+                    <propertyInstance
+                      Id="61fcd1ef-bd29-4de0-bf5b-db6c72c37494"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f35f1c33-4303-40ae-b25e-141a47f5fc75">
+                    <propertyInstance
+                      Id="06a78ba1-2dc9-46f8-9b78-22cb3313d22d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aceb1b5f-329e-4afe-9746-80aad155d0f6">
+                    <propertyInstance
+                      Id="88ae4b42-bfc6-4652-8f38-e7227462eb79"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6836f1d8-96bc-401a-9e20-68af654a543b">
+                    <propertyInstance
+                      Id="bc0fe621-32af-43ba-8ede-694de1200f63"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
