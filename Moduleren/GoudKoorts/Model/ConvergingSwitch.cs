@@ -20,9 +20,7 @@ public class ConvergingSwitch : Switch
 
 	}
 
-    public void Switch(){
 
-    }
     public override bool Move(LinkedList<MainTrack> route, List<MainTrack> usedTracks)
     {
         

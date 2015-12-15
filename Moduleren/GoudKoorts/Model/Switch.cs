@@ -14,8 +14,15 @@ public  abstract class Switch : MainTrack
     public virtual bool IsDown { get; set; }
     public LinkedListNode<MainTrack> Link1 { get; set; }
     public LinkedListNode<MainTrack> Link2 { get; set; }
-	public Switch()
+	public void doSwitch()
 	{
+        if (IsDown == true)
+        {
+            IsDown = false;
+        }
+        else {
+            IsDown = true;
+        }
 
 	}
 

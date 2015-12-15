@@ -68,6 +68,8 @@ public class MainTrack
                 usedTracks.Add(route.Find(this).Value);
                 return true;
             }
+        GameOver = true;
+
             return false;
         }
         

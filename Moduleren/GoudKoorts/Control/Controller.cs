@@ -55,63 +55,38 @@ namespace GoudKoorts
         {
             if (c.Equals('1'))
             {
-                if (boardInjector.ConSwitch[0].IsDown == true)
-                {
-                    boardInjector.ConSwitch[0].IsDown = false;
-                }
-                else
-                {
-                    boardInjector.ConSwitch[0].IsDown = true;
-                }
+
+                boardInjector.ConSwitch[0].doSwitch();
+               
 
             }
             if (c.Equals('2'))
             {
-                if (boardInjector.ConSwitch[1].IsDown == true)
-                {
-                    boardInjector.ConSwitch[1].IsDown = false;
-                }
-                else
-                {
-                    boardInjector.ConSwitch[1].IsDown = true;
-                }
+
+                boardInjector.ConSwitch[1].doSwitch();
+             
 
             }
             if (c.Equals('3'))
             {
-                if (boardInjector.ConSwitch[2].IsDown == true)
-                {
-                    boardInjector.ConSwitch[2].IsDown = false;
-                }
-                else
-                {
-                    boardInjector.ConSwitch[2].IsDown = true;
-                }
+
+                boardInjector.ConSwitch[2].doSwitch();
+               
 
             }
             if (c.Equals('4'))
             {
-                if (boardInjector.DevSwitch[0].IsDown == true)
-                {
-                    boardInjector.DevSwitch[0].IsDown = false;
-                }
-                else
-                {
-                    boardInjector.DevSwitch[0].IsDown = true;
-                }
+
+                boardInjector.DevSwitch[0].doSwitch();
+                
 
             }
 
             if (c.Equals('5'))
             {
-                if (boardInjector.DevSwitch[1].IsDown == true)
-                {
-                    boardInjector.DevSwitch[1].IsDown = false;
-                }
-                else
-                {
-                    boardInjector.DevSwitch[1].IsDown = true;
-                }
+
+                boardInjector.DevSwitch[1].doSwitch();
+               
 
             }
         }
