@@ -195,6 +195,7 @@ namespace GoudKoorts
                     Program.controller.board = new Board();
 
                     aTimer.Enabled = true;
+                   
                 }
 
             }

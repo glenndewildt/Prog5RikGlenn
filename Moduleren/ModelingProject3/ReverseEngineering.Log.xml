@@ -6,70 +6,127 @@
   <MessageClass Name="Error" Label="Error" Option="Show errors" />
   <MessageClass Name="Property" Label="Property" Option="Show metadata" />
   <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
-  <Message Timestamp="2015-12-15T23:13:17" Importance="High" Text="Reverse Engineering Started." />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'b93700ea-3935-496e-a85e-18e785c5a8c7' -  (ClassifierTemplateParameter)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Boolean' -  (PrimitiveType)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Integer' -  (PrimitiveType)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3' -  (ModelStoreModel)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Board' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::BoardInjector' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts' -  (Package)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::Controller' -  (Class)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::Controller::aTimer' -  (Property)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::Controller::board' -  (Property)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::Controller::boardInjector' -  (Property)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::Controller::Controller' -  (Operation)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::Controller::GameOver' -  (Property)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::Controller::Move' -  (Operation)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::Controller::schipChar' -  (Property)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::Controller::schipDock' -  (Property)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::Controller::schipSpace' -  (Property)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::Controller::schipSpaced' -  (Operation)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::Controller::Score' -  (Property)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::Controller::ship' -  (Property)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::Controller::Spawn' -  (Operation)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::Controller::Switch' -  (Operation)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::Controller::Switch::c' -  (Parameter)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::Controller::timer_Tick' -  (Operation)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::Controller::timer_Tick::e' -  (Parameter)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::Controller::timer_Tick::sender' -  (Parameter)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::Controller::UsedTracks' -  (Property)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::InputView' -  (Class)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::InputView::GetInput' -  (Operation)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::InputView::InputView' -  (Operation)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::OutputView' -  (Class)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::OutputView::aTimer' -  (Property)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::OutputView::OutputView' -  (Operation)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::OutputView::ViewBoard' -  (Operation)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::OutputView::ViewBoard::e' -  (Parameter)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::OutputView::ViewBoard::sender' -  (Parameter)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::Program' -  (Class)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::Program::controller' -  (Property)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::Program::Input' -  (Property)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::Program::Main' -  (Operation)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::Program::Main::args' -  (Parameter)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::Program::Output' -  (Property)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::GoudKoorts::Program::Program' -  (Operation)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::MainTrack' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Ship' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::System' -  (Package)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::System::Char' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::System::Collections' -  (Package)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::System::Collections::Generic' -  (Package)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::System::Collections::Generic::List' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::System::Collections::Generic::List&lt;MainTrack‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::System::EventArgs' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::System::Object' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::System::Timers' -  (Package)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::System::Timers::ElapsedEventArgs' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::System::Timers::Timer' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::GoudKoorts::Controller to ModelingProject3::Board (Association)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::GoudKoorts::Controller to ModelingProject3::Ship (Association)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::GoudKoorts::Controller to ModelingProject3::System::Collections::Generic::List&lt;MainTrack‎&gt; (Association)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::GoudKoorts::Controller to ModelingProject3::System::Char (Association)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::System::Timers::ElapsedEventArgs to ModelingProject3::System::EventArgs (Generalization)" />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="High" Text="(4) type(s) fully reverse engineered." />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="High" Text="(11) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
-  <Message Timestamp="2015-12-15T23:13:20" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+  <Message Timestamp="2015-12-16T20:45:52" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '1d651508-0527-4cdf-9f2f-7ed5bb1d844e' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '9ca02ac2-0dc7-4c9d-bd23-712447061588' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'b93700ea-3935-496e-a85e-18e785c5a8c7' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Boolean' -  (PrimitiveType)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Integer' -  (PrimitiveType)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3' -  (ModelStoreModel)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject3::Board' -  (Class)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Board::Board' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Board::boardInjector' -  (Property)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject3::BoardInjector' -  (Class)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::BoardInjector::Basis' -  (Property)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::BoardInjector::BoardInjector' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::BoardInjector::ConSwitch' -  (Property)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::BoardInjector::DevSwitch' -  (Property)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::BoardInjector::dock' -  (Property)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::BoardInjector::DockPath' -  (Property)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::BoardInjector::MainTrack' -  (Property)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::BoardInjector::MakePath' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::BoardInjector::SavePath' -  (Property)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::BoardInjector::SecondPath' -  (Property)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::BoardInjector::Warehouses' -  (Property)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::ConvergingSwitch' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::ConvergingSwitch::ConvergingSwitch' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::ConvergingSwitch::Move' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::ConvergingSwitch::Move::route' -  (Parameter)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::ConvergingSwitch::Move::usedTracks' -  (Parameter)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::ConvergingSwitch::ToChar' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::DevergingSwitch' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::DevergingSwitch::DevergingSwitch' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::DevergingSwitch::Move' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::DevergingSwitch::Move::route' -  (Parameter)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::DevergingSwitch::Move::usedTracks' -  (Parameter)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::DevergingSwitch::ToChar' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject3::Dock' -  (Class)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Dock::ContainsShip' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Dock::Dock' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Dock::Losse' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Dock::Losse::ship' -  (Parameter)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Dock::ship' -  (Property)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Dock::ToChar' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject3::MainTrack' -  (Class)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::MainTrack::Contains' -  (Property)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::MainTrack::GameOver' -  (Property)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::MainTrack::IsEmty' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::MainTrack::MainTrack' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::MainTrack::Move' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::MainTrack::Move::route' -  (Parameter)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::MainTrack::Move::usedTracks' -  (Parameter)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::MainTrack::Place' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::MainTrack::Place::cart' -  (Parameter)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::MainTrack::ToChar' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject3::Minecart' -  (Class)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Minecart::emptyMineCart' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Minecart::IsEmpty' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Minecart::isFull' -  (Property)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Minecart::Minecart' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Minecart::ToChar' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject3::SafeTrack' -  (Class)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::SafeTrack::Move' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::SafeTrack::Move::route' -  (Parameter)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::SafeTrack::Move::usedTracks' -  (Parameter)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::SafeTrack::SafeTrack' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::SafeTrack::ToChar' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject3::Ship' -  (Class)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Ship::aantal' -  (Property)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Ship::AddCart' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Ship::getChars' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Ship::IsEmpty' -  (Property)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Ship::IsFull' -  (Property)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Ship::IsHalfFull' -  (Property)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Ship::Ship' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Ship::shipE' -  (Property)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Ship::shipH' -  (Property)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Ship::shipV' -  (Property)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject3::Switch' -  (Class)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Switch::addLink' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Switch::addLink::link' -  (Parameter)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Switch::doSwitch' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Switch::IsDown' -  (Property)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Switch::Link1' -  (Property)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Switch::Link2' -  (Property)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Switch::Switch' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::System' -  (Package)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::System::Char' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::System::Collections' -  (Package)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::System::Collections::Generic' -  (Package)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::System::Collections::Generic::LinkedList' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::System::Collections::Generic::LinkedList&lt;MainTrack‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::System::Collections::Generic::LinkedListNode' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::System::Collections::Generic::LinkedListNode&lt;MainTrack‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::System::Collections::Generic::List' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::System::Collections::Generic::List&lt;MainTrack‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject3::Warehouse' -  (Class)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject3::Warehouse::Warehouse' -  (Operation)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::Dock to ModelingProject3::Ship (Association)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::Dock to ModelingProject3::MainTrack (Generalization)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::MainTrack to ModelingProject3::Minecart (Association)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::SafeTrack to ModelingProject3::MainTrack (Generalization)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::Ship to ModelingProject3::System::Char (Association)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::Ship to ModelingProject3::System::Char (Association)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::Ship to ModelingProject3::System::Char (Association)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::Switch to ModelingProject3::System::Collections::Generic::LinkedListNode&lt;MainTrack‎&gt; (Association)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::Switch to ModelingProject3::System::Collections::Generic::LinkedListNode&lt;MainTrack‎&gt; (Association)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::Switch to ModelingProject3::MainTrack (Generalization)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::Warehouse to ModelingProject3::MainTrack (Generalization)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::BoardInjector to ModelingProject3::MainTrack (Association)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::BoardInjector to ModelingProject3::ConvergingSwitch (Association)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::BoardInjector to ModelingProject3::DevergingSwitch (Association)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::BoardInjector to ModelingProject3::System::Collections::Generic::LinkedList&lt;MainTrack‎&gt; (Association)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::BoardInjector to ModelingProject3::MainTrack (Association)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::BoardInjector to ModelingProject3::System::Collections::Generic::LinkedList&lt;MainTrack‎&gt; (Association)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::BoardInjector to ModelingProject3::System::Collections::Generic::LinkedList&lt;MainTrack‎&gt; (Association)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::BoardInjector to ModelingProject3::Warehouse (Association)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::BoardInjector to ModelingProject3::Dock (Association)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::ConvergingSwitch to ModelingProject3::Switch (Generalization)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::DevergingSwitch to ModelingProject3::Switch (Generalization)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::SafeTrack to ModelingProject3::MainTrack (Generalization)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::Dock to ModelingProject3::MainTrack (Generalization)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject3::Switch to ModelingProject3::MainTrack (Generalization)" />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="High" Text="(9) type(s) fully reverse engineered." />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="High" Text="(9) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2015-12-16T20:45:58" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
 </Log>

@@ -151,10 +151,11 @@ namespace GoudKoorts
                 }
                 else
                 {
-                    if (UsedTracks.ElementAt(x).GameOver)
-                    {
-                        GameOver = true;
-                    }
+                    
+                }
+                if (UsedTracks.ElementAt(x).GameOver)
+                {
+                    GameOver = true;
                 }
             }
 
